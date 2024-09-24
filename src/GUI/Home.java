@@ -34,51 +34,51 @@ public class Home extends javax.swing.JFrame {
         LblSubtittle2 = new javax.swing.JLabel();
         LblSubtittle3 = new javax.swing.JLabel();
         btnGlossary = new javax.swing.JPanel();
-        jLabel23 = new javax.swing.JLabel();
+        LblGlossary = new javax.swing.JLabel();
         btnObserver = new javax.swing.JPanel();
-        jLabel19 = new javax.swing.JLabel();
+        LblObserver = new javax.swing.JLabel();
         btnStrategy = new javax.swing.JPanel();
-        jLabel20 = new javax.swing.JLabel();
+        LblStrategy = new javax.swing.JLabel();
         btnTemplateM = new javax.swing.JPanel();
-        jLabel21 = new javax.swing.JLabel();
+        LblTemplateMethod = new javax.swing.JLabel();
         btnVisitor = new javax.swing.JPanel();
-        jLabel22 = new javax.swing.JLabel();
+        LblVisitor = new javax.swing.JLabel();
         btnState = new javax.swing.JPanel();
-        lbl = new javax.swing.JLabel();
+        LblState = new javax.swing.JLabel();
         btnChainOR = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
+        LblChainOfResponsability = new javax.swing.JLabel();
         btnCommand = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
+        LblCommand = new javax.swing.JLabel();
         btnIterator = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
+        LblIterator = new javax.swing.JLabel();
         btnMediator = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
+        LblMediator = new javax.swing.JLabel();
         btnMemento = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
+        LblMemento = new javax.swing.JLabel();
         btnProxy = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
+        LblProxy = new javax.swing.JLabel();
         btnFlyweight = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
+        LblFlyweight = new javax.swing.JLabel();
         btnFacade = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
+        LblFacade = new javax.swing.JLabel();
         btnDecorator = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
+        LblDecorator = new javax.swing.JLabel();
         btnComposite = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
+        LblComposite = new javax.swing.JLabel();
         btnBridge = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
+        LblBridge = new javax.swing.JLabel();
         btnAdapter = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
+        LblAdapter = new javax.swing.JLabel();
         btnSingleton = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        LblSingleton = new javax.swing.JLabel();
         btnPrototype = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        LblPrototype = new javax.swing.JLabel();
         btnBuilder = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
+        LblBuilder = new javax.swing.JLabel();
         btnAbstractF = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        LblAbstractFactory = new javax.swing.JLabel();
         btnFactoryM = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        LblFactoryMethod = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
 
@@ -168,14 +168,14 @@ public class Home extends javax.swing.JFrame {
         );
         HeaderLayout.setVerticalGroup(
             HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 48, Short.MAX_VALUE)
+            .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        jPanel1.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 5, 840, 48));
+        jPanel1.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 50));
 
         bgDecoration1.setBackground(new java.awt.Color(253, 196, 196));
 
-        LblTittle.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
+        LblTittle.setFont(new java.awt.Font("Instrument Sans", 1, 36)); // NOI18N
         LblTittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LblTittle.setText("Patrones de Diseño");
 
@@ -184,8 +184,8 @@ public class Home extends javax.swing.JFrame {
         bgDecoration1Layout.setHorizontalGroup(
             bgDecoration1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgDecoration1Layout.createSequentialGroup()
-                .addContainerGap(80, Short.MAX_VALUE)
-                .addComponent(LblTittle, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(51, Short.MAX_VALUE)
+                .addComponent(LblTittle)
                 .addGap(52, 52, 52))
         );
         bgDecoration1Layout.setVerticalGroup(
@@ -203,24 +203,35 @@ public class Home extends javax.swing.JFrame {
         LblDefinition.setText("<html>Los patrones de diseño son enfoques estándar para resolver problemas comunes en el desarrollo de software. Funcionan como esquemas o guías que pueden adaptarse a las necesidades específicas de un proyecto, ayudando a abordar situaciones recurrentes en el diseño del código. A diferencia de funciones o bibliotecas predefinidas, no se pueden copiar directamente en el programa. En su lugar, un patrón es una idea general que se implementa de acuerdo con las características y requisitos particulares del sistema en desarrollo, ofreciendo una solución flexible y ajustable al problema en cuestión.<html>");
         jPanel1.add(LblDefinition, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 800, 146));
 
-        LblSubtittle1.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
+        LblSubtittle1.setFont(new java.awt.Font("Instrument Sans", 1, 24)); // NOI18N
         LblSubtittle1.setText("Comportamentales");
         jPanel1.add(LblSubtittle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 550, -1, -1));
 
-        LblSubtittle2.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
+        LblSubtittle2.setFont(new java.awt.Font("Instrument Sans", 1, 24)); // NOI18N
         LblSubtittle2.setText("Creacionales");
         jPanel1.add(LblSubtittle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
 
-        LblSubtittle3.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
+        LblSubtittle3.setFont(new java.awt.Font("Instrument Sans", 1, 24)); // NOI18N
         LblSubtittle3.setText("Estructurales");
         jPanel1.add(LblSubtittle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, -1, -1));
 
         btnGlossary.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel23.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Glossary_Icon.png"))); // NOI18N
-        jLabel23.setText("Glosario");
+        LblGlossary.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblGlossary.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblGlossary.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Glossary_Icon.png"))); // NOI18N
+        LblGlossary.setText("Glosario");
+        LblGlossary.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblGlossaryMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblGlossaryMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblGlossaryMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnGlossaryLayout = new javax.swing.GroupLayout(btnGlossary);
         btnGlossary.setLayout(btnGlossaryLayout);
@@ -228,41 +239,71 @@ public class Home extends javax.swing.JFrame {
             btnGlossaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 141, Short.MAX_VALUE)
             .addGroup(btnGlossaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE))
+                .addGroup(btnGlossaryLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(LblGlossary, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         btnGlossaryLayout.setVerticalGroup(
             btnGlossaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
             .addGroup(btnGlossaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
+                .addGroup(btnGlossaryLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(LblGlossary, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        jPanel1.add(btnGlossary, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 141, 50));
+        jPanel1.add(btnGlossary, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 141, 50));
 
         btnObserver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel19.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setText("Observer");
+        LblObserver.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblObserver.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblObserver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/observer_Icon.png"))); // NOI18N
+        LblObserver.setText("Observer");
+        LblObserver.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblObserverMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblObserverMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblObserverMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnObserverLayout = new javax.swing.GroupLayout(btnObserver);
         btnObserver.setLayout(btnObserverLayout);
         btnObserverLayout.setHorizontalGroup(
             btnObserverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+            .addComponent(LblObserver, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
         );
         btnObserverLayout.setVerticalGroup(
             btnObserverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(LblObserver, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnObserver, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 650, 141, 50));
 
         btnStrategy.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel20.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setText("Strategy");
+        LblStrategy.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblStrategy.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblStrategy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Strategy_Icon.png"))); // NOI18N
+        LblStrategy.setText("Strategy");
+        LblStrategy.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblStrategyMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblStrategyMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblStrategyMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnStrategyLayout = new javax.swing.GroupLayout(btnStrategy);
         btnStrategy.setLayout(btnStrategyLayout);
@@ -270,39 +311,63 @@ public class Home extends javax.swing.JFrame {
             btnStrategyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnStrategyLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(LblStrategy, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btnStrategyLayout.setVerticalGroup(
             btnStrategyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(LblStrategy, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnStrategy, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 650, 141, 50));
 
         btnTemplateM.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel21.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel21.setText("Template Method");
+        LblTemplateMethod.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblTemplateMethod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblTemplateMethod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/TemplateMethod_Icon.png"))); // NOI18N
+        LblTemplateMethod.setText("<html>Template Method<html>");
+        LblTemplateMethod.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblTemplateMethodMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblTemplateMethodMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblTemplateMethodMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnTemplateMLayout = new javax.swing.GroupLayout(btnTemplateM);
         btnTemplateM.setLayout(btnTemplateMLayout);
         btnTemplateMLayout.setHorizontalGroup(
             btnTemplateMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(LblTemplateMethod, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         btnTemplateMLayout.setVerticalGroup(
             btnTemplateMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(LblTemplateMethod, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnTemplateM, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 650, 141, 50));
 
         btnVisitor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel22.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel22.setText("Visitor");
+        LblVisitor.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblVisitor.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblVisitor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Visitor_Icon.png"))); // NOI18N
+        LblVisitor.setText("Visitor");
+        LblVisitor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblVisitorMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblVisitorMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblVisitorMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnVisitorLayout = new javax.swing.GroupLayout(btnVisitor);
         btnVisitor.setLayout(btnVisitorLayout);
@@ -310,20 +375,32 @@ public class Home extends javax.swing.JFrame {
             btnVisitorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnVisitorLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(LblVisitor, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btnVisitorLayout.setVerticalGroup(
             btnVisitorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(LblVisitor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnVisitor, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 650, 141, 50));
 
         btnState.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lbl.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        lbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl.setText("State");
+        LblState.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblState.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblState.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/State_Icon.png"))); // NOI18N
+        LblState.setText("State");
+        LblState.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblStateMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblStateMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblStateMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnStateLayout = new javax.swing.GroupLayout(btnState);
         btnState.setLayout(btnStateLayout);
@@ -331,39 +408,63 @@ public class Home extends javax.swing.JFrame {
             btnStateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnStateLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(LblState, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btnStateLayout.setVerticalGroup(
             btnStateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(LblState, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnState, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 650, 141, 50));
 
         btnChainOR.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel18.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("<html>Chain Of Responsability<html>");
+        LblChainOfResponsability.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblChainOfResponsability.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblChainOfResponsability.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/ChainOfResponsability_Icon.png"))); // NOI18N
+        LblChainOfResponsability.setText("<html>Chain Of Responsability<html>");
+        LblChainOfResponsability.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblChainOfResponsabilityMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblChainOfResponsabilityMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblChainOfResponsabilityMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnChainORLayout = new javax.swing.GroupLayout(btnChainOR);
         btnChainOR.setLayout(btnChainORLayout);
         btnChainORLayout.setHorizontalGroup(
             btnChainORLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+            .addComponent(LblChainOfResponsability, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
         );
         btnChainORLayout.setVerticalGroup(
             btnChainORLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(LblChainOfResponsability, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnChainOR, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, 141, 50));
 
         btnCommand.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel17.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("Command");
+        LblCommand.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblCommand.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblCommand.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Command_Icon.png"))); // NOI18N
+        LblCommand.setText("Command");
+        LblCommand.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblCommandMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblCommandMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblCommandMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnCommandLayout = new javax.swing.GroupLayout(btnCommand);
         btnCommand.setLayout(btnCommandLayout);
@@ -371,39 +472,63 @@ public class Home extends javax.swing.JFrame {
             btnCommandLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnCommandLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(LblCommand, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btnCommandLayout.setVerticalGroup(
             btnCommandLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(LblCommand, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnCommand, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 590, 141, 50));
 
         btnIterator.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel16.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("Iterator");
+        LblIterator.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblIterator.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblIterator.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/iteration_Icon.png"))); // NOI18N
+        LblIterator.setText("Iterator");
+        LblIterator.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblIteratorMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblIteratorMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblIteratorMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnIteratorLayout = new javax.swing.GroupLayout(btnIterator);
         btnIterator.setLayout(btnIteratorLayout);
         btnIteratorLayout.setHorizontalGroup(
             btnIteratorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+            .addComponent(LblIterator, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
         );
         btnIteratorLayout.setVerticalGroup(
             btnIteratorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(LblIterator, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnIterator, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 590, 141, 50));
 
         btnMediator.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel15.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText("Mediator");
+        LblMediator.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblMediator.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblMediator.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/mediator_Icon.png"))); // NOI18N
+        LblMediator.setText("Mediator");
+        LblMediator.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblMediatorMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblMediatorMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblMediatorMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnMediatorLayout = new javax.swing.GroupLayout(btnMediator);
         btnMediator.setLayout(btnMediatorLayout);
@@ -411,20 +536,32 @@ public class Home extends javax.swing.JFrame {
             btnMediatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnMediatorLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(LblMediator, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btnMediatorLayout.setVerticalGroup(
             btnMediatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(LblMediator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnMediator, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 590, 141, 50));
 
         btnMemento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel14.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("Memento");
+        LblMemento.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblMemento.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblMemento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Memento_Icon.png"))); // NOI18N
+        LblMemento.setText("Memento");
+        LblMemento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblMementoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblMementoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblMementoMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnMementoLayout = new javax.swing.GroupLayout(btnMemento);
         btnMemento.setLayout(btnMementoLayout);
@@ -432,20 +569,32 @@ public class Home extends javax.swing.JFrame {
             btnMementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnMementoLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(LblMemento, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btnMementoLayout.setVerticalGroup(
             btnMementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(LblMemento, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnMemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 590, 141, 50));
 
         btnProxy.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel12.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setText("Proxy");
+        LblProxy.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblProxy.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblProxy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Proxy_Icon.png"))); // NOI18N
+        LblProxy.setText("Proxy");
+        LblProxy.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblProxyMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblProxyMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblProxyMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnProxyLayout = new javax.swing.GroupLayout(btnProxy);
         btnProxy.setLayout(btnProxyLayout);
@@ -453,20 +602,32 @@ public class Home extends javax.swing.JFrame {
             btnProxyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnProxyLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(LblProxy, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btnProxyLayout.setVerticalGroup(
             btnProxyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(LblProxy, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnProxy, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 500, 141, 50));
 
         btnFlyweight.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel13.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setText("Flyweight ");
+        LblFlyweight.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblFlyweight.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblFlyweight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Flightweight_Icon.png"))); // NOI18N
+        LblFlyweight.setText("Flyweight ");
+        LblFlyweight.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblFlyweightMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblFlyweightMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblFlyweightMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnFlyweightLayout = new javax.swing.GroupLayout(btnFlyweight);
         btnFlyweight.setLayout(btnFlyweightLayout);
@@ -474,20 +635,32 @@ public class Home extends javax.swing.JFrame {
             btnFlyweightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnFlyweightLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(LblFlyweight, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btnFlyweightLayout.setVerticalGroup(
             btnFlyweightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(LblFlyweight, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnFlyweight, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 500, 141, 50));
 
         btnFacade.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel11.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("Facade");
+        LblFacade.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblFacade.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblFacade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Facade_Icon.png"))); // NOI18N
+        LblFacade.setText("Facade");
+        LblFacade.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblFacadeMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblFacadeMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblFacadeMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnFacadeLayout = new javax.swing.GroupLayout(btnFacade);
         btnFacade.setLayout(btnFacadeLayout);
@@ -495,20 +668,32 @@ public class Home extends javax.swing.JFrame {
             btnFacadeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnFacadeLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(LblFacade, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btnFacadeLayout.setVerticalGroup(
             btnFacadeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(LblFacade, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnFacade, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 440, 141, 50));
 
         btnDecorator.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel10.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("Decorator");
+        LblDecorator.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblDecorator.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblDecorator.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Decorator_Icon.png"))); // NOI18N
+        LblDecorator.setText("Decorator");
+        LblDecorator.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblDecoratorMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblDecoratorMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblDecoratorMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnDecoratorLayout = new javax.swing.GroupLayout(btnDecorator);
         btnDecorator.setLayout(btnDecoratorLayout);
@@ -516,39 +701,63 @@ public class Home extends javax.swing.JFrame {
             btnDecoratorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnDecoratorLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(LblDecorator, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btnDecoratorLayout.setVerticalGroup(
             btnDecoratorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(LblDecorator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnDecorator, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 440, 141, 50));
 
         btnComposite.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel9.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("Composite");
+        LblComposite.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblComposite.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblComposite.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Composite_Icon.png"))); // NOI18N
+        LblComposite.setText("Composite");
+        LblComposite.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblCompositeMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblCompositeMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblCompositeMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnCompositeLayout = new javax.swing.GroupLayout(btnComposite);
         btnComposite.setLayout(btnCompositeLayout);
         btnCompositeLayout.setHorizontalGroup(
             btnCompositeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+            .addComponent(LblComposite, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
         );
         btnCompositeLayout.setVerticalGroup(
             btnCompositeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(LblComposite, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnComposite, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, 141, 50));
 
         btnBridge.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel8.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("Bridge");
+        LblBridge.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblBridge.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblBridge.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Bridge_Icon.png"))); // NOI18N
+        LblBridge.setText("Bridge");
+        LblBridge.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblBridgeMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblBridgeMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblBridgeMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnBridgeLayout = new javax.swing.GroupLayout(btnBridge);
         btnBridge.setLayout(btnBridgeLayout);
@@ -556,39 +765,63 @@ public class Home extends javax.swing.JFrame {
             btnBridgeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnBridgeLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(LblBridge, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btnBridgeLayout.setVerticalGroup(
             btnBridgeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(LblBridge, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnBridge, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 141, 50));
 
         btnAdapter.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel7.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("Adapter");
+        LblAdapter.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblAdapter.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblAdapter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Adapter_Icon.png"))); // NOI18N
+        LblAdapter.setText("Adapter");
+        LblAdapter.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblAdapterMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblAdapterMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblAdapterMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnAdapterLayout = new javax.swing.GroupLayout(btnAdapter);
         btnAdapter.setLayout(btnAdapterLayout);
         btnAdapterLayout.setHorizontalGroup(
             btnAdapterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+            .addComponent(LblAdapter, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
         );
         btnAdapterLayout.setVerticalGroup(
             btnAdapterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(LblAdapter, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnAdapter, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, 141, 50));
 
         btnSingleton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel6.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Singleton");
+        LblSingleton.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblSingleton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblSingleton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Singleton_Icon.png"))); // NOI18N
+        LblSingleton.setText("Singleton");
+        LblSingleton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblSingletonMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblSingletonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblSingletonMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnSingletonLayout = new javax.swing.GroupLayout(btnSingleton);
         btnSingleton.setLayout(btnSingletonLayout);
@@ -596,20 +829,32 @@ public class Home extends javax.swing.JFrame {
             btnSingletonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnSingletonLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(LblSingleton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btnSingletonLayout.setVerticalGroup(
             btnSingletonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(LblSingleton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnSingleton, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 340, 141, 50));
 
         btnPrototype.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel4.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Prototype");
+        LblPrototype.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblPrototype.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblPrototype.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Prototype_Icon.png"))); // NOI18N
+        LblPrototype.setText("Prototype");
+        LblPrototype.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblPrototypeMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblPrototypeMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblPrototypeMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnPrototypeLayout = new javax.swing.GroupLayout(btnPrototype);
         btnPrototype.setLayout(btnPrototypeLayout);
@@ -617,39 +862,63 @@ public class Home extends javax.swing.JFrame {
             btnPrototypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnPrototypeLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(LblPrototype, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btnPrototypeLayout.setVerticalGroup(
             btnPrototypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(LblPrototype, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnPrototype, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 340, 141, 50));
 
         btnBuilder.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel5.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Builder");
+        LblBuilder.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblBuilder.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblBuilder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Builder_Icon.png"))); // NOI18N
+        LblBuilder.setText("Builder");
+        LblBuilder.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblBuilderMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblBuilderMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblBuilderMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnBuilderLayout = new javax.swing.GroupLayout(btnBuilder);
         btnBuilder.setLayout(btnBuilderLayout);
         btnBuilderLayout.setHorizontalGroup(
             btnBuilderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+            .addComponent(LblBuilder, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
         );
         btnBuilderLayout.setVerticalGroup(
             btnBuilderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(LblBuilder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnBuilder, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, 141, 50));
 
         btnAbstractF.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel3.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Abstract Factory");
+        LblAbstractFactory.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblAbstractFactory.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblAbstractFactory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/AbstracFactory_Icon.png"))); // NOI18N
+        LblAbstractFactory.setText("<html>Abstract Factory<html>");
+        LblAbstractFactory.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblAbstractFactoryMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblAbstractFactoryMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblAbstractFactoryMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnAbstractFLayout = new javax.swing.GroupLayout(btnAbstractF);
         btnAbstractF.setLayout(btnAbstractFLayout);
@@ -657,30 +926,42 @@ public class Home extends javax.swing.JFrame {
             btnAbstractFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnAbstractFLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(LblAbstractFactory, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btnAbstractFLayout.setVerticalGroup(
             btnAbstractFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(LblAbstractFactory, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnAbstractF, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 141, 50));
 
         btnFactoryM.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel2.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("<html>Factory Method<html>");
+        LblFactoryMethod.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
+        LblFactoryMethod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblFactoryMethod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/FactoryMethod_Icon.png"))); // NOI18N
+        LblFactoryMethod.setText("<html>Factory  Method<html>");
+        LblFactoryMethod.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblFactoryMethodMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LblFactoryMethodMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LblFactoryMethodMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnFactoryMLayout = new javax.swing.GroupLayout(btnFactoryM);
         btnFactoryM.setLayout(btnFactoryMLayout);
         btnFactoryMLayout.setHorizontalGroup(
             btnFactoryMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(LblFactoryMethod, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         btnFactoryMLayout.setVerticalGroup(
             btnFactoryMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(LblFactoryMethod, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel1.add(btnFactoryM, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 141, 50));
@@ -703,7 +984,9 @@ public class Home extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 725, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -733,6 +1016,396 @@ public class Home extends javax.swing.JFrame {
         mouseX=evt.getX();
         mouseY=evt.getY();
     }//GEN-LAST:event_HeaderMousePressed
+
+    private void LblFactoryMethodMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblFactoryMethodMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblFactoryMethod.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblFactoryMethodMouseClicked
+
+    private void LblFactoryMethodMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblFactoryMethodMouseEntered
+        btnFactoryM.setOpaque(true);
+        btnFactoryM.setBackground(Color.gray);
+       
+    }//GEN-LAST:event_LblFactoryMethodMouseEntered
+
+    private void LblFactoryMethodMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblFactoryMethodMouseExited
+        btnFactoryM.setOpaque(true);
+        btnFactoryM.setBackground(new Color(214, 217, 223));
+        
+    }//GEN-LAST:event_LblFactoryMethodMouseExited
+
+    private void LblAbstractFactoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblAbstractFactoryMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblAbstractFactory.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblAbstractFactoryMouseClicked
+
+    private void LblAbstractFactoryMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblAbstractFactoryMouseEntered
+        btnAbstractF.setOpaque(true);
+        btnAbstractF.setBackground(Color.gray);
+    }//GEN-LAST:event_LblAbstractFactoryMouseEntered
+
+    private void LblAbstractFactoryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblAbstractFactoryMouseExited
+        btnAbstractF.setOpaque(true);
+        btnAbstractF.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblAbstractFactoryMouseExited
+
+    private void LblBuilderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblBuilderMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblBuilder.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblBuilderMouseClicked
+
+    private void LblBuilderMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblBuilderMouseEntered
+        btnBuilder.setOpaque(true);
+        btnBuilder.setBackground(Color.gray);
+    }//GEN-LAST:event_LblBuilderMouseEntered
+
+    private void LblBuilderMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblBuilderMouseExited
+        btnBuilder.setOpaque(true);
+        btnBuilder.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblBuilderMouseExited
+
+    private void LblPrototypeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblPrototypeMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblPrototype.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblPrototypeMouseClicked
+
+    private void LblPrototypeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblPrototypeMouseEntered
+        btnPrototype.setOpaque(true);
+        btnPrototype.setBackground(Color.gray);
+    }//GEN-LAST:event_LblPrototypeMouseEntered
+
+    private void LblPrototypeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblPrototypeMouseExited
+        btnPrototype.setOpaque(true);
+        btnPrototype.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblPrototypeMouseExited
+
+    private void LblSingletonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblSingletonMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblSingleton.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblSingletonMouseClicked
+
+    private void LblSingletonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblSingletonMouseEntered
+        btnSingleton.setOpaque(true);
+        btnSingleton.setBackground(Color.gray);
+    }//GEN-LAST:event_LblSingletonMouseEntered
+
+    private void LblSingletonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblSingletonMouseExited
+        btnSingleton.setOpaque(true);
+        btnSingleton.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblSingletonMouseExited
+
+    private void LblGlossaryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblGlossaryMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LblGlossaryMouseClicked
+
+    private void LblGlossaryMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblGlossaryMouseEntered
+        btnGlossary.setOpaque(true);
+        btnGlossary.setBackground(Color.gray);
+    }//GEN-LAST:event_LblGlossaryMouseEntered
+
+    private void LblGlossaryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblGlossaryMouseExited
+        btnGlossary.setOpaque(true);
+        btnGlossary.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblGlossaryMouseExited
+
+    private void LblAdapterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblAdapterMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblAdapter.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblAdapterMouseClicked
+
+    private void LblAdapterMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblAdapterMouseEntered
+        btnAdapter.setOpaque(true);
+        btnAdapter.setBackground(Color.gray);
+    }//GEN-LAST:event_LblAdapterMouseEntered
+
+    private void LblAdapterMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblAdapterMouseExited
+        btnAdapter.setOpaque(true);
+        btnAdapter.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblAdapterMouseExited
+
+    private void LblBridgeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblBridgeMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblBridge.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblBridgeMouseClicked
+
+    private void LblBridgeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblBridgeMouseEntered
+        btnBridge.setOpaque(true);
+        btnBridge.setBackground(Color.gray);
+    }//GEN-LAST:event_LblBridgeMouseEntered
+
+    private void LblBridgeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblBridgeMouseExited
+        btnBridge.setOpaque(true);
+        btnBridge.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblBridgeMouseExited
+
+    private void LblCompositeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblCompositeMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblComposite.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblCompositeMouseClicked
+
+    private void LblCompositeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblCompositeMouseEntered
+        btnComposite.setOpaque(true);
+        btnComposite.setBackground(Color.gray);
+    }//GEN-LAST:event_LblCompositeMouseEntered
+
+    private void LblCompositeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblCompositeMouseExited
+        btnComposite.setOpaque(true);
+        btnComposite.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblCompositeMouseExited
+
+    private void LblDecoratorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblDecoratorMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblDecorator.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblDecoratorMouseClicked
+
+    private void LblDecoratorMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblDecoratorMouseEntered
+        btnDecorator.setOpaque(true);
+        btnDecorator.setBackground(Color.gray);
+    }//GEN-LAST:event_LblDecoratorMouseEntered
+
+    private void LblDecoratorMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblDecoratorMouseExited
+        btnDecorator.setOpaque(true);
+        btnDecorator.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblDecoratorMouseExited
+
+    private void LblFacadeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblFacadeMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblFacade.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblFacadeMouseClicked
+
+    private void LblFacadeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblFacadeMouseEntered
+        btnFacade.setOpaque(true);
+        btnFacade.setBackground(Color.gray);
+    }//GEN-LAST:event_LblFacadeMouseEntered
+
+    private void LblFacadeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblFacadeMouseExited
+        btnFacade.setOpaque(true);
+        btnFacade.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblFacadeMouseExited
+
+    private void LblFlyweightMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblFlyweightMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblFlyweight.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblFlyweightMouseClicked
+
+    private void LblFlyweightMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblFlyweightMouseEntered
+        btnFlyweight.setOpaque(true);
+        btnFlyweight.setBackground(Color.gray);
+    }//GEN-LAST:event_LblFlyweightMouseEntered
+
+    private void LblFlyweightMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblFlyweightMouseExited
+        btnFlyweight.setOpaque(true);
+        btnFlyweight.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblFlyweightMouseExited
+
+    private void LblProxyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblProxyMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblProxy.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblProxyMouseClicked
+
+    private void LblProxyMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblProxyMouseEntered
+        btnProxy.setOpaque(true);
+        btnProxy.setBackground(Color.gray);
+    }//GEN-LAST:event_LblProxyMouseEntered
+
+    private void LblProxyMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblProxyMouseExited
+        btnProxy.setOpaque(true);
+        btnProxy.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblProxyMouseExited
+
+    private void LblChainOfResponsabilityMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblChainOfResponsabilityMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblChainOfResponsability.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblChainOfResponsabilityMouseClicked
+
+    private void LblChainOfResponsabilityMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblChainOfResponsabilityMouseEntered
+        btnChainOR.setOpaque(true);
+        btnChainOR.setBackground(Color.gray);
+    }//GEN-LAST:event_LblChainOfResponsabilityMouseEntered
+
+    private void LblChainOfResponsabilityMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblChainOfResponsabilityMouseExited
+        btnChainOR.setOpaque(true);
+        btnChainOR.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblChainOfResponsabilityMouseExited
+
+    private void LblCommandMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblCommandMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblCommand.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblCommandMouseClicked
+
+    private void LblCommandMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblCommandMouseEntered
+        btnCommand.setOpaque(true);
+        btnCommand.setBackground(Color.gray);
+    }//GEN-LAST:event_LblCommandMouseEntered
+
+    private void LblCommandMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblCommandMouseExited
+        btnCommand.setOpaque(true);
+        btnCommand.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblCommandMouseExited
+
+    private void LblIteratorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblIteratorMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblIterator.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblIteratorMouseClicked
+
+    private void LblIteratorMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblIteratorMouseEntered
+        btnIterator.setOpaque(true);
+        btnIterator.setBackground(Color.gray);
+    }//GEN-LAST:event_LblIteratorMouseEntered
+
+    private void LblIteratorMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblIteratorMouseExited
+        btnIterator.setOpaque(true);
+        btnIterator.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblIteratorMouseExited
+
+    private void LblMediatorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblMediatorMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblMediator.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblMediatorMouseClicked
+
+    private void LblMediatorMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblMediatorMouseEntered
+        btnMediator.setOpaque(true);
+        btnMediator.setBackground(Color.gray);
+    }//GEN-LAST:event_LblMediatorMouseEntered
+
+    private void LblMediatorMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblMediatorMouseExited
+        btnMediator.setOpaque(true);
+        btnMediator.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblMediatorMouseExited
+
+    private void LblMementoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblMementoMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblMemento.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblMementoMouseClicked
+
+    private void LblMementoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblMementoMouseEntered
+        btnMemento.setOpaque(true);
+        btnMemento.setBackground(Color.gray);
+    }//GEN-LAST:event_LblMementoMouseEntered
+
+    private void LblMementoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblMementoMouseExited
+        btnMemento.setOpaque(true);
+        btnMemento.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblMementoMouseExited
+
+    private void LblObserverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblObserverMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblObserver.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblObserverMouseClicked
+
+    private void LblObserverMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblObserverMouseEntered
+        btnObserver.setOpaque(true);
+        btnObserver.setBackground(Color.gray);
+    }//GEN-LAST:event_LblObserverMouseEntered
+
+    private void LblObserverMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblObserverMouseExited
+        btnObserver.setOpaque(true);
+        btnObserver.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblObserverMouseExited
+
+    private void LblStrategyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblStrategyMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblStrategy.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblStrategyMouseClicked
+
+    private void LblStrategyMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblStrategyMouseEntered
+        btnStrategy.setOpaque(true);
+        btnStrategy.setBackground(Color.gray);
+    }//GEN-LAST:event_LblStrategyMouseEntered
+
+    private void LblStrategyMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblStrategyMouseExited
+        btnStrategy.setOpaque(true);
+        btnStrategy.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblStrategyMouseExited
+
+    private void LblTemplateMethodMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblTemplateMethodMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblTemplateMethod.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblTemplateMethodMouseClicked
+
+    private void LblTemplateMethodMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblTemplateMethodMouseEntered
+        btnTemplateM.setOpaque(true);
+        btnTemplateM.setBackground(Color.gray);
+    }//GEN-LAST:event_LblTemplateMethodMouseEntered
+
+    private void LblTemplateMethodMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblTemplateMethodMouseExited
+        btnTemplateM.setOpaque(true);
+        btnTemplateM.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblTemplateMethodMouseExited
+
+    private void LblVisitorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblVisitorMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblVisitor.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblVisitorMouseClicked
+
+    private void LblVisitorMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblVisitorMouseEntered
+        btnVisitor.setOpaque(true);
+        btnVisitor.setBackground(Color.gray);
+    }//GEN-LAST:event_LblVisitorMouseEntered
+
+    private void LblVisitorMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblVisitorMouseExited
+        btnVisitor.setOpaque(true);
+        btnVisitor.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblVisitorMouseExited
+
+    private void LblStateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblStateMouseClicked
+        PatternX newFrame = new PatternX();
+        newFrame.setDato(LblState.getText());
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_LblStateMouseClicked
+
+    private void LblStateMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblStateMouseEntered
+        btnState.setOpaque(true);
+        btnState.setBackground(Color.gray);
+    }//GEN-LAST:event_LblStateMouseEntered
+
+    private void LblStateMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblStateMouseExited
+        btnState.setOpaque(true);
+        btnState.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_LblStateMouseExited
 
     /**
      * @param args the command line arguments
@@ -771,11 +1444,34 @@ public class Home extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Header;
+    private javax.swing.JLabel LblAbstractFactory;
+    private javax.swing.JLabel LblAdapter;
+    private javax.swing.JLabel LblBridge;
+    private javax.swing.JLabel LblBuilder;
+    private javax.swing.JLabel LblChainOfResponsability;
+    private javax.swing.JLabel LblCommand;
+    private javax.swing.JLabel LblComposite;
+    private javax.swing.JLabel LblDecorator;
     private javax.swing.JLabel LblDefinition;
+    private javax.swing.JLabel LblFacade;
+    private javax.swing.JLabel LblFactoryMethod;
+    private javax.swing.JLabel LblFlyweight;
+    private javax.swing.JLabel LblGlossary;
+    private javax.swing.JLabel LblIterator;
+    private javax.swing.JLabel LblMediator;
+    private javax.swing.JLabel LblMemento;
+    private javax.swing.JLabel LblObserver;
+    private javax.swing.JLabel LblPrototype;
+    private javax.swing.JLabel LblProxy;
+    private javax.swing.JLabel LblSingleton;
+    private javax.swing.JLabel LblState;
+    private javax.swing.JLabel LblStrategy;
     private javax.swing.JLabel LblSubtittle1;
     private javax.swing.JLabel LblSubtittle2;
     private javax.swing.JLabel LblSubtittle3;
+    private javax.swing.JLabel LblTemplateMethod;
     private javax.swing.JLabel LblTittle;
+    private javax.swing.JLabel LblVisitor;
     private javax.swing.JPanel bgDecoration1;
     private javax.swing.JPanel btnAbstractF;
     private javax.swing.JPanel btnAdapter;
@@ -802,32 +1498,9 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel btnTemplateM;
     private javax.swing.JPanel btnVisitor;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel lbl;
     private javax.swing.JLabel txtCerrar;
     // End of variables declaration//GEN-END:variables
 }
