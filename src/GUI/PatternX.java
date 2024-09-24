@@ -161,7 +161,7 @@ public class PatternX extends javax.swing.JFrame {
         btnDefinition.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         LblDefinition.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblDefinition.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Patterns/Definition_Icon.png"))); // NOI18N
+        LblDefinition.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Patterns/Definition_Icon.png"))); // NOI18N
         LblDefinition.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         LblDefinition.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -193,7 +193,7 @@ public class PatternX extends javax.swing.JFrame {
         btnHome.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         LblHome.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Patterns/Home_icon.png"))); // NOI18N
+        LblHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Patterns/Home_icon.png"))); // NOI18N
         LblHome.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         LblHome.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -228,7 +228,7 @@ public class PatternX extends javax.swing.JFrame {
         btnAdvantage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         LblAdvantege.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblAdvantege.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Patterns/Advantages_Icon.png"))); // NOI18N
+        LblAdvantege.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Patterns/Advantages_Icon.png"))); // NOI18N
         LblAdvantege.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         LblAdvantege.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -260,7 +260,7 @@ public class PatternX extends javax.swing.JFrame {
         btnDiagram.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         LblDiagram.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblDiagram.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Patterns/Diagram_Icon.png"))); // NOI18N
+        LblDiagram.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Patterns/Diagram_Icon.png"))); // NOI18N
         LblDiagram.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         LblDiagram.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -292,7 +292,7 @@ public class PatternX extends javax.swing.JFrame {
         btnReferences.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         LblReferences.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblReferences.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Patterns/References_Icon.png"))); // NOI18N
+        LblReferences.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Patterns/References_Icon.png"))); // NOI18N
         LblReferences.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         LblReferences.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -324,7 +324,7 @@ public class PatternX extends javax.swing.JFrame {
         btnImplement.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         LblImplement.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblImplement.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Patterns/Implement_Icon.png"))); // NOI18N
+        LblImplement.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Patterns/Implement_Icon.png"))); // NOI18N
         LblImplement.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         LblImplement.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -356,7 +356,7 @@ public class PatternX extends javax.swing.JFrame {
         btnExperience.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         LblExperience.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblExperience.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Patterns/Experience_Icon.png"))); // NOI18N
+        LblExperience.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Patterns/Experience_Icon.png"))); // NOI18N
         LblExperience.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         LblExperience.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -388,7 +388,7 @@ public class PatternX extends javax.swing.JFrame {
         btnCodeExample.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         LblCodeExample.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblCodeExample.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Patterns/CodeExample_Icon.png"))); // NOI18N
+        LblCodeExample.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Patterns/CodeExample_Icon.png"))); // NOI18N
         LblCodeExample.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         LblCodeExample.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {

@@ -312,7 +312,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/Glossary_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/Glossary_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Glosario"/>
               </Properties>
@@ -356,7 +356,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/observer_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/observer_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Observer"/>
               </Properties>
@@ -403,7 +403,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/Strategy_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/Strategy_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Strategy"/>
               </Properties>
@@ -447,7 +447,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/TemplateMethod_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/TemplateMethod_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="&quot;&lt;html&gt;Template Method&lt;html&gt;&quot;" type="code"/>
@@ -496,7 +496,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/Visitor_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/Visitor_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Visitor"/>
               </Properties>
@@ -543,7 +543,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/State_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/State_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="State"/>
               </Properties>
@@ -587,7 +587,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/ChainOfResponsability_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/ChainOfResponsability_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="&quot;&lt;html&gt;Chain Of Responsability&lt;html&gt;&quot;" type="code"/>
@@ -636,7 +636,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/Command_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/Command_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Command"/>
               </Properties>
@@ -680,7 +680,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/iteration_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/iteration_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Iterator"/>
               </Properties>
@@ -727,7 +727,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/mediator_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/mediator_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Mediator"/>
               </Properties>
@@ -774,7 +774,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/Memento_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/Memento_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Memento"/>
               </Properties>
@@ -821,7 +821,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/Proxy_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/Proxy_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Proxy"/>
               </Properties>
@@ -868,7 +868,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/Flightweight_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/Flightweight_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Flyweight "/>
               </Properties>
@@ -915,7 +915,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/Facade_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/Facade_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Facade"/>
               </Properties>
@@ -962,7 +962,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/Decorator_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/Decorator_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Decorator"/>
               </Properties>
@@ -1006,7 +1006,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/Composite_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/Composite_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Composite"/>
               </Properties>
@@ -1053,7 +1053,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/Bridge_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/Bridge_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Bridge"/>
               </Properties>
@@ -1097,7 +1097,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/Adapter_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/Adapter_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Adapter"/>
               </Properties>
@@ -1144,7 +1144,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/Singleton_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/Singleton_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Singleton"/>
               </Properties>
@@ -1191,7 +1191,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/Prototype_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/Prototype_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Prototype"/>
               </Properties>
@@ -1235,7 +1235,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/Builder_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/Builder_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Builder"/>
               </Properties>
@@ -1282,7 +1282,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/AbstracFactory_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/AbstracFactory_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="&quot;&lt;html&gt;Abstract Factory&lt;html&gt;&quot;" type="code"/>
@@ -1328,7 +1328,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/Icons/Home/FactoryMethod_Icon.png"/>
+                  <Image iconType="3" name="/Assets/IMG/Icons/Home/FactoryMethod_Icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="&quot;&lt;html&gt;Factory  Method&lt;html&gt;&quot;" type="code"/>
@@ -1345,7 +1345,7 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/IMG/Icons/Home/bgCircle.png"/>
+              <Image iconType="3" name="/Assets/IMG/Icons/Home/bgCircle.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
@@ -1358,7 +1358,7 @@
         <Component class="javax.swing.JLabel" name="jLabel24">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/IMG/Icons/Home/bgTriangle.png"/>
+              <Image iconType="3" name="/Assets/IMG/Icons/Home/bgTriangle.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel24"/>
           </Properties>

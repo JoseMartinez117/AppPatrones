@@ -219,7 +219,7 @@ public class Home extends javax.swing.JFrame {
 
         LblGlossary.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblGlossary.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblGlossary.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Glossary_Icon.png"))); // NOI18N
+        LblGlossary.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/Glossary_Icon.png"))); // NOI18N
         LblGlossary.setText("Glosario");
         LblGlossary.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -260,7 +260,7 @@ public class Home extends javax.swing.JFrame {
 
         LblObserver.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblObserver.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblObserver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/observer_Icon.png"))); // NOI18N
+        LblObserver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/observer_Icon.png"))); // NOI18N
         LblObserver.setText("Observer");
         LblObserver.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -291,7 +291,7 @@ public class Home extends javax.swing.JFrame {
 
         LblStrategy.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblStrategy.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblStrategy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Strategy_Icon.png"))); // NOI18N
+        LblStrategy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/Strategy_Icon.png"))); // NOI18N
         LblStrategy.setText("Strategy");
         LblStrategy.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -324,7 +324,7 @@ public class Home extends javax.swing.JFrame {
 
         LblTemplateMethod.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblTemplateMethod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblTemplateMethod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/TemplateMethod_Icon.png"))); // NOI18N
+        LblTemplateMethod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/TemplateMethod_Icon.png"))); // NOI18N
         LblTemplateMethod.setText("<html>Template Method<html>");
         LblTemplateMethod.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -355,7 +355,7 @@ public class Home extends javax.swing.JFrame {
 
         LblVisitor.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblVisitor.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblVisitor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Visitor_Icon.png"))); // NOI18N
+        LblVisitor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/Visitor_Icon.png"))); // NOI18N
         LblVisitor.setText("Visitor");
         LblVisitor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -388,7 +388,7 @@ public class Home extends javax.swing.JFrame {
 
         LblState.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblState.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblState.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/State_Icon.png"))); // NOI18N
+        LblState.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/State_Icon.png"))); // NOI18N
         LblState.setText("State");
         LblState.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -421,7 +421,7 @@ public class Home extends javax.swing.JFrame {
 
         LblChainOfResponsability.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblChainOfResponsability.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblChainOfResponsability.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/ChainOfResponsability_Icon.png"))); // NOI18N
+        LblChainOfResponsability.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/ChainOfResponsability_Icon.png"))); // NOI18N
         LblChainOfResponsability.setText("<html>Chain Of Responsability<html>");
         LblChainOfResponsability.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -452,7 +452,7 @@ public class Home extends javax.swing.JFrame {
 
         LblCommand.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblCommand.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblCommand.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Command_Icon.png"))); // NOI18N
+        LblCommand.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/Command_Icon.png"))); // NOI18N
         LblCommand.setText("Command");
         LblCommand.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -485,7 +485,7 @@ public class Home extends javax.swing.JFrame {
 
         LblIterator.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblIterator.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblIterator.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/iteration_Icon.png"))); // NOI18N
+        LblIterator.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/iteration_Icon.png"))); // NOI18N
         LblIterator.setText("Iterator");
         LblIterator.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -516,7 +516,7 @@ public class Home extends javax.swing.JFrame {
 
         LblMediator.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblMediator.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblMediator.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/mediator_Icon.png"))); // NOI18N
+        LblMediator.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/mediator_Icon.png"))); // NOI18N
         LblMediator.setText("Mediator");
         LblMediator.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -549,7 +549,7 @@ public class Home extends javax.swing.JFrame {
 
         LblMemento.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblMemento.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblMemento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Memento_Icon.png"))); // NOI18N
+        LblMemento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/Memento_Icon.png"))); // NOI18N
         LblMemento.setText("Memento");
         LblMemento.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -582,7 +582,7 @@ public class Home extends javax.swing.JFrame {
 
         LblProxy.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblProxy.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblProxy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Proxy_Icon.png"))); // NOI18N
+        LblProxy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/Proxy_Icon.png"))); // NOI18N
         LblProxy.setText("Proxy");
         LblProxy.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -615,7 +615,7 @@ public class Home extends javax.swing.JFrame {
 
         LblFlyweight.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblFlyweight.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblFlyweight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Flightweight_Icon.png"))); // NOI18N
+        LblFlyweight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/Flightweight_Icon.png"))); // NOI18N
         LblFlyweight.setText("Flyweight ");
         LblFlyweight.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -648,7 +648,7 @@ public class Home extends javax.swing.JFrame {
 
         LblFacade.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblFacade.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblFacade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Facade_Icon.png"))); // NOI18N
+        LblFacade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/Facade_Icon.png"))); // NOI18N
         LblFacade.setText("Facade");
         LblFacade.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -681,7 +681,7 @@ public class Home extends javax.swing.JFrame {
 
         LblDecorator.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblDecorator.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblDecorator.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Decorator_Icon.png"))); // NOI18N
+        LblDecorator.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/Decorator_Icon.png"))); // NOI18N
         LblDecorator.setText("Decorator");
         LblDecorator.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -714,7 +714,7 @@ public class Home extends javax.swing.JFrame {
 
         LblComposite.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblComposite.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblComposite.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Composite_Icon.png"))); // NOI18N
+        LblComposite.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/Composite_Icon.png"))); // NOI18N
         LblComposite.setText("Composite");
         LblComposite.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -745,7 +745,7 @@ public class Home extends javax.swing.JFrame {
 
         LblBridge.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblBridge.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblBridge.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Bridge_Icon.png"))); // NOI18N
+        LblBridge.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/Bridge_Icon.png"))); // NOI18N
         LblBridge.setText("Bridge");
         LblBridge.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -778,7 +778,7 @@ public class Home extends javax.swing.JFrame {
 
         LblAdapter.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblAdapter.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblAdapter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Adapter_Icon.png"))); // NOI18N
+        LblAdapter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/Adapter_Icon.png"))); // NOI18N
         LblAdapter.setText("Adapter");
         LblAdapter.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -809,7 +809,7 @@ public class Home extends javax.swing.JFrame {
 
         LblSingleton.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblSingleton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblSingleton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Singleton_Icon.png"))); // NOI18N
+        LblSingleton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/Singleton_Icon.png"))); // NOI18N
         LblSingleton.setText("Singleton");
         LblSingleton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -842,7 +842,7 @@ public class Home extends javax.swing.JFrame {
 
         LblPrototype.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblPrototype.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblPrototype.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Prototype_Icon.png"))); // NOI18N
+        LblPrototype.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/Prototype_Icon.png"))); // NOI18N
         LblPrototype.setText("Prototype");
         LblPrototype.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -875,7 +875,7 @@ public class Home extends javax.swing.JFrame {
 
         LblBuilder.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblBuilder.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblBuilder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/Builder_Icon.png"))); // NOI18N
+        LblBuilder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/Builder_Icon.png"))); // NOI18N
         LblBuilder.setText("Builder");
         LblBuilder.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -906,7 +906,7 @@ public class Home extends javax.swing.JFrame {
 
         LblAbstractFactory.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblAbstractFactory.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblAbstractFactory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/AbstracFactory_Icon.png"))); // NOI18N
+        LblAbstractFactory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/AbstracFactory_Icon.png"))); // NOI18N
         LblAbstractFactory.setText("<html>Abstract Factory<html>");
         LblAbstractFactory.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -939,7 +939,7 @@ public class Home extends javax.swing.JFrame {
 
         LblFactoryMethod.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblFactoryMethod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblFactoryMethod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/FactoryMethod_Icon.png"))); // NOI18N
+        LblFactoryMethod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/FactoryMethod_Icon.png"))); // NOI18N
         LblFactoryMethod.setText("<html>Factory  Method<html>");
         LblFactoryMethod.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -966,11 +966,11 @@ public class Home extends javax.swing.JFrame {
 
         jPanel1.add(btnFactoryM, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 141, 50));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/bgCircle.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/bgCircle.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, 510, -1));
 
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Icons/Home/bgTriangle.png"))); // NOI18N
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/bgTriangle.png"))); // NOI18N
         jLabel24.setText("jLabel24");
         jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 530, 370));
 
