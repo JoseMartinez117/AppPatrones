@@ -5,14 +5,21 @@
 package GUI;
 
 import java.awt.Color;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.json.simple.parser.ParseException;
 
 public class Home extends javax.swing.JFrame {
     int mouseX,mouseY;
+    PatternX newFrame;
     
-    public Home() {
+    public Home() throws IOException, FileNotFoundException, ParseException {
         initComponents();
+        newFrame = new PatternX();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -616,7 +623,7 @@ public class Home extends javax.swing.JFrame {
         LblFlyweight.setFont(new java.awt.Font("Instrument Sans", 0, 14)); // NOI18N
         LblFlyweight.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LblFlyweight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Home/Flightweight_Icon.png"))); // NOI18N
-        LblFlyweight.setText("Flyweight ");
+        LblFlyweight.setText("Flyweight");
         LblFlyweight.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LblFlyweightMouseClicked(evt);
@@ -1018,7 +1025,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_HeaderMousePressed
 
     private void LblFactoryMethodMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblFactoryMethodMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblFactoryMethod.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1037,7 +1043,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblFactoryMethodMouseExited
 
     private void LblAbstractFactoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblAbstractFactoryMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblAbstractFactory.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1054,7 +1059,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblAbstractFactoryMouseExited
 
     private void LblBuilderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblBuilderMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblBuilder.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1071,7 +1075,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblBuilderMouseExited
 
     private void LblPrototypeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblPrototypeMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblPrototype.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1088,7 +1091,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblPrototypeMouseExited
 
     private void LblSingletonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblSingletonMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblSingleton.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1119,7 +1121,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblGlossaryMouseExited
 
     private void LblAdapterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblAdapterMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblAdapter.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1136,7 +1137,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblAdapterMouseExited
 
     private void LblBridgeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblBridgeMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblBridge.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1153,7 +1153,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblBridgeMouseExited
 
     private void LblCompositeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblCompositeMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblComposite.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1170,7 +1169,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblCompositeMouseExited
 
     private void LblDecoratorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblDecoratorMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblDecorator.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1187,7 +1185,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblDecoratorMouseExited
 
     private void LblFacadeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblFacadeMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblFacade.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1204,7 +1201,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblFacadeMouseExited
 
     private void LblFlyweightMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblFlyweightMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblFlyweight.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1221,7 +1217,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblFlyweightMouseExited
 
     private void LblProxyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblProxyMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblProxy.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1238,7 +1233,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblProxyMouseExited
 
     private void LblChainOfResponsabilityMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblChainOfResponsabilityMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblChainOfResponsability.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1255,7 +1249,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblChainOfResponsabilityMouseExited
 
     private void LblCommandMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblCommandMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblCommand.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1272,7 +1265,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblCommandMouseExited
 
     private void LblIteratorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblIteratorMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblIterator.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1289,7 +1281,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblIteratorMouseExited
 
     private void LblMediatorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblMediatorMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblMediator.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1306,7 +1297,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblMediatorMouseExited
 
     private void LblMementoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblMementoMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblMemento.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1323,7 +1313,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblMementoMouseExited
 
     private void LblObserverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblObserverMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblObserver.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1340,7 +1329,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblObserverMouseExited
 
     private void LblStrategyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblStrategyMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblStrategy.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1357,7 +1345,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblStrategyMouseExited
 
     private void LblTemplateMethodMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblTemplateMethodMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblTemplateMethod.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1374,7 +1361,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblTemplateMethodMouseExited
 
     private void LblVisitorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblVisitorMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblVisitor.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1391,7 +1377,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblVisitorMouseExited
 
     private void LblStateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblStateMouseClicked
-        PatternX newFrame = new PatternX();
         newFrame.setDato(LblState.getText());
         newFrame.setVisible(true);
         this.dispose();
@@ -1437,7 +1422,13 @@ public class Home extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Home().setVisible(true);
+                try {
+                    new Home().setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (ParseException ex) {
+                    Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
