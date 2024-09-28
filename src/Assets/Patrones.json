@@ -1,638 +1,734 @@
 {
-  "Creacionales": [
-    {
-      "Singleton" : 
-        {
-          "Definicion": "Nos permite asegurarnos de que una clase tenga una única instancia, a la vez que proporciona un punto de acceso global a dicha instancia.",
+  "Singleton" : {
+    "Definicion": "Nos permite asegurarnos de que una clase tenga una única instancia, a la vez que proporciona un punto de acceso global a dicha instancia.",
           
-          "Ventajas" : ["Puedes tener la certeza de que una clase tiene una única instancia.", 
-                        "Obtienes un punto de acceso global a dicha instancia.", 
-                        "El objeto Singleton solo se inicializa cuando se requiere por primera vez."],
+    "Ventajas" : [
+      "Puedes tener la certeza de que una clase tiene una única instancia.", 
+      "Obtienes un punto de acceso global a dicha instancia.", 
+      "El objeto Singleton solo se inicializa cuando se requiere por primera vez."
+    ],
           
-          "Desventajas" : ["Vulnera el Principio de responsabilidad única. El patrón resuelve dos problemas al mismo tiempo.", 
-                          "El patrón Singleton puede enmascarar un mal diseño, por ejemplo, cuando los componentes del programa saben demasiado los unos sobre los otros.", 
-                          "El patrón requiere de un tratamiento especial en un entorno con múltiples hilos de ejecución, para que varios hilos no creen un objeto Singleton varias veces.",
-                          "Puede resultar complicado realizar la prueba unitaria del código cliente del Singleton porque muchos frameworks de prueba dependen de la herencia a la hora de crear objetos simulados (mock objects). Debido a que la clase Singleton es privada y en la mayoría de los lenguajes resulta imposible sobrescribir métodos estáticos, tendrás que pensar en una manera original de simular el Singleton. O, simplemente, no escribas las pruebas. O no utilices el patrón Singleton."],
+    "Desventajas" : [
+      "Vulnera el Principio de responsabilidad única. El patrón resuelve dos problemas al mismo tiempo.", 
+      "El patrón Singleton puede enmascarar un mal diseño, por ejemplo, cuando los componentes del programa saben demasiado los unos sobre los otros.", 
+      "El patrón requiere de un tratamiento especial en un entorno con múltiples hilos de ejecución, para que varios hilos no creen un objeto Singleton varias veces.",
+      "Puede resultar complicado realizar la prueba unitaria del código cliente del Singleton porque muchos frameworks de prueba dependen de la herencia a la hora de crear objetos simulados (mock objects). Debido a que la clase Singleton es privada y en la mayoría de los lenguajes resulta imposible sobrescribir métodos estáticos, tendrás que pensar en una manera original de simular el Singleton. O, simplemente, no escribas las pruebas. O no utilices el patrón Singleton."
+    ],
           
-          "Implementacion" : ["Añade un campo estático privado a la clase para almacenar la instancia Singleton.", 
-                              "Declara un método de creación estático público para obtener la instancia Singleton.",
-                              "Implementa una inicialización diferida dentro del método estático. Debe crear un nuevo objeto en su primera llamada y colocarlo dentro del campo estático. El método deberá devolver siempre esa instancia en todas las llamadas siguientes.",
-                              "Declara el constructor de clase como privado. El método estático de la clase seguirá siendo capaz de invocar al constructor, pero no a los otros objetos.",
-                              "Repasa el código cliente y sustituye todas las llamadas directas al constructor de la instancia Singleton por llamadas a su método de creación estático."],
+    "Implementacion" : [
+      "Añade un campo estático privado a la clase para almacenar la instancia Singleton.", 
+      "Declara un método de creación estático público para obtener la instancia Singleton.",
+      "Implementa una inicialización diferida dentro del método estático. Debe crear un nuevo objeto en su primera llamada y colocarlo dentro del campo estático. El método deberá devolver siempre esa instancia en todas las llamadas siguientes.",
+      "Declara el constructor de clase como privado. El método estático de la clase seguirá siendo capaz de invocar al constructor, pero no a los otros objetos.",
+      "Repasa el código cliente y sustituye todas las llamadas directas al constructor de la instancia Singleton por llamadas a su método de creación estático."
+    ],
           
-          "Diagrama" : "",
+    "Diagrama" : "",
           
-          "Ejemplo": "",
+    "Ejemplo": "",
 
-          "Experiencia": "",
+    "Experiencia": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/singleton"
-                          ]
-        }
-    }, 
-    {
-      "Prototype" : 
-        {
-          "Definicion": "Nos permite copiar objetos existentes sin que el código dependa de sus clases.",
-          
-          "Ventajas" : ["Puedes clonar objetos sin acoplarlos a sus clases concretas.", 
-                        "Puedes evitar un código de inicialización repetido clonando prototipos prefabricados.", 
-                        "Puedes crear objetos complejos con más facilidad.",
-                        "Obtienes una alternativa a la herencia al tratar con preajustes de configuración para objetos complejos."],
-          
-          "Desventajas" : ["Clonar objetos complejos con referencias circulares puede resultar complicado."],
-          
-          "Implementacion" : ["Crea la interfaz del prototipo y declara el método clonar en ella, o, simplemente, añade el método a todas las clases de una jerarquía de clase existente, si la tienes.", 
-                              "Una clase de prototipo debe definir el constructor alternativo que acepta un objeto de dicha clase como argumento. El constructor debe copiar los valores de todos los campos definidos en la clase del objeto que se le pasa a la instancia recién creada. Si deseas cambiar una subclase, debes invocar al constructor padre para permitir que la superclase gestione la clonación de sus campos privados.",
-                              "Normalmente, el método de clonación consiste en una sola línea que ejecuta un operador new con la versión prototípica del constructor. Observa que todas las clases deben sobreescribir explícitamente el método de clonación y utilizar su propio nombre de clase junto al operador new. De lo contrario, el método de clonación puede producir un objeto a partir de una clase madre.",
-                              "Opcionalmente, puedes crear un registro de prototipos centralizado para almacenar un catálogo de prototipos de uso frecuente."],
-          
-          "Diagrama" : "",
-          
-          "Ejemplo": "",
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/singleton"
+    ]
+  },
 
-          "Experiencia": "",
+  "Prototype" : {
+    "Definicion": "Nos permite copiar objetos existentes sin que el código dependa de sus clases.",
+          
+    "Ventajas" :[
+      "Puedes clonar objetos sin acoplarlos a sus clases concretas.", 
+      "Puedes evitar un código de inicialización repetido clonando prototipos prefabricados.", 
+      "Puedes crear objetos complejos con más facilidad.",
+      "Obtienes una alternativa a la herencia al tratar con preajustes de configuración para objetos complejos."
+    ],
+          
+    "Desventajas" : [
+      "Clonar objetos complejos con referencias circulares puede resultar complicado."
+    ],
+          
+    "Implementacion" : [
+      "Crea la interfaz del prototipo y declara el método clonar en ella, o, simplemente, añade el método a todas las clases de una jerarquía de clase existente, si la tienes.", 
+      "Una clase de prototipo debe definir el constructor alternativo que acepta un objeto de dicha clase como argumento. El constructor debe copiar los valores de todos los campos definidos en la clase del objeto que se le pasa a la instancia recién creada. Si deseas cambiar una subclase, debes invocar al constructor padre para permitir que la superclase gestione la clonación de sus campos privados.",
+      "Normalmente, el método de clonación consiste en una sola línea que ejecuta un operador new con la versión prototípica del constructor. Observa que todas las clases deben sobreescribir explícitamente el método de clonación y utilizar su propio nombre de clase junto al operador new. De lo contrario, el método de clonación puede producir un objeto a partir de una clase madre.",
+      "Opcionalmente, puedes crear un registro de prototipos centralizado para almacenar un catálogo de prototipos de uso frecuente."
+    ],
+          
+    "Diagrama" : "",
+          
+    "Ejemplo": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/prototype" 
-                          ]
-        }
-    },
-    {
-      "Builder" : 
-        {
-          "Definicion": "Nos permite construir objetos complejos paso a paso. El patrón nos permite producir distintos tipos y representaciones de un objeto empleando el mismo código de construcción.",
-          
-          "Ventajas" : ["Puedes construir objetos paso a paso, aplazar pasos de la construcción o ejecutar pasos de forma recursiva.", 
-                        "Puedes reutilizar el mismo código de construcción al construir varias representaciones de productos.", 
-                        "Principio de responsabilidad única. Puedes aislar un código de construcción complejo de la lógica de negocio del producto."
-                      ],
-          
-          "Desventajas" : ["La complejidad general del código aumenta, ya que el patrón exige la creación de varias clases nuevas."],
-          
-          "Implementacion" : ["Asegúrate de poder definir claramente los pasos comunes de construcción para todas las representaciones disponibles del producto. De lo contrario, no podrás proceder a implementar el patrón.", 
-                              "Declara estos pasos en la interfaz constructora base.",
-                              "Crea una clase constructora concreta para cada una de las representaciones de producto e implementa sus pasos de construcción.",
-                              "Piensa en crear una clase directora. Puede encapsular varias formas de construir un producto utilizando el mismo objeto constructor.",
-                              "El código cliente crea tanto el objeto constructor como el director. Antes de que empiece la construcción, el cliente debe pasar un objeto constructor al director. Normalmente, el cliente hace esto sólo una vez, mediante los parámetros del constructor del director. El director utiliza el objeto constructor para el resto de la construcción. Existe una manera alternativa, en la que el objeto constructor se pasa directamente al método de construcción del director.",
-                              "El resultado de la construcción tan solo se puede obtener directamente del director si todos los productos siguen la misma interfaz. De lo contrario, el cliente deberá extraer el resultado del constructor."],
-          
-          "Diagrama" : "",
-          
-          "Ejemplo": "",
+    "Experiencia": "",
 
-          "Experiencia": "",
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/prototype" 
+    ]
+  },
+    
+  "Builder" : {
+    "Definicion": "Nos permite construir objetos complejos paso a paso. El patrón nos permite producir distintos tipos y representaciones de un objeto empleando el mismo código de construcción.",
+          
+    "Ventajas" :[
+      "Puedes construir objetos paso a paso, aplazar pasos de la construcción o ejecutar pasos de forma recursiva.", 
+      "Puedes reutilizar el mismo código de construcción al construir varias representaciones de productos.", 
+      "Principio de responsabilidad única. Puedes aislar un código de construcción complejo de la lógica de negocio del producto."
+    ],
+          
+    "Desventajas" : [
+      "La complejidad general del código aumenta, ya que el patrón exige la creación de varias clases nuevas."
+    ],
+          
+    "Implementacion" : [
+      "Asegúrate de poder definir claramente los pasos comunes de construcción para todas las representaciones disponibles del producto. De lo contrario, no podrás proceder a implementar el patrón.", 
+      "Declara estos pasos en la interfaz constructora base.",
+      "Crea una clase constructora concreta para cada una de las representaciones de producto e implementa sus pasos de construcción.",
+      "Piensa en crear una clase directora. Puede encapsular varias formas de construir un producto utilizando el mismo objeto constructor.",
+      "El código cliente crea tanto el objeto constructor como el director. Antes de que empiece la construcción, el cliente debe pasar un objeto constructor al director. Normalmente, el cliente hace esto sólo una vez, mediante los parámetros del constructor del director. El director utiliza el objeto constructor para el resto de la construcción. Existe una manera alternativa, en la que el objeto constructor se pasa directamente al método de construcción del director.",
+      "El resultado de la construcción tan solo se puede obtener directamente del director si todos los productos siguen la misma interfaz. De lo contrario, el cliente deberá extraer el resultado del constructor."
+    ],
+          
+    "Diagrama" : "",
+          
+    "Ejemplo": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/builder" 
-                          ]
-        }
-    },
-    {
-      "AbstractFactory" : 
-        {
-          "Definicion": "Nos permite producir familias de objetos relacionados sin especificar sus clases concretas.",
-          
-          "Ventajas" : ["Puedes tener la certeza de que los productos que obtienes de una fábrica son compatibles entre sí.", 
-                        "Evitas un acoplamiento fuerte entre productos concretos y el código cliente.", 
-                        "Principio de responsabilidad única. Puedes mover el código de creación de productos a un solo lugar, haciendo que el código sea más fácil de mantener.",
-                        "Principio de abierto/cerrado. Puedes introducir nuevas variantes de productos sin descomponer el código cliente existente."],
-          
-          "Desventajas" : ["Puede ser que el código se complique más de lo que debería, ya que se introducen muchas nuevas interfaces y clases junto al patrón."],
-          
-          "Implementacion" : ["Mapea una matriz de distintos tipos de productos frente a variantes de dichos productos.",
-                              "Declara interfaces abstractas de producto para todos los tipos de productos. Después haz que todas las clases concretas de productos implementen esas interfaces.",
-                              "Declara la interfaz de la fábrica abstracta con un grupo de métodos de creación para todos los productos abstractos.",
-                              "Implementa un grupo de clases concretas de fábrica, una por cada variante de producto.",
-                              "Crea un código de inicialización de la fábrica en algún punto de la aplicación. Deberá instanciar una de las clases concretas de la fábrica, dependiendo de la configuración de la aplicación o del entorno actual. Pasa este objeto de fábrica a todas las clases que construyen productos.",
-                              "Explora el código y encuentra todas las llamadas directas a constructores de producto. Sustitúyelas por llamadas al método de creación adecuado dentro del objeto de fábrica."],
-          "Diagrama" : "",
-          
-          "Ejemplo": "",
+    "Experiencia": "",
 
-          "Experiencia": "",
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/builder" 
+    ]
+  },
+    
+  "AbstractFactory" : {
+    "Definicion": "Nos permite producir familias de objetos relacionados sin especificar sus clases concretas.",
+          
+    "Ventajas" : [
+      "Puedes tener la certeza de que los productos que obtienes de una fábrica son compatibles entre sí.", 
+      "Evitas un acoplamiento fuerte entre productos concretos y el código cliente.", 
+      "Principio de responsabilidad única. Puedes mover el código de creación de productos a un solo lugar, haciendo que el código sea más fácil de mantener.",
+      "Principio de abierto/cerrado. Puedes introducir nuevas variantes de productos sin descomponer el código cliente existente."
+    ],
+          
+    "Desventajas" : [
+      "Puede ser que el código se complique más de lo que debería, ya que se introducen muchas nuevas interfaces y clases junto al patrón."
+    ],
+          
+    "Implementacion" : [
+      "Mapea una matriz de distintos tipos de productos frente a variantes de dichos productos.",
+      "Declara interfaces abstractas de producto para todos los tipos de productos. Después haz que todas las clases concretas de productos implementen esas interfaces.",
+      "Declara la interfaz de la fábrica abstracta con un grupo de métodos de creación para todos los productos abstractos.",
+      "Implementa un grupo de clases concretas de fábrica, una por cada variante de producto.",
+      "Crea un código de inicialización de la fábrica en algún punto de la aplicación. Deberá instanciar una de las clases concretas de la fábrica, dependiendo de la configuración de la aplicación o del entorno actual. Pasa este objeto de fábrica a todas las clases que construyen productos.",
+      "Explora el código y encuentra todas las llamadas directas a constructores de producto. Sustitúyelas por llamadas al método de creación adecuado dentro del objeto de fábrica."
+    ],
+    "Diagrama" : "",
+          
+    "Ejemplo": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/abstract-factory" 
-                          ]
-        }
-    },
-    {
-      "FactoryMethod" : 
-        {
-          "Definicion" : "Proporciona una interfaz para crear objetos en una superclase, mientras permite a las subclases alterar el tipo de objetos que se crearán.",
-          
-          "Ventajas" : ["Evitas un acoplamiento fuerte entre el creador y los productos concretos.", 
-                        "Principio de responsabilidad única. Puedes mover el código de creación de producto a un lugar del programa, haciendo que el código sea más fácil de mantener.", 
-                        "Principio de abierto/cerrado. Puedes incorporar nuevos tipos de productos en el programa sin descomponer el código cliente existente."],
-          
-          "Desventajas" : ["Puede ser que el código se complique, ya que debes incorporar una multitud de nuevas subclases para implementar el patrón. La situación ideal sería introducir el patrón en una jerarquía existente de clases creadoras."],
-          
-          "Implementacion" : ["Haz que todos los productos sigan la misma interfaz. Esta interfaz deberá declarar métodos que tengan sentido en todos los productos.",
-                              "Añade un patrón Factory Method vacío dentro de la clase creadora. El tipo de retorno del método deberá coincidir con la interfaz común de los productos.",
-                              "Encuentra todas las referencias a constructores de producto en el código de la clase creadora. Una a una, sustitúyelas por invocaciones al Factory Method, mientras extraes el código de creación de productos para colocarlo dentro del Factory Method.",
-                              "Ahora, crea un grupo de subclases creadoras para cada tipo de producto enumerado en el Factory Method. Sobrescribe el Factory Method en las subclases y extrae las partes adecuadas de código constructor del método base.",
-                              "Si hay demasiados tipos de producto y no tiene sentido crear subclases para todos ellos, puedes reutilizar el parámetro de control de la clase base en las subclases.",
-                              "Si, tras todas las extracciones, el Factory Method base queda vacío, puedes hacerlo abstracto. Si queda algo dentro, puedes convertirlo en un comportamiento por defecto del método."],
-          "Diagrama" : "",
-          
-          "Ejemplo": "",
+    "Experiencia": "",
 
-          "Experiencia": "",
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/abstract-factory" 
+    ]
+  },  
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/factory-method" 
-                          ]
-        }
-    }
-  ],
-  "Escturcturales":[
-    {
-      "Adapter":
-      {
-          "Definicion": "Permite la colaboración entre objetos con interfaces incompatibles.",
+  "FactoryMethod" : {
+    "Definicion" : "Proporciona una interfaz para crear objetos en una superclase, mientras permite a las subclases alterar el tipo de objetos que se crearán.",
+          
+    "Ventajas" : [
+      "Evitas un acoplamiento fuerte entre el creador y los productos concretos.", 
+      "Principio de responsabilidad única. Puedes mover el código de creación de producto a un lugar del programa, haciendo que el código sea más fácil de mantener.", 
+      "Principio de abierto/cerrado. Puedes incorporar nuevos tipos de productos en el programa sin descomponer el código cliente existente."
+    ],
+          
+    "Desventajas" : [
+      "Puede ser que el código se complique, ya que debes incorporar una multitud de nuevas subclases para implementar el patrón. La situación ideal sería introducir el patrón en una jerarquía existente de clases creadoras."
+    ],
+          
+    "Implementacion" : [
+      "Haz que todos los productos sigan la misma interfaz. Esta interfaz deberá declarar métodos que tengan sentido en todos los productos.",
+      "Añade un patrón Factory Method vacío dentro de la clase creadora. El tipo de retorno del método deberá coincidir con la interfaz común de los productos.",
+      "Encuentra todas las referencias a constructores de producto en el código de la clase creadora. Una a una, sustitúyelas por invocaciones al Factory Method, mientras extraes el código de creación de productos para colocarlo dentro del Factory Method.",
+      "Ahora, crea un grupo de subclases creadoras para cada tipo de producto enumerado en el Factory Method. Sobrescribe el Factory Method en las subclases y extrae las partes adecuadas de código constructor del método base.",
+      "Si hay demasiados tipos de producto y no tiene sentido crear subclases para todos ellos, puedes reutilizar el parámetro de control de la clase base en las subclases.",
+      "Si, tras todas las extracciones, el Factory Method base queda vacío, puedes hacerlo abstracto. Si queda algo dentro, puedes convertirlo en un comportamiento por defecto del método."
+    ],
+
+    "Diagrama" : "",
+          
+    "Ejemplo": "",
+
+    "Experiencia": "",
+
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/factory-method" 
+    ]
+  },
+
+  "Adapter":{
+    "Definicion": "Permite la colaboración entre objetos con interfaces incompatibles.",
         
-          "Ventajas" : ["Principio de responsabilidad única. Puedes separar la interfaz o el código de conversión de datos de la lógica de negocio primaria del programa.",
-                        "Principio de abierto/cerrado. Puedes introducir nuevos tipos de adaptadores al programa sin descomponer el código cliente existente, siempre y cuando trabajen con los adaptadores a través de la interfaz con el cliente."],
+    "Ventajas" : [
+      "Principio de responsabilidad única. Puedes separar la interfaz o el código de conversión de datos de la lógica de negocio primaria del programa.",
+      "Principio de abierto/cerrado. Puedes introducir nuevos tipos de adaptadores al programa sin descomponer el código cliente existente, siempre y cuando trabajen con los adaptadores a través de la interfaz con el cliente."
+    ],
 
-          "Desventajas" : ["La complejidad general del código aumenta, ya que debes introducir un grupo de nuevas interfaces y clases. En ocasiones resulta más sencillo cambiar la clase de servicio de modo que coincida con el resto de tu código."],
+    "Desventajas" : [
+      "La complejidad general del código aumenta, ya que debes introducir un grupo de nuevas interfaces y clases. En ocasiones resulta más sencillo cambiar la clase de servicio de modo que coincida con el resto de tu código."
+    ],
 
-          "Implementacion" : ["Asegúrate de que tienes al menos dos clases con interfaces incompatibles: Una útil clase servicio que no puedes cambiar (a menudo de un tercero, heredada o con muchas dependencias existentes). Una o varias clases cliente que se beneficiarían de contar con una clase de servicio.",
-                              "Declara la interfaz con el cliente y describe el modo en que las clases cliente se comunican con la clase de servicio.",
-                              "Crea la clase adaptadora y haz que siga la interfaz con el cliente. Deja todos los métodos vacíos por ahora.",
-                              "Añade un campo a la clase adaptadora para almacenar una referencia al objeto de servicio. La práctica común es inicializar este campo a través del constructor, pero en ocasiones es adecuado pasarlo al adaptador cuando se invocan sus métodos.",
-                              "Uno por uno, implementa todos los métodos de la interfaz con el cliente en la clase adaptadora. La clase adaptadora deberá delegar la mayor parte del trabajo real al objeto de servicio, gestionando tan solo la interfaz o la conversión de formato de los datos.",
-                              "Las clases cliente deberán utilizar la clase adaptadora a través de la interfaz con el cliente. Esto te permitirá cambiar o extender las clases adaptadoras sin afectar al código cliente."],
+    "Implementacion" : [
+      "Asegúrate de que tienes al menos dos clases con interfaces incompatibles: Una útil clase servicio que no puedes cambiar (a menudo de un tercero, heredada o con muchas dependencias existentes). Una o varias clases cliente que se beneficiarían de contar con una clase de servicio.",
+      "Declara la interfaz con el cliente y describe el modo en que las clases cliente se comunican con la clase de servicio.",
+      "Crea la clase adaptadora y haz que siga la interfaz con el cliente. Deja todos los métodos vacíos por ahora.",
+      "Añade un campo a la clase adaptadora para almacenar una referencia al objeto de servicio. La práctica común es inicializar este campo a través del constructor, pero en ocasiones es adecuado pasarlo al adaptador cuando se invocan sus métodos.",
+      "Uno por uno, implementa todos los métodos de la interfaz con el cliente en la clase adaptadora. La clase adaptadora deberá delegar la mayor parte del trabajo real al objeto de servicio, gestionando tan solo la interfaz o la conversión de formato de los datos.",
+      "Las clases cliente deberán utilizar la clase adaptadora a través de la interfaz con el cliente. Esto te permitirá cambiar o extender las clases adaptadoras sin afectar al código cliente."
+    ],
 
-          "Diagrama" : "",
+    "Diagrama" : "",
           
-          "Ejemplo": "",
+    "Ejemplo": "",
 
-          "Experiencia": "",
+    "Experiencia": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/adapter" 
-                          ]
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/adapter" 
+    ]
+  },
 
-      },
-      "Bridge":
-      {
-          "Definicion": "Permite dividir una clase grande, o un grupo de clases estrechamente relacionadas, en dos jerarquías separadas (abstracción e implementación) que pueden desarrollarse independientemente la una de la otra.",
+  "Bridge":{
+    "Definicion": "Permite dividir una clase grande, o un grupo de clases estrechamente relacionadas, en dos jerarquías separadas (abstracción e implementación) que pueden desarrollarse independientemente la una de la otra.",
         
-          "Ventajas" : ["Puedes crear clases y aplicaciones independientes de plataforma.",
-                        "El código cliente funciona con abstracciones de alto nivel. No está expuesto a los detalles de la plataforma.",
-                        "Principio de abierto/cerrado. Puedes introducir nuevas abstracciones e implementaciones independientes entre sí.",
-                        "Principio de responsabilidad única. Puedes centrarte en la lógica de alto nivel en la abstracción y en detalles de la plataforma en la implementación."],
+    "Ventajas" : [
+      "Puedes crear clases y aplicaciones independientes de plataforma.",
+      "El código cliente funciona con abstracciones de alto nivel. No está expuesto a los detalles de la plataforma.",
+      "Principio de abierto/cerrado. Puedes introducir nuevas abstracciones e implementaciones independientes entre sí.",
+      "Principio de responsabilidad única. Puedes centrarte en la lógica de alto nivel en la abstracción y en detalles de la plataforma en la implementación."
+    ],
 
-          "Desventajas" : ["Puede ser que el código se complique si aplicas el patrón a una clase muy cohesionada."],
+    "Desventajas" : [
+      "Puede ser que el código se complique si aplicas el patrón a una clase muy cohesionada."
+    ],
 
-          "Implementacion" : ["Identifica las dimensiones ortogonales de tus clases. Estos conceptos independientes pueden ser: abstracción/plataforma, dominio/infraestructura, front end/back end, o interfaz/implementación.",
-                              "Comprueba qué operaciones necesita el cliente y defínelas en la clase base de abstracción.",
-                              "Determina las operaciones disponibles en todas las plataformas. Declara aquellas que necesite la abstracción en la interfaz general de implementación.",
-                              "Crea clases concretas de implementación para todas las plataformas de tu dominio, pero asegúrate de que todas sigan la interfaz de implementación.",
-                              "Dentro de la clase de abstracción añade un campo de referencia para el tipo de implementación. La abstracción delega la mayor parte del trabajo al objeto de la implementación referenciado en ese campo.",
-                              "Si tienes muchas variantes de lógica de alto nivel, crea abstracciones refinadas para cada variante extendiendo la clase base de abstracción.",
-                              "El código cliente debe pasar un objeto de implementación al constructor de la abstracción para asociar el uno con el otro. Después, el cliente puede ignorar la implementación y trabajar solo con el objeto de la abstracción."],
+    "Implementacion" : [
+      "Identifica las dimensiones ortogonales de tus clases. Estos conceptos independientes pueden ser: abstracción/plataforma, dominio/infraestructura, front end/back end, o interfaz/implementación.",
+      "Comprueba qué operaciones necesita el cliente y defínelas en la clase base de abstracción.",
+      "Determina las operaciones disponibles en todas las plataformas. Declara aquellas que necesite la abstracción en la interfaz general de implementación.",
+      "Crea clases concretas de implementación para todas las plataformas de tu dominio, pero asegúrate de que todas sigan la interfaz de implementación.",
+      "Dentro de la clase de abstracción añade un campo de referencia para el tipo de implementación. La abstracción delega la mayor parte del trabajo al objeto de la implementación referenciado en ese campo.",
+      "Si tienes muchas variantes de lógica de alto nivel, crea abstracciones refinadas para cada variante extendiendo la clase base de abstracción.",
+      "El código cliente debe pasar un objeto de implementación al constructor de la abstracción para asociar el uno con el otro. Después, el cliente puede ignorar la implementación y trabajar solo con el objeto de la abstracción."
+    ],
 
-          "Diagrama" : "",
+    "Diagrama" : "",
           
-          "Ejemplo": "",
+    "Ejemplo": "",
 
-          "Experiencia": "",
+    "Experiencia": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/bridge" 
-                          ]
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/bridge" 
+    ]
+  },
 
-      },
-      "Composite":
-      {
-          "Definicion": "Permite componer objetos en estructuras de árbol y trabajar con esas estructuras como si fueran objetos individuales.",
+  "Composite":{
+    "Definicion": "Permite componer objetos en estructuras de árbol y trabajar con esas estructuras como si fueran objetos individuales.",
         
-          "Ventajas" : ["Puedes trabajar con estructuras de árbol complejas con mayor comodidad: utiliza el polimorfismo y la recursión en tu favor.",
-                        "Principio de abierto/cerrado. Puedes introducir nuevos tipos de elemento en la aplicación sin descomponer el código existente, que ahora funciona con el árbol de objetos."],
+    "Ventajas" : [
+      "Puedes trabajar con estructuras de árbol complejas con mayor comodidad: utiliza el polimorfismo y la recursión en tu favor.",
+      "Principio de abierto/cerrado. Puedes introducir nuevos tipos de elemento en la aplicación sin descomponer el código existente, que ahora funciona con el árbol de objetos."
+    ],
 
-          "Desventajas" : ["Puede resultar difícil proporcionar una interfaz común para clases cuya funcionalidad difiere demasiado. En algunos casos, tendrás que generalizar en exceso la interfaz componente, provocando que sea más difícil de comprender."],
+    "Desventajas" : [
+      "Puede resultar difícil proporcionar una interfaz común para clases cuya funcionalidad difiere demasiado. En algunos casos, tendrás que generalizar en exceso la interfaz componente, provocando que sea más difícil de comprender."
+    ],
 
-          "Implementacion" : ["Asegúrate de que el modelo central de tu aplicación pueda representarse como una estructura de árbol. Intenta dividirlo en elementos simples y contenedores. Recuerda que los contenedores deben ser capaces de contener tanto elementos simples como otros contenedores.",
-                              "Declara la interfaz componente con una lista de métodos que tengan sentido para componentes simples y complejos.",
-                              "Crea una clase hoja para representar elementos simples. Un programa puede tener varias clases hoja diferentes.",
-                              "Crea una clase contenedora para representar elementos complejos. Incluye un campo matriz en esta clase para almacenar referencias a subelementos. La matriz debe poder almacenar hojas y contenedores, así que asegúrate de declararla con el tipo de la interfaz componente.",
-                              "Por último, define los métodos para añadir y eliminar elementos hijos dentro del contenedor."],
+    "Implementacion" : [
+      "Asegúrate de que el modelo central de tu aplicación pueda representarse como una estructura de árbol. Intenta dividirlo en elementos simples y contenedores. Recuerda que los contenedores deben ser capaces de contener tanto elementos simples como otros contenedores.",
+      "Declara la interfaz componente con una lista de métodos que tengan sentido para componentes simples y complejos.",
+      "Crea una clase hoja para representar elementos simples. Un programa puede tener varias clases hoja diferentes.",
+      "Crea una clase contenedora para representar elementos complejos. Incluye un campo matriz en esta clase para almacenar referencias a subelementos. La matriz debe poder almacenar hojas y contenedores, así que asegúrate de declararla con el tipo de la interfaz componente.",
+      "Por último, define los métodos para añadir y eliminar elementos hijos dentro del contenedor."
+    ],
 
-          "Diagrama" : "",
+    "Diagrama" : "",
           
-          "Ejemplo": "",
+    "Ejemplo": "",
 
-          "Experiencia": "",
+    "Experiencia": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/composite" 
-                          ]
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/composite" 
+    ]
+  },
 
-      },
-      "Decorator":
-      {
-          "Definicion": "Permite añadir funcionalidades a objetos colocando estos objetos dentro de objetos encapsuladores especiales que contienen estas funcionalidades.",
+  "Decorator":{
+    "Definicion": "Permite añadir funcionalidades a objetos colocando estos objetos dentro de objetos encapsuladores especiales que contienen estas funcionalidades.",
         
-          "Ventajas" : ["Puedes extender el comportamiento de un objeto sin crear una nueva subclase.",
-                        "Puedes añadir o eliminar responsabilidades de un objeto durante el tiempo de ejecución.",
-                        "Puedes combinar varios comportamientos envolviendo un objeto con varios decoradores.",
-                        "Principio de responsabilidad única. Puedes dividir una clase monolítica que implementa muchas variantes posibles de comportamiento, en varias clases más pequeñas."],
+    "Ventajas" : [
+      "Puedes extender el comportamiento de un objeto sin crear una nueva subclase.",
+      "Puedes añadir o eliminar responsabilidades de un objeto durante el tiempo de ejecución.",
+      "Puedes combinar varios comportamientos envolviendo un objeto con varios decoradores.",
+      "Principio de responsabilidad única. Puedes dividir una clase monolítica que implementa muchas variantes posibles de comportamiento, en varias clases más pequeñas."
+    ],
 
-          "Desventajas" : ["Resulta difícil eliminar un wrapper específico de la pila de wrappers.",
-                           "Es difícil implementar un decorador de tal forma que su comportamiento no dependa del orden en la pila de decoradores.",
-                           "El código de configuración inicial de las capas pueden tener un aspecto desagradable."],
+    "Desventajas" : [
+      "Resulta difícil eliminar un wrapper específico de la pila de wrappers.",
+      "Es difícil implementar un decorador de tal forma que su comportamiento no dependa del orden en la pila de decoradores.",
+      "El código de configuración inicial de las capas pueden tener un aspecto desagradable."
+    ],
 
-          "Implementacion" : ["Asegúrate de que tu dominio de negocio puede representarse como un componente primario con varias capas opcionales encima.",
-                              "Decide qué métodos son comunes al componente primario y las capas opcionales. Crea una interfaz de componente y declara esos métodos en ella.",
-                              "Crea una clase concreta de componente y define en ella el comportamiento base.",
-                              "Crea una clase base decoradora. Debe tener un campo para almacenar una referencia a un objeto envuelto. El campo debe declararse con el tipo de interfaz de componente para permitir la vinculación a componentes concretos, así como a decoradores. La clase decoradora base debe delegar todas las operaciones al objeto envuelto.",
-                              "Asegúrate de que todas las clases implementan la interfaz de componente.",
-                              "Crea decoradores concretos extendiéndolos a partir de la decoradora base. Un decorador concreto debe ejecutar su comportamiento antes o después de la llamada al método padre (que siempre delega al objeto envuelto).",
-                              "El código cliente debe ser responsable de crear decoradores y componerlos del modo que el cliente necesite."],
+    "Implementacion" : [
+      "Asegúrate de que tu dominio de negocio puede representarse como un componente primario con varias capas opcionales encima.",
+      "Decide qué métodos son comunes al componente primario y las capas opcionales. Crea una interfaz de componente y declara esos métodos en ella.",
+      "Crea una clase concreta de componente y define en ella el comportamiento base.",
+      "Crea una clase base decoradora. Debe tener un campo para almacenar una referencia a un objeto envuelto. El campo debe declararse con el tipo de interfaz de componente para permitir la vinculación a componentes concretos, así como a decoradores. La clase decoradora base debe delegar todas las operaciones al objeto envuelto.",
+      "Asegúrate de que todas las clases implementan la interfaz de componente.",
+      "Crea decoradores concretos extendiéndolos a partir de la decoradora base. Un decorador concreto debe ejecutar su comportamiento antes o después de la llamada al método padre (que siempre delega al objeto envuelto).",
+      "El código cliente debe ser responsable de crear decoradores y componerlos del modo que el cliente necesite."
+    ],
 
-          "Diagrama" : "",
+    "Diagrama" : "",
           
-          "Ejemplo": "",
+    "Ejemplo": "",
 
-          "Experiencia": "",
+    "Experiencia": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/decorator" 
-                          ]
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/decorator" 
+    ]
+  },
 
-      },
-      "Facade":
-      {
-          "Definicion": "Proporciona una interfaz simplificada a una biblioteca, un framework o cualquier otro grupo complejo de clases.",
+  "Facade":{
+    "Definicion": "Proporciona una interfaz simplificada a una biblioteca, un framework o cualquier otro grupo complejo de clases.",
         
-          "Ventajas" : ["Puedes aislar tu código de la complejidad de un subsistema."],
+    "Ventajas" : [
+      "Puedes aislar tu código de la complejidad de un subsistema."
+    ],
 
-          "Desventajas" : ["Una fachada puede convertirse en un objeto todopoderoso acoplado a todas las clases de una aplicación."],
+    "Desventajas" : [
+      "Una fachada puede convertirse en un objeto todopoderoso acoplado a todas las clases de una aplicación."
+    ],
 
-          "Implementacion" : ["Comprueba si es posible proporcionar una interfaz más simple que la que está proporcionando un subsistema existente. Estás bien encaminado si esta interfaz hace que el código cliente sea independiente de muchas de las clases del subsistema.",
-                              "Declara e implementa esta interfaz en una nueva clase fachada. La fachada deberá redireccionar las llamadas desde el código cliente a los objetos adecuados del subsistema. La fachada deberá ser responsable de inicializar el subsistema y gestionar su ciclo de vida, a no ser que el código cliente ya lo haga.",
-                              "Para aprovechar el patrón al máximo, haz que todo el código cliente se comunique con el subsistema únicamente a través de la fachada. Ahora el código cliente está protegido de cualquier cambio en el código del subsistema. Por ejemplo, cuando se actualice un subsistema a una nueva versión, sólo tendrás que modificar el código de la fachada.",
-                              "Si la fachada se vuelve demasiado grande, piensa en extraer parte de su comportamiento y colocarlo dentro de una nueva clase fachada refinada."],
+    "Implementacion" : [
+      "Comprueba si es posible proporcionar una interfaz más simple que la que está proporcionando un subsistema existente. Estás bien encaminado si esta interfaz hace que el código cliente sea independiente de muchas de las clases del subsistema.",
+      "Declara e implementa esta interfaz en una nueva clase fachada. La fachada deberá redireccionar las llamadas desde el código cliente a los objetos adecuados del subsistema. La fachada deberá ser responsable de inicializar el subsistema y gestionar su ciclo de vida, a no ser que el código cliente ya lo haga.",
+      "Para aprovechar el patrón al máximo, haz que todo el código cliente se comunique con el subsistema únicamente a través de la fachada. Ahora el código cliente está protegido de cualquier cambio en el código del subsistema. Por ejemplo, cuando se actualice un subsistema a una nueva versión, sólo tendrás que modificar el código de la fachada.",
+      "Si la fachada se vuelve demasiado grande, piensa en extraer parte de su comportamiento y colocarlo dentro de una nueva clase fachada refinada."
+    ],
 
-          "Diagrama" : "",
+    "Diagrama" : "",
           
-          "Ejemplo": "",
+    "Ejemplo": "",
 
-          "Experiencia": "",
+    "Experiencia": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/facade" 
-                          ]
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/facade" 
+    ]
+  },
 
-      },
-      "Flyweight":
-      {
-          "Definicion": "Permite mantener más objetos dentro de la cantidad disponible de RAM compartiendo las partes comunes del estado entre varios objetos en lugar de mantener toda la información en cada objeto.",
+  "Flyweight":{
+    "Definicion": "Permite mantener más objetos dentro de la cantidad disponible de RAM compartiendo las partes comunes del estado entre varios objetos en lugar de mantener toda la información en cada objeto.",
         
-          "Ventajas" : ["Puedes ahorrar mucha RAM, siempre que tu programa tenga toneladas de objetos similares."],
+    "Ventajas" : [
+      "Puedes ahorrar mucha RAM, siempre que tu programa tenga toneladas de objetos similares."
+    ],
 
-          "Desventajas" : ["Puede que estés cambiando RAM por ciclos CPU cuando deba calcularse de nuevo parte de la información de contexto cada vez que alguien invoque un método flyweight.",
-                           "El código se complica mucho. Los nuevos miembros del equipo siempre estarán preguntándose por qué el estado de una entidad se separó de tal manera."],
+    "Desventajas" : [
+      "Puede que estés cambiando RAM por ciclos CPU cuando deba calcularse de nuevo parte de la información de contexto cada vez que alguien invoque un método flyweight.",
+      "El código se complica mucho. Los nuevos miembros del equipo siempre estarán preguntándose por qué el estado de una entidad se separó de tal manera."
+    ],
 
-          "Implementacion" : ["Divide los campos de una clase que se convertirá en flyweight en dos partes: El estado intrínseco: los campos que contienen información invariable duplicada a través de varios objetos. El estado extrínseco: los campos que contienen información contextual única de cada objeto.",
-                              "Deja los campos que representan el estado intrínseco en la clase, pero asegúrate de que sean inmutables. Deben llevar sus valores iniciales únicamente dentro del constructor.",
-                              "Repasa los métodos que utilizan campos del estado extrínseco. Para cada campo utilizado en el método, introduce un nuevo parámetro y utilízalo en lugar del campo.",
-                              "Opcionalmente, crea una clase fábrica para gestionar el grupo de objetos flyweight, buscando uno existente antes de crear uno nuevo. Una vez que la fábrica esté en su sitio, los clientes sólo deberán solicitar objetos flyweight a través de ella. Deberán describir el flyweight deseado pasando su estado intrínseco a la fábrica.",
-                              "El cliente deberá almacenar o calcular valores del estado extrínseco (contexto) para poder invocar métodos de objetos flyweight. Por comodidad, el estado extrínseco puede moverse a una clase contexto separada junto con el campo referenciador del flyweight."],
+    "Implementacion" : [
+      "Divide los campos de una clase que se convertirá en flyweight en dos partes: El estado intrínseco: los campos que contienen información invariable duplicada a través de varios objetos. El estado extrínseco: los campos que contienen información contextual única de cada objeto.",
+      "Deja los campos que representan el estado intrínseco en la clase, pero asegúrate de que sean inmutables. Deben llevar sus valores iniciales únicamente dentro del constructor.",
+      "Repasa los métodos que utilizan campos del estado extrínseco. Para cada campo utilizado en el método, introduce un nuevo parámetro y utilízalo en lugar del campo.",
+      "Opcionalmente, crea una clase fábrica para gestionar el grupo de objetos flyweight, buscando uno existente antes de crear uno nuevo. Una vez que la fábrica esté en su sitio, los clientes sólo deberán solicitar objetos flyweight a través de ella. Deberán describir el flyweight deseado pasando su estado intrínseco a la fábrica.",
+      "El cliente deberá almacenar o calcular valores del estado extrínseco (contexto) para poder invocar métodos de objetos flyweight. Por comodidad, el estado extrínseco puede moverse a una clase contexto separada junto con el campo referenciador del flyweight."
+    ],
 
-          "Diagrama" : "",
+    "Diagrama" : "",
           
-          "Ejemplo": "",
+    "Ejemplo": "",
 
-          "Experiencia": "",
+    "Experiencia": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/flyweight" 
-                          ]
-
-      },
-      "Proxy":
-      {
-          "Definicion": "Permite proporcionar un sustituto o marcador de posición para otro objeto. Un proxy controla el acceso al objeto original, permitiéndote hacer algo antes o después de que la solicitud llegue al objeto original.",
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/flyweight" 
+    ]
+  },
+  
+  "Proxy":{
+    "Definicion": "Permite proporcionar un sustituto o marcador de posición para otro objeto. Un proxy controla el acceso al objeto original, permitiéndote hacer algo antes o después de que la solicitud llegue al objeto original.",
         
-          "Ventajas" : ["Puedes controlar el objeto de servicio sin que los clientes lo sepan.",
-                        "Puedes gestionar el ciclo de vida del objeto de servicio cuando a los clientes no les importa.",
-                        "El proxy funciona incluso si el objeto de servicio no está listo o no está disponible.",
-                        "Principio de abierto/cerrado. Puedes introducir nuevos proxies sin cambiar el servicio o los clientes."],
+    "Ventajas" : [
+      "Puedes controlar el objeto de servicio sin que los clientes lo sepan.",
+      "Puedes gestionar el ciclo de vida del objeto de servicio cuando a los clientes no les importa.",
+      "El proxy funciona incluso si el objeto de servicio no está listo o no está disponible.",
+      "Principio de abierto/cerrado. Puedes introducir nuevos proxies sin cambiar el servicio o los clientes."
+    ],
 
-          "Desventajas" : ["El código puede complicarse ya que debes introducir gran cantidad de clases nuevas.",
-                           "La respuesta del servicio puede retrasarse."],
+    "Desventajas" : [
+      "El código puede complicarse ya que debes introducir gran cantidad de clases nuevas.",
+      "La respuesta del servicio puede retrasarse."
+    ],
 
-          "Implementacion" : ["Si no hay una interfaz de servicio preexistente, crea una para que los objetos de proxy y de servicio sean intercambiables. No siempre resulta posible extraer la interfaz de la clase servicio, porque tienes que cambiar todos los clientes del servicio para utilizar esa interfaz. El plan B consiste en convertir el proxy en una subclase de la clase servicio, de forma que herede la interfaz del servicio.",
-                              "Crea la clase proxy. Debe tener un campo para almacenar una referencia al servicio. Normalmente los proxies crean y gestionan el ciclo de vida completo de sus servicios. En raras ocasiones, el cliente pasa un servicio al proxy a través de un constructor.",
-                              "Implementa los métodos del proxy según sus propósitos. En la mayoría de los casos, después de hacer cierta labor, el proxy debería delegar el trabajo a un objeto de servicio.",
-                              "Considera introducir un método de creación que decida si el cliente obtiene un proxy o un servicio real. Puede tratarse de un simple método estático en la clase proxy o de todo un método de fábrica.",
-                              "Considera implementar la inicialización diferida para el objeto de servicio."],
+    "Implementacion" : [
+      "Si no hay una interfaz de servicio preexistente, crea una para que los objetos de proxy y de servicio sean intercambiables. No siempre resulta posible extraer la interfaz de la clase servicio, porque tienes que cambiar todos los clientes del servicio para utilizar esa interfaz. El plan B consiste en convertir el proxy en una subclase de la clase servicio, de forma que herede la interfaz del servicio.",
+      "Crea la clase proxy. Debe tener un campo para almacenar una referencia al servicio. Normalmente los proxies crean y gestionan el ciclo de vida completo de sus servicios. En raras ocasiones, el cliente pasa un servicio al proxy a través de un constructor.",
+      "Implementa los métodos del proxy según sus propósitos. En la mayoría de los casos, después de hacer cierta labor, el proxy debería delegar el trabajo a un objeto de servicio.",
+      "Considera introducir un método de creación que decida si el cliente obtiene un proxy o un servicio real. Puede tratarse de un simple método estático en la clase proxy o de todo un método de fábrica.",
+      "Considera implementar la inicialización diferida para el objeto de servicio."
+    ],
 
-          "Diagrama" : "",
+    "Diagrama" : "",
           
-          "Ejemplo": "",
+    "Ejemplo": "",
 
-          "Experiencia": "",
+    "Experiencia": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/proxy" 
-                          ]
-
-      }
-    }
-
-  ],
-  "Comportamentales":[
-    {
-      "Chain of Responsibility":
-      {
-          "Definicion": "Permite pasar solicitudes a lo largo de una cadena de manejadores. Al recibir una solicitud, cada manejador decide si la procesa o si la pasa al siguiente manejador de la cadena.",
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/proxy" 
+    ]
+  },
+  
+  "Chain of Responsibility":{
+    "Definicion": "Permite pasar solicitudes a lo largo de una cadena de manejadores. Al recibir una solicitud, cada manejador decide si la procesa o si la pasa al siguiente manejador de la cadena.",
         
-          "Ventajas" : ["Puedes controlar el orden de control de solicitudes.",
-                        "Principio de responsabilidad única. Puedes desacoplar las clases que invoquen operaciones de las que realicen operaciones.",
-                        "Principio de abierto/cerrado. Puedes introducir nuevos manejadores en la aplicación sin descomponer el código cliente existente."],
+    "Ventajas" : [
+      "Puedes controlar el orden de control de solicitudes.",
+      "Principio de responsabilidad única. Puedes desacoplar las clases que invoquen operaciones de las que realicen operaciones.",
+      "Principio de abierto/cerrado. Puedes introducir nuevos manejadores en la aplicación sin descomponer el código cliente existente."
+    ],
 
-          "Desventajas" : ["Algunas solicitudes pueden acabar sin ser gestionadas."],
+    "Desventajas" : [
+      "Algunas solicitudes pueden acabar sin ser gestionadas."
+    ],
 
-          "Implementacion" : ["Declara la interfaz manejadora y describe la firma de un método para manejar solicitudes.",
-                              "Para eliminar código boilerplate duplicado en manejadores concretos, puede merecer la pena crear una clase manejadora abstracta base, derivada de la interfaz manejadora.",
-                              "Una a una, crea subclases manejadoras concretas e implementa los métodos de control. Cada manejador debe tomar dos decisiones cuando recibe una solicitud: Si procesa la solicitud. Si pasa la solicitud al siguiente eslabón de la cadena.",
-                              "El cliente puede ensamblar cadenas por su cuenta o recibir cadenas prefabricadas de otros objetos. En el último caso, debes implementar algunas clases fábrica para crear cadenas de acuerdo con los ajustes de configuración o de entorno.",
-                              "El cliente puede activar cualquier manejador de la cadena, no solo el primero. La solicitud se pasará a lo largo de la cadena hasta que algún manejador se rehúse a pasarlo o hasta que llegue al final de la cadena.",
-                              "Debido a la naturaleza dinámica de la cadena, el cliente debe estar listo para gestionar los siguientes escenarios: La cadena puede consistir en un único vínculo. Algunas solicitudes pueden no llegar al final de la cadena. Otras pueden llegar hasta el final de la cadena sin ser gestionadas."],
+    "Implementacion" : [
+      "Declara la interfaz manejadora y describe la firma de un método para manejar solicitudes.",
+      "Para eliminar código boilerplate duplicado en manejadores concretos, puede merecer la pena crear una clase manejadora abstracta base, derivada de la interfaz manejadora.",
+      "Una a una, crea subclases manejadoras concretas e implementa los métodos de control. Cada manejador debe tomar dos decisiones cuando recibe una solicitud: Si procesa la solicitud. Si pasa la solicitud al siguiente eslabón de la cadena.",
+      "El cliente puede ensamblar cadenas por su cuenta o recibir cadenas prefabricadas de otros objetos. En el último caso, debes implementar algunas clases fábrica para crear cadenas de acuerdo con los ajustes de configuración o de entorno.",
+      "El cliente puede activar cualquier manejador de la cadena, no solo el primero. La solicitud se pasará a lo largo de la cadena hasta que algún manejador se rehúse a pasarlo o hasta que llegue al final de la cadena.",
+      "Debido a la naturaleza dinámica de la cadena, el cliente debe estar listo para gestionar los siguientes escenarios: La cadena puede consistir en un único vínculo. Algunas solicitudes pueden no llegar al final de la cadena. Otras pueden llegar hasta el final de la cadena sin ser gestionadas."
+    ],
 
-          "Diagrama" : "",
+    "Diagrama" : "",
           
-          "Ejemplo": "",
+    "Ejemplo": "",
 
-          "Experiencia": "",
+    "Experiencia": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/chain-of-responsibility" 
-                          ]
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/chain-of-responsibility" 
+    ]
+  },
 
-      }
-    },
-    {
-      "Command":
-      {
-          "Definicion": "Convierte una solicitud en un objeto independiente que contiene toda la información sobre la solicitud. Esta transformación te permite parametrizar los métodos con diferentes solicitudes, retrasar o poner en cola la ejecución de una solicitud y soportar operaciones que no se pueden realizar.",
+  "Command":{
+    "Definicion": "Convierte una solicitud en un objeto independiente que contiene toda la información sobre la solicitud. Esta transformación te permite parametrizar los métodos con diferentes solicitudes, retrasar o poner en cola la ejecución de una solicitud y soportar operaciones que no se pueden realizar.",
         
-          "Ventajas" : ["Principio de responsabilidad única. Puedes desacoplar las clases que invocan operaciones de las que realizan esas operaciones.",
-                        "Principio de abierto/cerrado. Puedes introducir nuevos comandos en la aplicación sin descomponer el código cliente existente.",
-                        "Puedes implementar deshacer/rehacer.",
-                        "Puedes implementar la ejecución diferida de operaciones.",
-                        "Puedes ensamblar un grupo de comandos simples para crear uno complejo."],
+    "Ventajas" : [
+      "Principio de responsabilidad única. Puedes desacoplar las clases que invocan operaciones de las que realizan esas operaciones.",
+      "Principio de abierto/cerrado. Puedes introducir nuevos comandos en la aplicación sin descomponer el código cliente existente.",
+      "Puedes implementar deshacer/rehacer.",
+      "Puedes implementar la ejecución diferida de operaciones.",
+      "Puedes ensamblar un grupo de comandos simples para crear uno complejo."
+    ],
 
-          "Desventajas" : ["El código puede complicarse, ya que estás introduciendo una nueva capa entre emisores y receptores."],
+    "Desventajas" : [
+      "El código puede complicarse, ya que estás introduciendo una nueva capa entre emisores y receptores."
+    ],
 
-          "Implementacion" : ["Declara la interfaz de comando con un único método de ejecución.",
-                              "Empieza extrayendo solicitudes y poniéndolas dentro de clases concretas de comando que implementen la interfaz de comando. Cada clase debe contar con un grupo de campos para almacenar los argumentos de las solicitudes junto con referencias al objeto receptor. Todos estos valores deben inicializarse a través del constructor del comando.",
-                              "Identifica clases que actúen como emisoras. Añade los campos para almacenar comandos dentro de estas clases. Las emisoras deberán comunicarse con sus comandos tan solo a través de la interfaz de comando. Normalmente las emisoras no crean objetos de comando por su cuenta, sino que los obtienen del código cliente.",
-                              "Cambia las emisoras de forma que ejecuten el comando en lugar de enviar directamente una solicitud al receptor.",
-                              "El cliente debe inicializar objetos en el siguiente orden: Crear receptores. Crear comandos y asociarlos con receptores si es necesario. Crear emisores y asociarlos con comandos específicos."],
+    "Implementacion" : [
+      "Declara la interfaz de comando con un único método de ejecución.",
+      "Empieza extrayendo solicitudes y poniéndolas dentro de clases concretas de comando que implementen la interfaz de comando. Cada clase debe contar con un grupo de campos para almacenar los argumentos de las solicitudes junto con referencias al objeto receptor. Todos estos valores deben inicializarse a través del constructor del comando.",
+      "Identifica clases que actúen como emisoras. Añade los campos para almacenar comandos dentro de estas clases. Las emisoras deberán comunicarse con sus comandos tan solo a través de la interfaz de comando. Normalmente las emisoras no crean objetos de comando por su cuenta, sino que los obtienen del código cliente.",
+      "Cambia las emisoras de forma que ejecuten el comando en lugar de enviar directamente una solicitud al receptor.",
+      "El cliente debe inicializar objetos en el siguiente orden: Crear receptores. Crear comandos y asociarlos con receptores si es necesario. Crear emisores y asociarlos con comandos específicos."
+    ],
 
-          "Diagrama" : "",
+    "Diagrama" : "",
           
-          "Ejemplo": "",
+    "Ejemplo": "",
 
-          "Experiencia": "",
+    "Experiencia": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/command" 
-                          ]
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/command" 
+    ]
+  },
 
-      }
-    },
-    {
-      "Iterator":
-      {
-          "Definicion": "Permite recorrer elementos de una colección sin exponer su representación subyacente (lista, pila, árbol, etc.).",
+  "Iterator":{
+    "Definicion": "Permite recorrer elementos de una colección sin exponer su representación subyacente (lista, pila, árbol, etc.).",
         
-          "Ventajas" : ["Principio de responsabilidad única. Puedes limpiar el código cliente y las colecciones extrayendo algoritmos de recorrido voluminosos y colocándolos en clases independientes.",
-                        "Principio de abierto/cerrado. Puedes implementar nuevos tipos de colecciones e iteradores y pasarlos al código existente sin descomponer nada.",
-                        "Puedes recorrer la misma colección en paralelo porque cada objeto iterador contiene su propio estado de iteración.",
-                        "Por la misma razón, puedes retrasar una iteración y continuar cuando sea necesario."],
+    "Ventajas" : [
+      "Principio de responsabilidad única. Puedes limpiar el código cliente y las colecciones extrayendo algoritmos de recorrido voluminosos y colocándolos en clases independientes.",
+      "Principio de abierto/cerrado. Puedes implementar nuevos tipos de colecciones e iteradores y pasarlos al código existente sin descomponer nada.",
+      "Puedes recorrer la misma colección en paralelo porque cada objeto iterador contiene su propio estado de iteración.",
+      "Por la misma razón, puedes retrasar una iteración y continuar cuando sea necesario."
+    ],
 
-          "Desventajas" : ["Aplicar el patrón puede resultar excesivo si tu aplicación funciona únicamente con colecciones sencillas.",
-                           "Utilizar un iterador puede ser menos eficiente que recorrer directamente los elementos de algunas colecciones especializadas."],
+    "Desventajas" : [
+      "Aplicar el patrón puede resultar excesivo si tu aplicación funciona únicamente con colecciones sencillas.",
+      "Utilizar un iterador puede ser menos eficiente que recorrer directamente los elementos de algunas colecciones especializadas."
+    ],
 
-          "Implementacion" : ["Declara la interfaz iteradora. Como mínimo, debe tener un método para extraer el siguiente elemento de una colección. Por conveniencia, puedes añadir un par de métodos distintos, como para extraer el elemento previo, localizar la posición actual o comprobar el final de la iteración.",
-                              "Declara la interfaz de colección y describe un método para buscar iteradores. El tipo de retorno debe ser igual al de la interfaz iteradora. Puedes declarar métodos similares si planeas tener varios grupos distintos de iteradores.",
-                              "Implementa clases iteradoras concretas para las colecciones que quieras que sean recorridas por iteradores. Un objeto iterador debe estar vinculado a una única instancia de la colección. Normalmente, este vínculo se establece a través del constructor del iterador.",
-                              "Implementa la interfaz de colección en tus clases de colección. La idea principal es proporcionar al cliente un atajo para crear iteradores personalizados para una clase de colección particular. El objeto de colección debe pasarse a sí mismo al constructor del iterador para establecer un vínculo entre ellos.",
-                              "Repasa el código cliente para sustituir todo el código de recorrido de la colección por el uso de iteradores. El cliente busca un nuevo objeto iterador cada vez que necesita recorrer los elementos de la colección."],
+    "Implementacion" : [
+      "Declara la interfaz iteradora. Como mínimo, debe tener un método para extraer el siguiente elemento de una colección. Por conveniencia, puedes añadir un par de métodos distintos, como para extraer el elemento previo, localizar la posición actual o comprobar el final de la iteración.",
+      "Declara la interfaz de colección y describe un método para buscar iteradores. El tipo de retorno debe ser igual al de la interfaz iteradora. Puedes declarar métodos similares si planeas tener varios grupos distintos de iteradores.",
+      "Implementa clases iteradoras concretas para las colecciones que quieras que sean recorridas por iteradores. Un objeto iterador debe estar vinculado a una única instancia de la colección. Normalmente, este vínculo se establece a través del constructor del iterador.",
+      "Implementa la interfaz de colección en tus clases de colección. La idea principal es proporcionar al cliente un atajo para crear iteradores personalizados para una clase de colección particular. El objeto de colección debe pasarse a sí mismo al constructor del iterador para establecer un vínculo entre ellos.",
+      "Repasa el código cliente para sustituir todo el código de recorrido de la colección por el uso de iteradores. El cliente busca un nuevo objeto iterador cada vez que necesita recorrer los elementos de la colección."
+    ],
 
-          "Diagrama" : "",
+    "Diagrama" : "",
           
-          "Ejemplo": "",
+    "Ejemplo": "",
 
-          "Experiencia": "",
+    "Experiencia": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/iterator" 
-                          ]
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/iterator" 
+    ]
+  },
 
-      }
-    },
-    {
-      "Mediator":
-      {
-          "Definicion": "Permite reducir las dependencias caóticas entre objetos. El patrón restringe las comunicaciones directas entre los objetos, forzándolos a colaborar únicamente a través de un objeto mediador.",
+  "Mediator":{
+    "Definicion": "Permite reducir las dependencias caóticas entre objetos. El patrón restringe las comunicaciones directas entre los objetos, forzándolos a colaborar únicamente a través de un objeto mediador.",
         
-          "Ventajas" : ["Principio de responsabilidad única. Puedes extraer las comunicaciones entre varios componentes dentro de un único sitio, haciéndolo más fácil de comprender y mantener.",
-                        "Principio de abierto/cerrado. Puedes introducir nuevos mediadores sin tener que cambiar los propios componentes.",
-                        "Puedes reducir el acoplamiento entre varios componentes de un programa.",
-                        "Puedes reutilizar componentes individuales con mayor facilidad."],
+    "Ventajas" : [
+      "Principio de responsabilidad única. Puedes extraer las comunicaciones entre varios componentes dentro de un único sitio, haciéndolo más fácil de comprender y mantener.",
+      "Principio de abierto/cerrado. Puedes introducir nuevos mediadores sin tener que cambiar los propios componentes.",
+      "Puedes reducir el acoplamiento entre varios componentes de un programa.",
+      "Puedes reutilizar componentes individuales con mayor facilidad."
+    ],
 
-          "Desventajas" : ["Con el tiempo, un mediador puede evolucionar a un objeto todopoderoso."],
+    "Desventajas" : [
+      "Con el tiempo, un mediador puede evolucionar a un objeto todopoderoso."
+    ],
 
-          "Implementacion" : ["Identifica un grupo de clases fuertemente acopladas que se beneficiarían de ser más independientes (p. ej., para un mantenimiento más sencillo o una reutilización más simple de esas clases).",
-                              "Declara la interfaz mediadora y describe el protocolo de comunicación deseado entre mediadores y otros varios componentes. En la mayoría de los casos, un único método para recibir notificaciones de los componentes es suficiente.",
-                              "Implementa la clase concreta mediadora. Esta clase se beneficiará de almacenar referencias a todos los componentes que gestiona.",
-                              "Puedes ir más lejos y hacer la interfaz mediadora responsable de la creación y destrucción de objetos del componente. Tras esto, la mediadora puede parecerse a una fábrica o una fachada.",
-                              "Los componentes deben almacenar una referencia al objeto mediador. La conexión se establece normalmente en el constructor del componente, donde un objeto mediador se pasa como argumento.",
-                              "Cambia el código de los componentes de forma que invoquen el método de notificación del mediador en lugar de los métodos de otros componentes. Extrae el código que implique llamar a otros componentes dentro de la clase mediadora. Ejecuta este código cuando el mediador reciba notificaciones de ese componente."],
+    "Implementacion" : [
+      "Identifica un grupo de clases fuertemente acopladas que se beneficiarían de ser más independientes (p. ej., para un mantenimiento más sencillo o una reutilización más simple de esas clases).",
+      "Declara la interfaz mediadora y describe el protocolo de comunicación deseado entre mediadores y otros varios componentes. En la mayoría de los casos, un único método para recibir notificaciones de los componentes es suficiente.",
+      "Implementa la clase concreta mediadora. Esta clase se beneficiará de almacenar referencias a todos los componentes que gestiona.",
+      "Puedes ir más lejos y hacer la interfaz mediadora responsable de la creación y destrucción de objetos del componente. Tras esto, la mediadora puede parecerse a una fábrica o una fachada.",
+      "Los componentes deben almacenar una referencia al objeto mediador. La conexión se establece normalmente en el constructor del componente, donde un objeto mediador se pasa como argumento.",
+      "Cambia el código de los componentes de forma que invoquen el método de notificación del mediador en lugar de los métodos de otros componentes. Extrae el código que implique llamar a otros componentes dentro de la clase mediadora. Ejecuta este código cuando el mediador reciba notificaciones de ese componente."
+    ],
 
-          "Diagrama" : "",
+    "Diagrama" : "",
           
-          "Ejemplo": "",
+    "Ejemplo": "",
 
-          "Experiencia": "",
+    "Experiencia": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/mediator" 
-                          ]
-
-      }
-    },
-    {
-      "Memento":
-      {
-          "Definicion": "Permite guardar y restaurar el estado previo de un objeto sin revelar los detalles de su implementación.",
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/mediator" 
+    ]
+  },
+  
+  "Memento":{
+    "Definicion": "Permite guardar y restaurar el estado previo de un objeto sin revelar los detalles de su implementación.",
         
-          "Ventajas" : ["Puedes producir instantáneas del estado del objeto sin violar su encapsulación.",
-                        "Puedes simplificar el código de la originadora permitiendo que la cuidadora mantenga el historial del estado de la originadora."],
+    "Ventajas" : [
+      "Puedes producir instantáneas del estado del objeto sin violar su encapsulación.",
+      "Puedes simplificar el código de la originadora permitiendo que la cuidadora mantenga el historial del estado de la originadora."
+    ],
 
-          "Desventajas" : ["La aplicación puede consumir mucha memoria RAM si los clientes crean mementos muy a menudo.",
-                           "Las cuidadoras deben rastrear el ciclo de vida de la originadora para poder destruir mementos obsoletos.",
-                           "La mayoría de los lenguajes de programación dinámicos, como PHP, Python y JavaScript, no pueden garantizar que el estado dentro del memento se mantenga intacto."],
+    "Desventajas" : [
+      "La aplicación puede consumir mucha memoria RAM si los clientes crean mementos muy a menudo.",
+      "Las cuidadoras deben rastrear el ciclo de vida de la originadora para poder destruir mementos obsoletos.",
+      "La mayoría de los lenguajes de programación dinámicos, como PHP, Python y JavaScript, no pueden garantizar que el estado dentro del memento se mantenga intacto."
+    ],
 
-          "Implementacion" : ["Determina qué clase jugará el papel de la originadora. Es importante saber si el programa utiliza un objeto central de este tipo o varios más pequeños.",
-                              "Crea la clase memento. Uno a uno, declara un grupo de campos que reflejen los campos declarados dentro de la clase originadora.",
-                              "Haz la clase memento inmutable. Una clase memento debe aceptar los datos sólo una vez, a través del constructor. La clase no debe tener modificadores.",
-                              "Si tu lenguaje de programación soporta clases anidadas, anida la clase memento dentro de la originadora. Si no es así, extrae una interfaz en blanco de la clase memento y haz que el resto de objetos la utilicen para remitirse a ella. Puedes añadir operaciones de metadatos a la interfaz, pero nada que exponga el estado de la originadora.",
-                              "Añade un método para producir mementos a la clase originadora. La originadora debe pasar su estado a la clase memento a través de uno o varios argumentos del constructor del memento.",
-                              "Añade un método para restaurar el estado del originador a su clase. Debe aceptar un objeto memento como argumento. Si extrajiste una interfaz en el paso previo, haz que sea el tipo del parámetro. En este caso, debes especificar el tipo del objeto entrante al de la clase memento, ya que la originadora necesita pleno acceso a ese objeto.",
-                              "La cuidadora, independientemente de que represente un objeto de comando, un historial, o algo totalmente diferente, debe saber cuándo solicitar nuevos mementos de la originadora, cómo almacenarlos y cuándo restaurar la originadora con un memento particular.",
-                              "El vínculo entre cuidadoras y originadoras puede moverse dentro de la clase memento. En este caso, cada memento debe conectarse a la originadora que lo creó. El método de restauración también se moverá a la clase memento. No obstante, todo esto sólo tendrá sentido si la clase memento está anidada dentro de la originadora o la clase originadora proporciona suficientes modificadores para sobrescribir su estado."],
+    "Implementacion" : [
+      "Determina qué clase jugará el papel de la originadora. Es importante saber si el programa utiliza un objeto central de este tipo o varios más pequeños.",
+      "Crea la clase memento. Uno a uno, declara un grupo de campos que reflejen los campos declarados dentro de la clase originadora.",
+      "Haz la clase memento inmutable. Una clase memento debe aceptar los datos sólo una vez, a través del constructor. La clase no debe tener modificadores.",
+      "Si tu lenguaje de programación soporta clases anidadas, anida la clase memento dentro de la originadora. Si no es así, extrae una interfaz en blanco de la clase memento y haz que el resto de objetos la utilicen para remitirse a ella. Puedes añadir operaciones de metadatos a la interfaz, pero nada que exponga el estado de la originadora.",
+      "Añade un método para producir mementos a la clase originadora. La originadora debe pasar su estado a la clase memento a través de uno o varios argumentos del constructor del memento.",
+      "Añade un método para restaurar el estado del originador a su clase. Debe aceptar un objeto memento como argumento. Si extrajiste una interfaz en el paso previo, haz que sea el tipo del parámetro. En este caso, debes especificar el tipo del objeto entrante al de la clase memento, ya que la originadora necesita pleno acceso a ese objeto.",
+      "La cuidadora, independientemente de que represente un objeto de comando, un historial, o algo totalmente diferente, debe saber cuándo solicitar nuevos mementos de la originadora, cómo almacenarlos y cuándo restaurar la originadora con un memento particular.",
+      "El vínculo entre cuidadoras y originadoras puede moverse dentro de la clase memento. En este caso, cada memento debe conectarse a la originadora que lo creó. El método de restauración también se moverá a la clase memento. No obstante, todo esto sólo tendrá sentido si la clase memento está anidada dentro de la originadora o la clase originadora proporciona suficientes modificadores para sobrescribir su estado."
+    ],
 
-          "Diagrama" : "",
+    "Diagrama" : "",
           
-          "Ejemplo": "",
+    "Ejemplo": "",
 
-          "Experiencia": "",
+    "Experiencia": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/memento" 
-                          ]
-
-      }
-    },
-    {
-      "Observer":
-      {
-          "Definicion": "Permite definir un mecanismo de suscripción para notificar a varios objetos sobre cualquier evento que le suceda al objeto que están observando.",
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/"
+    ]
+  },
+  
+  "Observer":{
+    "Definicion": "Permite definir un mecanismo de suscripción para notificar a varios objetos sobre cualquier evento que le suceda al objeto que están observando.",
         
-          "Ventajas" : ["Principio de abierto/cerrado. Puedes introducir nuevas clases suscriptoras sin tener que cambiar el código de la notificadora (y viceversa si hay una interfaz notificadora).",
-                        "Puedes establecer relaciones entre objetos durante el tiempo de ejecución."],
+    "Ventajas" : [
+      "Principio de abierto/cerrado. Puedes introducir nuevas clases suscriptoras sin tener que cambiar el código de la notificadora (y viceversa si hay una interfaz notificadora).",
+      "Puedes establecer relaciones entre objetos durante el tiempo de ejecución."
+    ],
 
-          "Desventajas" : ["Los suscriptores son notificados en un orden aleatorio."],
+    "Desventajas" : [
+      "Los suscriptores son notificados en un orden aleatorio."
+    ],
 
-          "Implementacion" : ["Repasa tu lógica de negocio e intenta dividirla en dos partes: la funcionalidad central, independiente del resto de código, actuará como notificador; el resto se convertirá en un grupo de clases suscriptoras.",
-                              "Declara la interfaz suscriptora. Como mínimo, deberá declarar un único método actualizar.",
-                              "Declara la interfaz notificadora y describe un par de métodos para añadir y eliminar de la lista un objeto suscriptor. Recuerda que los notificadores deben trabajar con suscriptores únicamente a través de la interfaz suscriptora.",
-                              "Decide dónde colocar la lista de suscripción y la implementación de métodos de suscripción. Normalmente, este código tiene el mismo aspecto para todos los tipos de notificadores, por lo que el lugar obvio para colocarlo es en una clase abstracta derivada directamente de la interfaz notificadora. Los notificadores concretos extienden esa clase, heredando el comportamiento de suscripción.",
-                              "Crea clases notificadoras concretas. Cada vez que suceda algo importante dentro de una notificadora, deberá notificar a todos sus suscriptores.",
-                              "Implementa los métodos de notificación de actualizaciones en clases suscriptoras concretas. La mayoría de las suscriptoras necesitarán cierta información de contexto sobre el evento, que puede pasarse como argumento del método de notificación.",
-                              "El cliente debe crear todos los suscriptores necesarios y registrarlos con los notificadores adecuados."],
+    "Implementacion" : [
+      "Repasa tu lógica de negocio e intenta dividirla en dos partes: la funcionalidad central, independiente del resto de código, actuará como notificador; el resto se convertirá en un grupo de clases suscriptoras.",
+      "Declara la interfaz suscriptora. Como mínimo, deberá declarar un único método actualizar.",
+      "Declara la interfaz notificadora y describe un par de métodos para añadir y eliminar de la lista un objeto suscriptor. Recuerda que los notificadores deben trabajar con suscriptores únicamente a través de la interfaz suscriptora.",
+      "Decide dónde colocar la lista de suscripción y la implementación de métodos de suscripción. Normalmente, este código tiene el mismo aspecto para todos los tipos de notificadores, por lo que el lugar obvio para colocarlo es en una clase abstracta derivada directamente de la interfaz notificadora. Los notificadores concretos extienden esa clase, heredando el comportamiento de suscripción.",
+      "Crea clases notificadoras concretas. Cada vez que suceda algo importante dentro de una notificadora, deberá notificar a todos sus suscriptores.",
+      "Implementa los métodos de notificación de actualizaciones en clases suscriptoras concretas. La mayoría de las suscriptoras necesitarán cierta información de contexto sobre el evento, que puede pasarse como argumento del método de notificación.",
+      "El cliente debe crear todos los suscriptores necesarios y registrarlos con los notificadores adecuados."
+    ],
 
-          "Diagrama" : "",
+    "Diagrama" : "",
           
-          "Ejemplo": "",
+    "Ejemplo": "",
 
-          "Experiencia": "",
+    "Experiencia": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/observer" 
-                          ]
-
-      }
-    },
-    {
-      "State":
-      {
-          "Definicion": "Permite a un objeto alterar su comportamiento cuando su estado interno cambia. Parece como si el objeto cambiara su clase.",
+    "Referencias" : ["https://refactoring.guru/es/design-patterns/observer" 
+    ]
+  },
+  
+  "State":{
+    "Definicion": "Permite a un objeto alterar su comportamiento cuando su estado interno cambia. Parece como si el objeto cambiara su clase.",
         
-          "Ventajas" : ["Principio de responsabilidad única. Organiza el código relacionado con estados particulares en clases separadas.",
-                        "Principio de abierto/cerrado. Introduce nuevos estados sin cambiar clases de estado existentes o la clase contexto.",
-                        "Simplifica el código del contexto eliminando voluminosos condicionales de máquina de estados."],
+    "Ventajas" : [
+      "Principio de responsabilidad única. Organiza el código relacionado con estados particulares en clases separadas.",
+      "Principio de abierto/cerrado. Introduce nuevos estados sin cambiar clases de estado existentes o la clase contexto.",
+      "Simplifica el código del contexto eliminando voluminosos condicionales de máquina de estados."
+    ],
 
-          "Desventajas" : ["Aplicar el patrón puede resultar excesivo si una máquina de estados sólo tiene unos pocos estados o raramente cambia."],
+    "Desventajas" : [
+      "Aplicar el patrón puede resultar excesivo si una máquina de estados sólo tiene unos pocos estados o raramente cambia."
+    ],
 
-          "Implementacion" : ["Decide qué clase actuará como contexto. Puede ser una clase existente que ya tiene el código dependiente del estado, o una nueva clase, si el código específico del estado está distribuido a lo largo de varias clases.",
-                              "Declara la interfaz de estado. Aunque puede replicar todos los métodos declarados en el contexto, céntrate en los que pueden contener comportamientos específicos del estado.",
-                              "Para cada estado actual, crea una clase derivada de la interfaz de estado. Después repasa los métodos del contexto y extrae todo el código relacionado con ese estado para meterlo en tu clase recién creada.",
-                              "En la clase contexto, añade un campo de referencia del tipo de interfaz de estado y un modificador (setter) público que permita sobrescribir el valor de ese campo.",
-                              "Vuelve a repasar el método del contexto y sustituye los condicionales de estado vacíos por llamadas a métodos correspondientes del objeto de estado.",
-                              "Para cambiar el estado del contexto, crea una instancia de una de las clases de estado y pásala a la clase contexto. Puedes hacer esto dentro de la propia clase contexto, en distintos estados, o en el cliente. Se haga de una forma u otra, la clase se vuelve dependiente de la clase de estado concreto que instancia."],
+    "Implementacion" : [
+      "Decide qué clase actuará como contexto. Puede ser una clase existente que ya tiene el código dependiente del estado, o una nueva clase, si el código específico del estado está distribuido a lo largo de varias clases.",
+      "Declara la interfaz de estado. Aunque puede replicar todos los métodos declarados en el contexto, céntrate en los que pueden contener comportamientos específicos del estado.",
+      "Para cada estado actual, crea una clase derivada de la interfaz de estado. Después repasa los métodos del contexto y extrae todo el código relacionado con ese estado para meterlo en tu clase recién creada.",
+      "En la clase contexto, añade un campo de referencia del tipo de interfaz de estado y un modificador (setter) público que permita sobrescribir el valor de ese campo.",
+      "Vuelve a repasar el método del contexto y sustituye los condicionales de estado vacíos por llamadas a métodos correspondientes del objeto de estado.",
+      "Para cambiar el estado del contexto, crea una instancia de una de las clases de estado y pásala a la clase contexto. Puedes hacer esto dentro de la propia clase contexto, en distintos estados, o en el cliente. Se haga de una forma u otra, la clase se vuelve dependiente de la clase de estado concreto que instancia."
+    ],
 
-          "Diagrama" : "",
+    "Diagrama" : "",
           
-          "Ejemplo": "",
+    "Ejemplo": "",
 
-          "Experiencia": "",
+    "Experiencia": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/state" 
-                          ]
-
-      }
-    },
-    {
-      "Strategy":
-      {
-          "Definicion": "Permite definir una familia de algoritmos, colocar cada uno de ellos en una clase separada y hacer sus objetos intercambiables.",
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/state" 
+    ]
+  },
+  
+  "Strategy":{
+    "Definicion": "Permite definir una familia de algoritmos, colocar cada uno de ellos en una clase separada y hacer sus objetos intercambiables.",
         
-          "Ventajas" : ["Puedes intercambiar algoritmos usados dentro de un objeto durante el tiempo de ejecución.",
-                        "Puedes aislar los detalles de implementación de un algoritmo del código que lo utiliza.",
-                        "Puedes sustituir la herencia por composición.",
-                        "Principio de abierto/cerrado. Puedes introducir nuevas estrategias sin tener que cambiar el contexto."],
+    "Ventajas" : [
+      "Puedes intercambiar algoritmos usados dentro de un objeto durante el tiempo de ejecución.",
+      "Puedes aislar los detalles de implementación de un algoritmo del código que lo utiliza.",
+      "Puedes sustituir la herencia por composición.",
+      "Principio de abierto/cerrado. Puedes introducir nuevas estrategias sin tener que cambiar el contexto."
+    ],
 
-          "Desventajas" : ["Si sólo tienes un par de algoritmos que raramente cambian, no hay una razón real para complicar el programa en exceso con nuevas clases e interfaces que vengan con el patrón.",
-                           "Los clientes deben conocer las diferencias entre estrategias para poder seleccionar la adecuada.",
-                           "Muchos lenguajes de programación modernos tienen un soporte de tipo funcional que te permite implementar distintas versiones de un algoritmo dentro de un grupo de funciones anónimas. Entonces puedes utilizar estas funciones exactamente como habrías utilizado los objetos de estrategia, pero sin saturar tu código con clases e interfaces adicionales."],
+    "Desventajas" : [
+      "Si sólo tienes un par de algoritmos que raramente cambian, no hay una razón real para complicar el programa en exceso con nuevas clases e interfaces que vengan con el patrón.",
+      "Los clientes deben conocer las diferencias entre estrategias para poder seleccionar la adecuada.",
+      "Muchos lenguajes de programación modernos tienen un soporte de tipo funcional que te permite implementar distintas versiones de un algoritmo dentro de un grupo de funciones anónimas. Entonces puedes utilizar estas funciones exactamente como habrías utilizado los objetos de estrategia, pero sin saturar tu código con clases e interfaces adicionales."
+    ],
 
-          "Implementacion" : ["En la clase contexto, identifica un algoritmo que tienda a sufrir cambios frecuentes. También puede ser un enorme condicional que seleccione y ejecute una variante del mismo algoritmo durante el tiempo de ejecución.",
-                              "Declara la interfaz estrategia común a todas las variantes del algoritmo.",
-                              "Uno a uno, extrae todos los algoritmos y ponlos en sus propias clases. Todas deben implementar la misma interfaz estrategia.",
-                              "En la clase contexto, añade un campo para almacenar una referencia a un objeto de estrategia. Proporciona un modificador set para sustituir valores de ese campo. La clase contexto debe trabajar con el objeto de estrategia únicamente a través de la interfaz estrategia. La clase contexto puede definir una interfaz que permita a la estrategia acceder a sus datos.",
-                              "Los clientes de la clase contexto deben asociarla con una estrategia adecuada que coincida con la forma en la que esperan que la clase contexto realice su trabajo principal."],
+    "Implementacion" : [
+      "En la clase contexto, identifica un algoritmo que tienda a sufrir cambios frecuentes. También puede ser un enorme condicional que seleccione y ejecute una variante del mismo algoritmo durante el tiempo de ejecución.",
+      "Declara la interfaz estrategia común a todas las variantes del algoritmo.",
+      "Uno a uno, extrae todos los algoritmos y ponlos en sus propias clases. Todas deben implementar la misma interfaz estrategia.",
+      "En la clase contexto, añade un campo para almacenar una referencia a un objeto de estrategia. Proporciona un modificador set para sustituir valores de ese campo. La clase contexto debe trabajar con el objeto de estrategia únicamente a través de la interfaz estrategia. La clase contexto puede definir una interfaz que permita a la estrategia acceder a sus datos.",
+      "Los clientes de la clase contexto deben asociarla con una estrategia adecuada que coincida con la forma en la que esperan que la clase contexto realice su trabajo principal."
+    ],
 
-          "Diagrama" : "",
+    "Diagrama" : "",
           
-          "Ejemplo": "",
+    "Ejemplo": "",
 
-          "Experiencia": "",
+    "Experiencia": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/strategy" 
-                          ]
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/strategy" 
+    ]
+  },
 
-      }
-    },
-    {
-      "Template Method":
-      {
-          "Definicion": "Define el esqueleto de un algoritmo en la superclase pero permite que las subclases sobrescriban pasos del algoritmo sin cambiar su estructura.",
+  "Template Method":{
+    "Definicion": "Define el esqueleto de un algoritmo en la superclase pero permite que las subclases sobrescriban pasos del algoritmo sin cambiar su estructura.",
         
-          "Ventajas" : ["Puedes permitir a los clientes que sobrescriban tan solo ciertas partes de un algoritmo grande, para que les afecten menos los cambios que tienen lugar en otras partes del algoritmo.",
-                        "Puedes colocar el código duplicado dentro de una superclase."],
+    "Ventajas" : [
+      "Puedes permitir a los clientes que sobrescriban tan solo ciertas partes de un algoritmo grande, para que les afecten menos los cambios que tienen lugar en otras partes del algoritmo.",
+      "Puedes colocar el código duplicado dentro de una superclase."
+    ],
 
-          "Desventajas" : ["Algunos clientes pueden verse limitados por el esqueleto proporcionado de un algoritmo.",
-                           "Puede que violes el principio de sustitución de Liskov suprimiendo una implementación por defecto de un paso a través de una subclase.",
-                           "Los métodos plantilla tienden a ser más difíciles de mantener cuantos más pasos tengan."],
+    "Desventajas" : [
+      "Algunos clientes pueden verse limitados por el esqueleto proporcionado de un algoritmo.",
+      "Puede que violes el principio de sustitución de Liskov suprimiendo una implementación por defecto de un paso a través de una subclase.",
+      "Los métodos plantilla tienden a ser más difíciles de mantener cuantos más pasos tengan."
+    ],
 
-          "Implementacion" : ["Analiza el algoritmo objetivo para ver si puedes dividirlo en pasos. Considera qué pasos son comunes a todas las subclases y cuáles siempre serán únicos.",
-                              "Crea la clase base abstracta y declara el método plantilla y un grupo de métodos abstractos que representen los pasos del algoritmo. Perfila la estructura del algoritmo en el método plantilla ejecutando los pasos correspondientes. Considera declarar el método plantilla como final para evitar que las subclases lo sobrescriban.",
-                              "No hay problema en que todos los pasos acaben siendo abstractos. Sin embargo, a algunos pasos les vendría bien tener una implementación por defecto. Las subclases no tienen que implementar esos métodos.",
-                              "Piensa en añadir ganchos entre los pasos cruciales del algoritmo.",
-                              "Para cada variación del algoritmo, crea una nueva subclase concreta. Ésta debe implementar todos los pasos abstractos, pero también puede sobrescribir algunos de los opcionales."],
+    "Implementacion" : [
+      "Analiza el algoritmo objetivo para ver si puedes dividirlo en pasos. Considera qué pasos son comunes a todas las subclases y cuáles siempre serán únicos.",
+      "Crea la clase base abstracta y declara el método plantilla y un grupo de métodos abstractos que representen los pasos del algoritmo. Perfila la estructura del algoritmo en el método plantilla ejecutando los pasos correspondientes. Considera declarar el método plantilla como final para evitar que las subclases lo sobrescriban.",
+      "No hay problema en que todos los pasos acaben siendo abstractos. Sin embargo, a algunos pasos les vendría bien tener una implementación por defecto. Las subclases no tienen que implementar esos métodos.",
+      "Piensa en añadir ganchos entre los pasos cruciales del algoritmo.",
+      "Para cada variación del algoritmo, crea una nueva subclase concreta. Ésta debe implementar todos los pasos abstractos, pero también puede sobrescribir algunos de los opcionales."
+    ],
 
-          "Diagrama" : "",
+    "Diagrama" : "",
           
-          "Ejemplo": "",
+    "Ejemplo": "",
 
-          "Experiencia": "",
+    "Experiencia": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/template-method" 
-                          ]
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/template-method" 
+    ]
+  },
 
-      }
-    },
-    {
-      "Visitor":
-      {
-          "Definicion": "Permite separar algoritmos de los objetos sobre los que operan.",
+  "Visitor":{
+    "Definicion": "Permite separar algoritmos de los objetos sobre los que operan.",
         
-          "Ventajas" : ["Principio de abierto/cerrado. Puedes introducir un nuevo comportamiento que puede funcionar con objetos de clases diferentes sin cambiar esas clases.",
-                        "Principio de responsabilidad única. Puedes tomar varias versiones del mismo comportamiento y ponerlas en la misma clase.",
-                        "Un objeto visitante puede acumular cierta información útil mientras trabaja con varios objetos. Esto puede resultar útil cuando quieras atravesar una compleja estructura de objetos, como un árbol de objetos, y aplicar el visitante a cada objeto de esa estructura."],
+    "Ventajas" : [
+      "Principio de abierto/cerrado. Puedes introducir un nuevo comportamiento que puede funcionar con objetos de clases diferentes sin cambiar esas clases.",
+      "Principio de responsabilidad única. Puedes tomar varias versiones del mismo comportamiento y ponerlas en la misma clase.",
+      "Un objeto visitante puede acumular cierta información útil mientras trabaja con varios objetos. Esto puede resultar útil cuando quieras atravesar una compleja estructura de objetos, como un árbol de objetos, y aplicar el visitante a cada objeto de esa estructura."
+    ],
 
-          "Desventajas" : ["Debes actualizar todos los visitantes cada vez que una clase se añada o elimine de la jerarquía de elementos.",
-                           "Los visitantes pueden carecer del acceso necesario a los campos y métodos privados de los elementos con los que se supone que deben trabajar."],
+    "Desventajas" : [
+      "Debes actualizar todos los visitantes cada vez que una clase se añada o elimine de la jerarquía de elementos.",
+      "Los visitantes pueden carecer del acceso necesario a los campos y métodos privados de los elementos con los que se supone que deben trabajar."
+    ],
 
-          "Implementacion" : ["Declara la interfaz visitante con un grupo de métodos “visitantes”, uno por cada clase de elemento concreto existente en el programa.",
-                              "Declara la interfaz de elemento. Si estás trabajando con una jerarquía de clases de elemento existente, añade el método abstracto de “aceptación” a la clase base de la jerarquía. Este método debe aceptar un objeto visitante como argumento.",
-                              "Implementa los métodos de aceptación en todas las clases de elemento concreto. Estos métodos simplemente deben redirigir la llamada a un método visitante en el objeto visitante entrante que coincida con la clase del elemento actual.",
-                              "Las clases de elemento sólo deben funcionar con visitantes a través de la interfaz visitante. Los visitantes, sin embargo, deben conocer todas las clases de elemento concreto, referenciadas como tipos de parámetro de los métodos de visita.",
-                              "Por cada comportamiento que no pueda implementarse dentro de la jerarquía de elementos, crea una nueva clase concreta visitante e implementa todos los métodos visitantes.",
-                              "El cliente debe crear objetos visitantes y pasarlos dentro de elementos a través de métodos de “aceptación”."],
+    "Implementacion" : [
+      "Declara la interfaz visitante con un grupo de métodos “visitantes”, uno por cada clase de elemento concreto existente en el programa.",
+      "Declara la interfaz de elemento. Si estás trabajando con una jerarquía de clases de elemento existente, añade el método abstracto de “aceptación” a la clase base de la jerarquía. Este método debe aceptar un objeto visitante como argumento.",
+      "Implementa los métodos de aceptación en todas las clases de elemento concreto. Estos métodos simplemente deben redirigir la llamada a un método visitante en el objeto visitante entrante que coincida con la clase del elemento actual.",
+      "Las clases de elemento sólo deben funcionar con visitantes a través de la interfaz visitante. Los visitantes, sin embargo, deben conocer todas las clases de elemento concreto, referenciadas como tipos de parámetro de los métodos de visita.",
+      "Por cada comportamiento que no pueda implementarse dentro de la jerarquía de elementos, crea una nueva clase concreta visitante e implementa todos los métodos visitantes.",
+      "El cliente debe crear objetos visitantes y pasarlos dentro de elementos a través de métodos de “aceptación”."
+    ],
 
-          "Diagrama" : "",
+    "Diagrama" : "",
           
-          "Ejemplo": "",
+    "Ejemplo": "",
 
-          "Experiencia": "",
+    "Experiencia": "",
 
-          "Referencias" : ["https://refactoring.guru/es/design-patterns/visitor" 
-                          ]
-
-      }
-    }
-  ]
+    "Referencias" : [
+      "https://refactoring.guru/es/design-patterns/visitor" 
+    ]
+  }
 }
