@@ -635,7 +635,7 @@ public class Prototype extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCerrarMouseEntered
 
     private void txtCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCerrarMouseClicked
-        System.exit(0);
+        this.dispose();
     }//GEN-LAST:event_txtCerrarMouseClicked
 
     private void HeaderMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HeaderMousePressed

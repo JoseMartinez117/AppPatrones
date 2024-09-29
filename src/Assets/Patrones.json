@@ -1,6 +1,6 @@
 {
   "Singleton" : {
-    "Definicion": "Nos permite asegurarnos de que una clase tenga una única instancia, a la vez que proporciona un punto de acceso global a dicha instancia.",
+    "Definicion": "Singleton es un patrón de diseño creacional que nos permite asegurarnos de que una clase tenga una única instancia, a la vez que proporciona un punto de acceso global a dicha instancia. <p><p>Todas las implementaciones del patrón Singleton tienen estos dos pasos en común: <p><p>1. Hacer privado el constructor por defecto para evitar que otros objetos utilicen el operador new con la clase Singleton. <p><p>2. Crear un método de creación estático que actúe como constructor. Tras bambalinas, este método invoca al constructor privado para crear un objeto y lo guarda en un campo estático. Las siguientes llamadas a este método devuelven el objeto almacenado en memoria.",
           
     "Ventajas" : [
       "Puedes tener la certeza de que una clase tiene una única instancia.", 
@@ -35,7 +35,7 @@
   },
 
   "Prototype" : {
-    "Definicion": "Nos permite copiar objetos existentes sin que el código dependa de sus clases.",
+    "Definicion": "Prototype es un patrón de diseño creacional que nos permite copiar objetos existentes sin que el código dependa de sus clases. <p><p>Este busca delegar el proceso de copia a los propios objetos que están siendo clonados. <p><p>La implementación del método clonar es muy parecida en todas las clases. El método crea un objeto a partir de la clase actual y lleva todos los valores de campo del objeto viejo, al nuevo.",
           
     "Ventajas" :[
       "Puedes clonar objetos sin acoplarlos a sus clases concretas.", 
@@ -67,7 +67,7 @@
   },
     
   "Builder" : {
-    "Definicion": "Nos permite construir objetos complejos paso a paso. El patrón nos permite producir distintos tipos y representaciones de un objeto empleando el mismo código de construcción.",
+    "Definicion": "Builder es un patrón de diseño creacional que nos permite construir objetos complejos paso a paso. El patrón nos permite producir distintos tipos y representaciones de un objeto empleando el mismo código de construcción. <p><p> Este sugiere que saques el código de construcción del objeto de su propia clase y lo coloques dentro de objetos independientes llamados constructores que realizaran una serie de pasos. <p><p>Lo importante es que no necesitas invocar todos los pasos. Puedes invocar sólo aquellos que sean necesarios para producir una configuración particular de un objeto.",
           
     "Ventajas" :[
       "Puedes construir objetos paso a paso, aplazar pasos de la construcción o ejecutar pasos de forma recursiva.", 
@@ -100,8 +100,7 @@
   },
     
   "AbstractFactory" : {
-    "Definicion": "Nos permite producir familias de objetos relacionados sin especificar sus clases concretas.",
-          
+    "Definicion": "Abstract Factory es un patrón de diseño creacional que nos permite producir familias de objetos relacionados sin especificar sus clases concretas. <p><p>Lo primero que sugiere el patrón Abstract Factory es que declaremos de forma explícita interfaces para cada producto diferente de la familia de productos y cada variante de dicho producto implemente su interfaz correspondiente. <p><p>Luego se debe declarar la Fábrica abstracta: una interfaz con una lista de métodos de creación para todos los productos que son parte de la familia de productos. <p><p>Para cada variante de una familia de productos, creamos una clase de fábrica independiente basada en la Fábrica Abstracta que devolverá los productos específicos de su categoría.",          
     "Ventajas" : [
       "Puedes tener la certeza de que los productos que obtienes de una fábrica son compatibles entre sí.", 
       "Evitas un acoplamiento fuerte entre productos concretos y el código cliente.", 
@@ -133,7 +132,7 @@
   },  
 
   "FactoryMethod" : {
-    "Definicion" : "Proporciona una interfaz para crear objetos en una superclase, mientras permite a las subclases alterar el tipo de objetos que se crearán.",
+    "Definicion" : "Factory Method es un patrón de diseño creacional que proporciona una interfaz para crear objetos en una superclase, mientras permite a las subclases alterar el tipo de objetos que se crearán. <p><p>Este busca que los objetos sean creados invocando un método de una clase fabrica especifica en lugar de llamar al operador new para construir objetos directamente. <p><p>A simple vista, puede parecer que este cambio no tiene sentido, ya que tan solo hemos cambiado el lugar desde donde invocamos al constructor. Sin embargo, piensa en esto: ahora puedes sobrescribir el método fábrica en una subclase y cambiar la clase de los productos creados por el método.",
           
     "Ventajas" : [
       "Evitas un acoplamiento fuerte entre el creador y los productos concretos.", 
@@ -166,7 +165,7 @@
   },
 
   "Adapter":{
-    "Definicion": "Permite la colaboración entre objetos con interfaces incompatibles.",
+    "Definicion": "Adapter es un patrón de diseño estructural que permite la colaboración entre objetos con interfaces incompatibles. <p><p>Estre busca crear un adaptador, el cual es un objeto especial que convierte la interfaz de un objeto, de forma que otro objeto pueda comprenderla. Un adaptador envuelve uno de los objetos para esconder la complejidad de la conversión que tiene lugar tras bambalinas. El objeto envuelto ni siquiera es consciente de la existencia del adaptador. <p><p>Por ejemplo, puedes envolver un objeto que opera con metros y kilómetros con un adaptador que convierte todos los datos al sistema anglosajón, es decir, pies y millas.",
         
     "Ventajas" : [
       "Principio de responsabilidad única. Puedes separar la interfaz o el código de conversión de datos de la lógica de negocio primaria del programa.",
@@ -198,7 +197,7 @@
   },
 
   "Bridge":{
-    "Definicion": "Permite dividir una clase grande, o un grupo de clases estrechamente relacionadas, en dos jerarquías separadas (abstracción e implementación) que pueden desarrollarse independientemente la una de la otra.",
+    "Definicion": "Bridge es un patrón de diseño estructural que te permite dividir una clase grande, o un grupo de clases estrechamente relacionadas, en dos jerarquías separadas (abstracción e implementación) que pueden desarrollarse independientemente la una de la otra. <p><p>El patrón Bridge busca pasar de la herencia a la composición del objeto. Esto quiere decir que se extrae una de las dimensiones a una jerarquía de clases separada, de modo que las clases originales referencian un objeto de la nueva jerarquía, en lugar de tener todo su estado y sus funcionalidades dentro de una clase.",
         
     "Ventajas" : [
       "Puedes crear clases y aplicaciones independientes de plataforma.",
@@ -233,7 +232,7 @@
   },
 
   "Composite":{
-    "Definicion": "Permite componer objetos en estructuras de árbol y trabajar con esas estructuras como si fueran objetos individuales.",
+    "Definicion": "Composite es un patrón de diseño estructural que te permite componer objetos en estructuras de árbol y trabajar con esas estructuras como si fueran objetos individuales. <p><p>El uso del patrón Composite sólo tiene sentido cuando el modelo central de tu aplicación puede representarse en forma de árbol. Permitiendo tratar a los nodos hijos de un nodo padre de forma igualitaria sin importar su clase. <p><p>Para ello se hace uso de interfaz común que tendra los metodos que deseemos implementar.",
         
     "Ventajas" : [
       "Puedes trabajar con estructuras de árbol complejas con mayor comodidad: utiliza el polimorfismo y la recursión en tu favor.",
@@ -264,7 +263,7 @@
   },
 
   "Decorator":{
-    "Definicion": "Permite añadir funcionalidades a objetos colocando estos objetos dentro de objetos encapsuladores especiales que contienen estas funcionalidades.",
+    "Definicion": "Decorator es un patrón de diseño estructural que te permite añadir funcionalidades a objetos colocando estos objetos dentro de objetos encapsuladores especiales que contienen estas funcionalidades. <p><p> ",
         
     "Ventajas" : [
       "Puedes extender el comportamiento de un objeto sin crear una nueva subclase.",

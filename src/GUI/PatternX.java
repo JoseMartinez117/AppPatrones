@@ -6,10 +6,14 @@ package GUI;
 
 import Json.JsonInformation;
 import java.awt.Color;
+import java.awt.Image;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import org.json.simple.parser.ParseException;
 
 public class PatternX extends javax.swing.JFrame {
@@ -20,7 +24,7 @@ public class PatternX extends javax.swing.JFrame {
     Color colorSelected;
     Color colorEntered;
     Color colorDefault;
-    private String dato;
+    private String dato="";
     
     public PatternX() throws IOException, FileNotFoundException, ParseException {
         this.info = new JsonInformation();
@@ -37,6 +41,13 @@ public class PatternX extends javax.swing.JFrame {
         btnDefinition.setBackground(colorSelected);
     }
     
+    private void setImageLabel(JLabel labelName, String root){
+        ImageIcon image = new ImageIcon(root);
+        Icon icon = new ImageIcon(image.getImage().getScaledInstance(labelName.getWidth(), labelName.getHeight(),Image.SCALE_SMOOTH));
+        labelName.setIcon(icon);
+        this.repaint();
+    }
+    
     private void defaultButtons(){
         btnDefinition.setBackground(colorDefault);
         btnAdvantage.setBackground(colorDefault);
@@ -45,6 +56,35 @@ public class PatternX extends javax.swing.JFrame {
         btnCodeExample.setBackground(colorDefault);
         btnExperience.setBackground(colorDefault);
         btnReferences.setBackground(colorDefault);
+    }
+    
+    private void window(String nombre){
+        
+        switch(nombre){
+            case "FactoryMethod":
+                FactoryMethod newframe = new FactoryMethod();
+                newframe.setVisible(true);
+                break;
+            case "AbstractFactory":
+                AbstractFactory newframe1 = new AbstractFactory();
+                newframe1.setVisible(true);
+                break;
+            case "Builder":
+                Builder newframe2 = new Builder();
+                newframe2.setVisible(true);
+                break;
+                
+            case "Prototye":
+                Prototype newframe3 = new Prototype();
+                newframe3.setVisible(true);
+                break;
+                
+            case "Singleton":
+                Singleton newframe4 = new Singleton();
+                newframe4.setVisible(true);
+                break;   
+        }
+    
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -83,11 +123,26 @@ public class PatternX extends javax.swing.JFrame {
         pnlDefinition = new javax.swing.JPanel();
         lblDefinition = new javax.swing.JLabel();
         pnlAdventage = new javax.swing.JPanel();
+        lblAdvantages = new javax.swing.JLabel();
+        lblAdvantages1 = new javax.swing.JLabel();
         pnlImplment = new javax.swing.JPanel();
+        lblImplement = new javax.swing.JLabel();
         pnlDiagram = new javax.swing.JPanel();
+        lblDiagram = new javax.swing.JLabel();
+        btnBack = new javax.swing.JPanel();
+        lblNext1 = new javax.swing.JLabel();
+        btnNext = new javax.swing.JPanel();
+        lblNext = new javax.swing.JLabel();
         pnlCodeExample = new javax.swing.JPanel();
+        lblCode = new javax.swing.JLabel();
+        btnBack1 = new javax.swing.JPanel();
+        lblNext2 = new javax.swing.JLabel();
+        btnNext1 = new javax.swing.JPanel();
+        lblNext3 = new javax.swing.JLabel();
         pnlExperience = new javax.swing.JPanel();
+        lblExperience = new javax.swing.JLabel();
         pnlReferences = new javax.swing.JPanel();
+        lblReferences = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -478,19 +533,22 @@ public class PatternX extends javax.swing.JFrame {
         lblTitle.setFont(new java.awt.Font("Instrument Sans", 1, 24)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("<html>texto ejemplo<html>");
-        jPanel1.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 430, 60));
+        jPanel1.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 430, 60));
 
+        lblTab.setBackground(new java.awt.Color(255, 255, 255));
         lblTab.setFont(new java.awt.Font("Instrument Sans", 1, 12)); // NOI18N
-        lblTab.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblTab.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTab.setText("<html>Definición<html>");
-        jPanel1.add(lblTab, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 540, 30));
+        jPanel1.add(lblTab, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 540, 30));
 
         tabs.setBackground(new java.awt.Color(255, 255, 255));
         tabs.setTabPlacement(javax.swing.JTabbedPane.LEFT);
 
         pnlDefinition.setBackground(new java.awt.Color(255, 255, 255));
 
+        lblDefinition.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         lblDefinition.setText("Text");
+        lblDefinition.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         javax.swing.GroupLayout pnlDefinitionLayout = new javax.swing.GroupLayout(pnlDefinition);
         pnlDefinition.setLayout(pnlDefinitionLayout);
@@ -510,95 +568,285 @@ public class PatternX extends javax.swing.JFrame {
 
         pnlAdventage.setBackground(new java.awt.Color(255, 255, 255));
 
+        lblAdvantages.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        lblAdvantages.setText("Text");
+        lblAdvantages.setToolTipText("");
+        lblAdvantages.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        lblAdvantages1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        lblAdvantages1.setText("Text");
+        lblAdvantages1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
         javax.swing.GroupLayout pnlAdventageLayout = new javax.swing.GroupLayout(pnlAdventage);
         pnlAdventage.setLayout(pnlAdventageLayout);
         pnlAdventageLayout.setHorizontalGroup(
             pnlAdventageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 631, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAdventageLayout.createSequentialGroup()
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addComponent(lblAdvantages, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblAdvantages1, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         pnlAdventageLayout.setVerticalGroup(
             pnlAdventageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 310, Short.MAX_VALUE)
+            .addGroup(pnlAdventageLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlAdventageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblAdvantages, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblAdvantages1, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tabs.addTab("", pnlAdventage);
 
         pnlImplment.setBackground(new java.awt.Color(255, 255, 255));
 
+        lblImplement.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        lblImplement.setText("Text");
+        lblImplement.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
         javax.swing.GroupLayout pnlImplmentLayout = new javax.swing.GroupLayout(pnlImplment);
         pnlImplment.setLayout(pnlImplmentLayout);
         pnlImplmentLayout.setHorizontalGroup(
             pnlImplmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 631, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlImplmentLayout.createSequentialGroup()
+                .addGap(0, 18, Short.MAX_VALUE)
+                .addComponent(lblImplement, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         pnlImplmentLayout.setVerticalGroup(
             pnlImplmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 310, Short.MAX_VALUE)
+            .addGroup(pnlImplmentLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblImplement, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tabs.addTab("", pnlImplment);
 
         pnlDiagram.setBackground(new java.awt.Color(255, 255, 255));
 
+        lblNext1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        lblNext1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblNext1.setText("<");
+        lblNext1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblNext1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblNext1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblNext1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblNext1MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnBackLayout = new javax.swing.GroupLayout(btnBack);
+        btnBack.setLayout(btnBackLayout);
+        btnBackLayout.setHorizontalGroup(
+            btnBackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblNext1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+        );
+        btnBackLayout.setVerticalGroup(
+            btnBackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblNext1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, Short.MAX_VALUE)
+        );
+
+        lblNext.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        lblNext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblNext.setText(">");
+        lblNext.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblNext.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblNextMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblNextMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblNextMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnNextLayout = new javax.swing.GroupLayout(btnNext);
+        btnNext.setLayout(btnNextLayout);
+        btnNextLayout.setHorizontalGroup(
+            btnNextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblNext, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+        );
+        btnNextLayout.setVerticalGroup(
+            btnNextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblNext, javax.swing.GroupLayout.PREFERRED_SIZE, 45, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout pnlDiagramLayout = new javax.swing.GroupLayout(pnlDiagram);
         pnlDiagram.setLayout(pnlDiagramLayout);
         pnlDiagramLayout.setHorizontalGroup(
             pnlDiagramLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 631, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDiagramLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblDiagram, javax.swing.GroupLayout.DEFAULT_SIZE, 511, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnNext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         pnlDiagramLayout.setVerticalGroup(
             pnlDiagramLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 310, Short.MAX_VALUE)
+            .addGroup(pnlDiagramLayout.createSequentialGroup()
+                .addGroup(pnlDiagramLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblDiagram, javax.swing.GroupLayout.DEFAULT_SIZE, 314, Short.MAX_VALUE)
+                    .addGroup(pnlDiagramLayout.createSequentialGroup()
+                        .addGap(117, 117, 117)
+                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(pnlDiagramLayout.createSequentialGroup()
+                .addGap(116, 116, 116)
+                .addComponent(btnNext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tabs.addTab("", pnlDiagram);
 
         pnlCodeExample.setBackground(new java.awt.Color(255, 255, 255));
 
+        lblNext2.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        lblNext2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblNext2.setText("<");
+        lblNext2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblNext2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblNext2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblNext2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblNext2MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnBack1Layout = new javax.swing.GroupLayout(btnBack1);
+        btnBack1.setLayout(btnBack1Layout);
+        btnBack1Layout.setHorizontalGroup(
+            btnBack1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblNext2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+        );
+        btnBack1Layout.setVerticalGroup(
+            btnBack1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblNext2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, Short.MAX_VALUE)
+        );
+
+        lblNext3.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        lblNext3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblNext3.setText(">");
+        lblNext3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblNext3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblNext3MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblNext3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblNext3MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnNext1Layout = new javax.swing.GroupLayout(btnNext1);
+        btnNext1.setLayout(btnNext1Layout);
+        btnNext1Layout.setHorizontalGroup(
+            btnNext1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblNext3, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+        );
+        btnNext1Layout.setVerticalGroup(
+            btnNext1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblNext3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout pnlCodeExampleLayout = new javax.swing.GroupLayout(pnlCodeExample);
         pnlCodeExample.setLayout(pnlCodeExampleLayout);
         pnlCodeExampleLayout.setHorizontalGroup(
             pnlCodeExampleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 631, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCodeExampleLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(btnBack1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblCode, javax.swing.GroupLayout.DEFAULT_SIZE, 511, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnNext1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         pnlCodeExampleLayout.setVerticalGroup(
             pnlCodeExampleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 310, Short.MAX_VALUE)
+            .addGroup(pnlCodeExampleLayout.createSequentialGroup()
+                .addGroup(pnlCodeExampleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblCode, javax.swing.GroupLayout.DEFAULT_SIZE, 314, Short.MAX_VALUE)
+                    .addGroup(pnlCodeExampleLayout.createSequentialGroup()
+                        .addGap(117, 117, 117)
+                        .addComponent(btnBack1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(pnlCodeExampleLayout.createSequentialGroup()
+                .addGap(116, 116, 116)
+                .addComponent(btnNext1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tabs.addTab("", pnlCodeExample);
 
         pnlExperience.setBackground(new java.awt.Color(255, 255, 255));
 
+        lblExperience.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        lblExperience.setText("Text");
+        lblExperience.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
         javax.swing.GroupLayout pnlExperienceLayout = new javax.swing.GroupLayout(pnlExperience);
         pnlExperience.setLayout(pnlExperienceLayout);
         pnlExperienceLayout.setHorizontalGroup(
             pnlExperienceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 631, Short.MAX_VALUE)
+            .addGroup(pnlExperienceLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(lblExperience, javax.swing.GroupLayout.DEFAULT_SIZE, 608, Short.MAX_VALUE)
+                .addContainerGap())
         );
         pnlExperienceLayout.setVerticalGroup(
             pnlExperienceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 310, Short.MAX_VALUE)
+            .addGroup(pnlExperienceLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(lblExperience, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         tabs.addTab("", pnlExperience);
 
         pnlReferences.setBackground(new java.awt.Color(255, 255, 255));
 
+        lblReferences.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        lblReferences.setText("Text");
+        lblReferences.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
         javax.swing.GroupLayout pnlReferencesLayout = new javax.swing.GroupLayout(pnlReferences);
         pnlReferences.setLayout(pnlReferencesLayout);
         pnlReferencesLayout.setHorizontalGroup(
             pnlReferencesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 631, Short.MAX_VALUE)
+            .addGroup(pnlReferencesLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(lblReferences, javax.swing.GroupLayout.DEFAULT_SIZE, 608, Short.MAX_VALUE)
+                .addContainerGap())
         );
         pnlReferencesLayout.setVerticalGroup(
             pnlReferencesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 310, Short.MAX_VALUE)
+            .addGroup(pnlReferencesLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(lblReferences, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         tabs.addTab("", pnlReferences);
 
-        jPanel1.add(tabs, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 660, 310));
+        jPanel1.add(tabs, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 660, 320));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -772,6 +1020,8 @@ public class PatternX extends javax.swing.JFrame {
         lblTab.setText("Ventajas y Desventajas");
         defaultButtons();
         btnAdvantage.setBackground(colorSelected);
+        lblAdvantages.setText("<html>"+info.getList(dato, "Ventajas")+"<html>");
+        lblAdvantages1.setText("<html>"+info.getList(dato, "Desventajas")+"<html>");
     }//GEN-LAST:event_LblAdvantegeMouseClicked
 
     private void LblImplementMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblImplementMouseClicked
@@ -779,6 +1029,8 @@ public class PatternX extends javax.swing.JFrame {
         lblTab.setText("Pasos de Implementación");
         defaultButtons();
         btnImplement.setBackground(colorSelected);
+        lblImplement.setText("<html>"+info.getList(dato, "Implementacion")+"<html>");
+        
     }//GEN-LAST:event_LblImplementMouseClicked
 
     private void LblDiagramMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblDiagramMouseClicked
@@ -786,6 +1038,9 @@ public class PatternX extends javax.swing.JFrame {
         lblTab.setText("Ejemplo con Diagrama de Clases");
         defaultButtons();
         btnDiagram.setBackground(colorSelected);
+        setImageLabel(lblDiagram, "src/Assets/IMG//Diagramas//DiagramaUML_"+dato+".png");
+        
+        
     }//GEN-LAST:event_LblDiagramMouseClicked
 
     private void LblCodeExampleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblCodeExampleMouseClicked
@@ -793,6 +1048,7 @@ public class PatternX extends javax.swing.JFrame {
         lblTab.setText("Ejemplo en Código");
         defaultButtons();
         btnCodeExample.setBackground(colorSelected);
+        
     }//GEN-LAST:event_LblCodeExampleMouseClicked
 
     private void LblExperienceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblExperienceMouseClicked
@@ -800,6 +1056,7 @@ public class PatternX extends javax.swing.JFrame {
         lblTab.setText("Experiencia Interactiva");
         defaultButtons();
         btnExperience.setBackground(colorSelected);
+        window(dato);
     }//GEN-LAST:event_LblExperienceMouseClicked
 
     private void LblReferencesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblReferencesMouseClicked
@@ -807,7 +1064,60 @@ public class PatternX extends javax.swing.JFrame {
         lblTab.setText("Referencias");
         defaultButtons();
         btnReferences.setBackground(colorSelected);
+        lblReferences.setText("<html>"+info.getList(dato, "Referencias")+"<html>");
     }//GEN-LAST:event_LblReferencesMouseClicked
+
+    private void lblNext1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNext1MouseEntered
+        btnBack.setOpaque(true);
+        btnBack.setBackground(Color.gray);
+    }//GEN-LAST:event_lblNext1MouseEntered
+
+    private void lblNext1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNext1MouseExited
+        btnBack.setOpaque(true);
+        btnBack.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_lblNext1MouseExited
+
+    private void lblNextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNextMouseClicked
+        setImageLabel(lblDiagram, "src/Assets/IMG//Diagramas//DiagramaUML_"+dato+"Ex.png");   
+    }//GEN-LAST:event_lblNextMouseClicked
+
+    private void lblNextMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNextMouseEntered
+        btnNext.setOpaque(true);
+        btnNext.setBackground(Color.gray);
+    }//GEN-LAST:event_lblNextMouseEntered
+
+    private void lblNextMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNextMouseExited
+        btnNext.setOpaque(true);
+        btnNext.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_lblNextMouseExited
+
+    private void lblNext1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNext1MouseClicked
+        setImageLabel(lblDiagram, "src/Assets/IMG//Diagramas//DiagramaUML_"+dato+".png");
+    }//GEN-LAST:event_lblNext1MouseClicked
+
+    private void lblNext2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNext2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblNext2MouseClicked
+
+    private void lblNext2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNext2MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblNext2MouseEntered
+
+    private void lblNext2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNext2MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblNext2MouseExited
+
+    private void lblNext3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNext3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblNext3MouseClicked
+
+    private void lblNext3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNext3MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblNext3MouseEntered
+
+    private void lblNext3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNext3MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblNext3MouseExited
 
     /**
      * @param args the command line arguments
@@ -861,6 +1171,8 @@ public class PatternX extends javax.swing.JFrame {
     private javax.swing.JLabel LblImplement;
     private javax.swing.JLabel LblReferences;
     private javax.swing.JPanel btnAdvantage;
+    private javax.swing.JPanel btnBack;
+    private javax.swing.JPanel btnBack1;
     private javax.swing.JPanel btnClose;
     private javax.swing.JPanel btnCodeExample;
     private javax.swing.JPanel btnDefinition;
@@ -868,11 +1180,24 @@ public class PatternX extends javax.swing.JFrame {
     private javax.swing.JPanel btnExperience;
     private javax.swing.JPanel btnHome;
     private javax.swing.JPanel btnImplement;
+    private javax.swing.JPanel btnNext;
+    private javax.swing.JPanel btnNext1;
     private javax.swing.JPanel btnReferences;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel lblAdvantages;
+    private javax.swing.JLabel lblAdvantages1;
+    private javax.swing.JLabel lblCode;
     private javax.swing.JLabel lblDefinition;
+    private javax.swing.JLabel lblDiagram;
+    private javax.swing.JLabel lblExperience;
+    private javax.swing.JLabel lblImplement;
+    private javax.swing.JLabel lblNext;
+    private javax.swing.JLabel lblNext1;
+    private javax.swing.JLabel lblNext2;
+    private javax.swing.JLabel lblNext3;
+    private javax.swing.JLabel lblReferences;
     private javax.swing.JLabel lblTab;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JPanel pnlAdventage;

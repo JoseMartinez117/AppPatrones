@@ -327,7 +327,7 @@ public class FactoryMethod extends javax.swing.JFrame {
     }//GEN-LAST:event_HeaderMousePressed
 
     private void txtCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCerrarMouseClicked
-        System.exit(0);
+        this.dispose();
     }//GEN-LAST:event_txtCerrarMouseClicked
 
     private void txtCerrarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCerrarMouseEntered

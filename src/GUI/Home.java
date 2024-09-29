@@ -1025,7 +1025,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_HeaderMousePressed
 
     private void LblFactoryMethodMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblFactoryMethodMouseClicked
-        newFrame.setDato(LblFactoryMethod.getText());
+        newFrame.setDato("FactoryMethod");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblFactoryMethodMouseClicked
@@ -1043,7 +1043,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblFactoryMethodMouseExited
 
     private void LblAbstractFactoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblAbstractFactoryMouseClicked
-        newFrame.setDato(LblAbstractFactory.getText());
+        newFrame.setDato("AbstractFactory");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblAbstractFactoryMouseClicked
@@ -1059,7 +1059,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblAbstractFactoryMouseExited
 
     private void LblBuilderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblBuilderMouseClicked
-        newFrame.setDato(LblBuilder.getText());
+        newFrame.setDato("Builder");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblBuilderMouseClicked
@@ -1075,7 +1075,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblBuilderMouseExited
 
     private void LblPrototypeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblPrototypeMouseClicked
-        newFrame.setDato(LblPrototype.getText());
+        newFrame.setDato("Prototype");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblPrototypeMouseClicked
@@ -1091,7 +1091,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblPrototypeMouseExited
 
     private void LblSingletonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblSingletonMouseClicked
-        newFrame.setDato(LblSingleton.getText());
+        newFrame.setDato("Singleton");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblSingletonMouseClicked
@@ -1121,7 +1121,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblGlossaryMouseExited
 
     private void LblAdapterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblAdapterMouseClicked
-        newFrame.setDato(LblAdapter.getText());
+        newFrame.setDato("Adapter");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblAdapterMouseClicked
@@ -1137,7 +1137,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblAdapterMouseExited
 
     private void LblBridgeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblBridgeMouseClicked
-        newFrame.setDato(LblBridge.getText());
+        newFrame.setDato("Bridge");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblBridgeMouseClicked
@@ -1153,7 +1153,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblBridgeMouseExited
 
     private void LblCompositeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblCompositeMouseClicked
-        newFrame.setDato(LblComposite.getText());
+        newFrame.setDato("Composite");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblCompositeMouseClicked
@@ -1169,7 +1169,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblCompositeMouseExited
 
     private void LblDecoratorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblDecoratorMouseClicked
-        newFrame.setDato(LblDecorator.getText());
+        newFrame.setDato("Decorator");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblDecoratorMouseClicked
@@ -1185,7 +1185,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblDecoratorMouseExited
 
     private void LblFacadeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblFacadeMouseClicked
-        newFrame.setDato(LblFacade.getText());
+        newFrame.setDato("Facade");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblFacadeMouseClicked
@@ -1201,7 +1201,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblFacadeMouseExited
 
     private void LblFlyweightMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblFlyweightMouseClicked
-        newFrame.setDato(LblFlyweight.getText());
+        newFrame.setDato("Flyweight");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblFlyweightMouseClicked
@@ -1217,7 +1217,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblFlyweightMouseExited
 
     private void LblProxyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblProxyMouseClicked
-        newFrame.setDato(LblProxy.getText());
+        newFrame.setDato("Proxy");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblProxyMouseClicked
@@ -1233,7 +1233,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblProxyMouseExited
 
     private void LblChainOfResponsabilityMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblChainOfResponsabilityMouseClicked
-        newFrame.setDato(LblChainOfResponsability.getText());
+        newFrame.setDato("ChainOfResponsability");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblChainOfResponsabilityMouseClicked
@@ -1249,7 +1249,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblChainOfResponsabilityMouseExited
 
     private void LblCommandMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblCommandMouseClicked
-        newFrame.setDato(LblCommand.getText());
+        newFrame.setDato("Command");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblCommandMouseClicked
@@ -1265,7 +1265,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblCommandMouseExited
 
     private void LblIteratorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblIteratorMouseClicked
-        newFrame.setDato(LblIterator.getText());
+        newFrame.setDato("Iterator");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblIteratorMouseClicked
@@ -1281,7 +1281,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblIteratorMouseExited
 
     private void LblMediatorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblMediatorMouseClicked
-        newFrame.setDato(LblMediator.getText());
+        newFrame.setDato("Mediator");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblMediatorMouseClicked
@@ -1297,7 +1297,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblMediatorMouseExited
 
     private void LblMementoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblMementoMouseClicked
-        newFrame.setDato(LblMemento.getText());
+        newFrame.setDato("Memento");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblMementoMouseClicked
@@ -1313,7 +1313,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblMementoMouseExited
 
     private void LblObserverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblObserverMouseClicked
-        newFrame.setDato(LblObserver.getText());
+        newFrame.setDato("Observer");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblObserverMouseClicked
@@ -1329,7 +1329,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblObserverMouseExited
 
     private void LblStrategyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblStrategyMouseClicked
-        newFrame.setDato(LblStrategy.getText());
+        newFrame.setDato("Strategy");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblStrategyMouseClicked
@@ -1345,7 +1345,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblStrategyMouseExited
 
     private void LblTemplateMethodMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblTemplateMethodMouseClicked
-        newFrame.setDato(LblTemplateMethod.getText());
+        newFrame.setDato("TemplateMethod");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblTemplateMethodMouseClicked
@@ -1361,7 +1361,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblTemplateMethodMouseExited
 
     private void LblVisitorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblVisitorMouseClicked
-        newFrame.setDato(LblVisitor.getText());
+        newFrame.setDato("Visitor");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblVisitorMouseClicked
@@ -1377,7 +1377,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblVisitorMouseExited
 
     private void LblStateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblStateMouseClicked
-        newFrame.setDato(LblState.getText());
+        newFrame.setDato("State");
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LblStateMouseClicked
