@@ -4,7 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/josem/OneDrive/Documentos/NetBeansProjects/DiseñoDePatrones/src/GUI/PatternX.java</file>
+            <file>file:/C:/Users/josem/OneDrive/Documentos/NetBeansProjects/DiseñoDePatrones/src/GUI/Prototype.java</file>
+            <file>file:/C:/Users/josem/OneDrive/Documentos/NetBeansProjects/DiseñoDePatrones/src/GUI/Builder.java</file>
+            <file>file:/C:/Users/josem/OneDrive/Documentos/NetBeansProjects/DiseñoDePatrones/src/GUI/Singleton.java</file>
             <file>file:/C:/Users/josem/OneDrive/Documentos/NetBeansProjects/DiseñoDePatrones/src/GUI/Home.java</file>
+            <file>file:/C:/Users/josem/OneDrive/Documentos/NetBeansProjects/DiseñoDePatrones/src/GUI/FactoryMethod.java</file>
+            <file>file:/C:/Users/josem/OneDrive/Documentos/NetBeansProjects/DiseñoDePatrones/src/GUI/AbstractFactory.java</file>
         </group>
     </open-files>
 </project-private>
