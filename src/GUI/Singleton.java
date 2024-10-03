@@ -11,12 +11,16 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import Assets.FONT.Fonts;
+
 
 public class Singleton extends javax.swing.JFrame {
     DefaultTableModel modelo;
     
     int mouseX, mouseY, i=0;
     String cmbW="", name="", memory;
+    Fonts typeFont;
+    
     Color colorEntered=new Color(128, 128, 128);
     Color colorDefault=new Color(214, 217, 223);
     
@@ -37,6 +41,12 @@ public class Singleton extends javax.swing.JFrame {
         
         memory=Integer.toHexString(System.identityHashCode(lblWorlds));
         
+    }
+    
+    private void decorator(){
+        typeFont = new Fonts();
+
+    
     }
 
     private void setImageLabel(JLabel labelName, String root){

@@ -5,7 +5,7 @@
 package examples.creationals.factoryMethod.factories;
 
 import examples.creationals.factoryMethod.Enemy;
-import examples.creationals.factoryMethod.enemies.Skeleton;
+import examples.creationals.factoryMethod.entities.Skeleton;
 
 /**
  *

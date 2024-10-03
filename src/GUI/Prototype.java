@@ -10,11 +10,13 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import Assets.FONT.Fonts;
 
 public class Prototype extends javax.swing.JFrame {
 
     int mouseX, mouseY;
     String cmbH="N", cmbC="N", cmbL="N", cmbB="N", cmbW="N", root="Z_HN_CN_LN_BN_WN.png";
+    Fonts typeFont;
     
     Color colorEntered=new Color(128, 128, 128);
     Color colorDefault=new Color(214, 217, 223);
@@ -33,6 +35,23 @@ public class Prototype extends javax.swing.JFrame {
         setImageLabel(lblEnemy, "src/Assets/IMG/Enemies/Zombie_Combinations/Z_HN_CN_LN_BN_WN.png");
         
         lblMemory.setText("Dirección en memoria: "+Integer.toHexString(System.identityHashCode(lblMemory)));
+    }
+    
+    private void decorator(){
+        typeFont = new Fonts();
+
+        lblPrototype.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        cmbHelmet.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        cmbChesplate.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        cmbLeggins.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        cmbBoots.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        cmbHelmet1.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        cmbChesplate1.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        cmbLeggins1.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        cmbBoots1.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblMemory.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblMemory2.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+    
     }
 
     private void setImageLabel(JLabel labelName, String root){

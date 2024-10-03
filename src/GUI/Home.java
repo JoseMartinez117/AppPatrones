@@ -10,16 +10,59 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.json.simple.parser.ParseException;
+import Assets.FONT.Fonts;
 
 public class Home extends javax.swing.JFrame {
     int mouseX,mouseY;
     PatternX newFrame;
+    Fonts typeFont;
     
     public Home() throws IOException, FileNotFoundException, ParseException {
         initComponents();
-        newFrame = new PatternX();
+        decorator();
+        newFrame = new PatternX();  
     }
     
+    
+    private void decorator(){
+        typeFont = new Fonts();
+        //Inicializando la fuente de la ventana.
+        //-Titulos, subtitulos y definicion
+        LblTittle.setFont(typeFont.fontV(typeFont.instruments, 1, 40));
+        LblDefinition.setFont(typeFont.fontV(typeFont.instruments, 0, 17));
+        LblSubtittle1.setFont(typeFont.fontV(typeFont.instruments, 1, 18));
+        LblSubtittle2.setFont(typeFont.fontV(typeFont.instruments, 1, 18));
+        LblSubtittle3.setFont(typeFont.fontV(typeFont.instruments, 1, 18));
+        //-Botones
+        LblGlossary.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        //--Creacionales
+        LblFactoryMethod.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        LblAbstractFactory.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        LblBuilder.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        LblPrototype.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        LblSingleton.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        //--Estructurales
+        LblAdapter.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        LblBridge.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        LblComposite.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        LblDecorator.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        LblFacade.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        LblFlyweight.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        LblProxy.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        //--Comportamentales
+        LblChainOfResponsability.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        LblCommand.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        LblIterator.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        LblMediator.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        LblMemento.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        LblObserver.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        LblStrategy.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        LblTemplateMethod.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        LblVisitor.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        LblState.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        
+    
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -182,7 +225,6 @@ public class Home extends javax.swing.JFrame {
 
         bgDecoration1.setBackground(new java.awt.Color(253, 196, 196));
 
-        LblTittle.setFont(new java.awt.Font("Instrument Sans", 1, 36)); // NOI18N
         LblTittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LblTittle.setText("Patrones de Diseño");
 
@@ -190,17 +232,13 @@ public class Home extends javax.swing.JFrame {
         bgDecoration1.setLayout(bgDecoration1Layout);
         bgDecoration1Layout.setHorizontalGroup(
             bgDecoration1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgDecoration1Layout.createSequentialGroup()
-                .addContainerGap(51, Short.MAX_VALUE)
-                .addComponent(LblTittle)
-                .addGap(52, 52, 52))
+            .addComponent(LblTittle, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
         );
         bgDecoration1Layout.setVerticalGroup(
             bgDecoration1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgDecoration1Layout.createSequentialGroup()
-                .addContainerGap(10, Short.MAX_VALUE)
-                .addComponent(LblTittle)
-                .addContainerGap())
+                .addContainerGap()
+                .addComponent(LblTittle, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE))
         );
 
         jPanel1.add(bgDecoration1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 51, 442, 60));

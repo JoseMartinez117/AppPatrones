@@ -9,12 +9,16 @@ import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import Assets.FONT.Fonts;
+
 public class FactoryMethod extends javax.swing.JFrame {
 
     int mouseX, mouseY, sldValue;
     String cmbBio, cmbDif;
     Color colorBase=Color.GRAY;
     Color colorCambi=new Color(214, 217, 223);
+    Fonts typeFont;
+    
     
     public FactoryMethod() {
         initComponents();
@@ -31,6 +35,26 @@ public class FactoryMethod extends javax.swing.JFrame {
         setImageLabel(lblEnemy6, "src/Assets/IMG/Enemies/Bogged.png");
         
         
+    }
+    
+    private void decorator(){
+        typeFont = new Fonts();
+        
+        //Inicializando la fuente de la ventana.
+        cmbBiome.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        cmbDifficulty.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblBuildEnemy.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblLight.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblDifficulty.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblBiome.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblDescription.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblDescription1.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblDescription3.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblDescription4.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblDescription5.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblDescription6.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        SldLight.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+    
     }
 
     /**

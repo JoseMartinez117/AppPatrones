@@ -10,18 +10,22 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import Assets.FONT.Fonts;
+
 
 public class Builder extends javax.swing.JFrame {
 
     int mouseX, mouseY;
     String cmbH="N", cmbC="N", cmbL="N", cmbB="N", cmbW="N", root="Z_HN_CN_LN_BN_WN.png";
     String[] saves = new String[4];
+    Fonts typeFont;
     
     Color colorEntered=new Color(128, 128, 128);
     Color colorDefault=new Color(214, 217, 223);
     
     public Builder() {
         initComponents();
+        decorator();
         
         //Armadura
         setImageLabel(lblHelmet, "src/Assets/IMG/Items/Armor/Helmet/Nothing.png");
@@ -36,6 +40,25 @@ public class Builder extends javax.swing.JFrame {
         
     }
 
+    
+    private void decorator(){
+        typeFont = new Fonts();
+        
+        lblSubtittle.setFont(typeFont.fontV(typeFont.instruments, 1, 18));
+        lblGenerator1.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblGenerator2.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblGenerator3.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblGenerator4.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblSave.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        cmbHelmet.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        cmbChesplate.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        cmbLeggins.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        cmbBoots.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        cmbSaveState.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+  
+    
+    }
+    
     private void setImageLabel(JLabel labelName, String root){
         ImageIcon image = new ImageIcon(root);
         Icon icon = new ImageIcon(image.getImage().getScaledInstance(labelName.getWidth(), labelName.getHeight(),Image.SCALE_SMOOTH));
@@ -105,7 +128,7 @@ public class Builder extends javax.swing.JFrame {
         lblGenerate3 = new javax.swing.JLabel();
         lblGenerate1 = new javax.swing.JLabel();
         lblGenerate2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblSubtittle = new javax.swing.JLabel();
         cmbHelmet = new javax.swing.JComboBox<>();
         cmbChesplate = new javax.swing.JComboBox<>();
         cmbWeapon = new javax.swing.JComboBox<>();
@@ -358,9 +381,9 @@ public class Builder extends javax.swing.JFrame {
         jPanel1.add(lblGenerate1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 275, 90, 160));
         jPanel1.add(lblGenerate2, new org.netbeans.lib.awtextra.AbsoluteConstraints(515, 275, 90, 160));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel1.setText("Enemigos Generados:");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(405, 250, 180, -1));
+        lblSubtittle.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        lblSubtittle.setText("Enemigos Generados:");
+        jPanel1.add(lblSubtittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(405, 250, 300, -1));
 
         cmbHelmet.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nada", "Diamante", "Hierro", "Oro" }));
         cmbHelmet.addItemListener(new java.awt.event.ItemListener() {
@@ -773,7 +796,6 @@ public class Builder extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbLeggins;
     private javax.swing.JComboBox<String> cmbSaveState;
     private javax.swing.JComboBox<String> cmbWeapon;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblBoots;
     private javax.swing.JLabel lblChesplate;
@@ -788,6 +810,7 @@ public class Builder extends javax.swing.JFrame {
     private javax.swing.JLabel lblHelmet;
     private javax.swing.JLabel lblLeggins;
     private javax.swing.JLabel lblSave;
+    private javax.swing.JLabel lblSubtittle;
     private javax.swing.JLabel lblWeapon;
     private javax.swing.JPanel pnWepon;
     private javax.swing.JPanel pnlBoots;
