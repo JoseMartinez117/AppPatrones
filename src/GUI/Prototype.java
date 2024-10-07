@@ -675,7 +675,8 @@ public class Prototype extends javax.swing.JFrame {
         lblLeggins1.setIcon(lblLeggins.getIcon());
         lblBoots1.setIcon(lblBoots.getIcon());
         lblWeapon1.setIcon(lblWeapon.getIcon());
-        lblMemory2.setText("Dirección en memoria: "+Integer.toHexString(System.identityHashCode(lblMemory2)));
+        Object memory = new Object();
+        lblMemory2.setText("Dirección en memoria: "+Integer.toHexString(System.identityHashCode(memory)));
      
     }//GEN-LAST:event_lblPrototypeMouseClicked
 

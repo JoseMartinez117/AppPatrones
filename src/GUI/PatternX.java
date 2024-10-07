@@ -18,6 +18,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import org.json.simple.parser.ParseException;
 import Assets.FONT.Fonts;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 
 public class PatternX extends javax.swing.JFrame {
@@ -49,13 +51,13 @@ public class PatternX extends javax.swing.JFrame {
         //-Titulos, subtitulos, definiciones
         lblTitle.setFont(typeFont.fontV(typeFont.instruments, 1, 40));
         lblTab.setFont(typeFont.fontV(typeFont.instruments, 1, 24));
-        lblDefinition.setFont(typeFont.fontV(typeFont.instruments, 0, 18));
-        lblAdvantages.setFont(typeFont.fontV(typeFont.instruments, 0, 18));
-        lblAdvantages1.setFont(typeFont.fontV(typeFont.instruments, 0, 18));
-        lblImplement.setFont(typeFont.fontV(typeFont.instruments, 0, 18));
-        lblTextEx.setFont(typeFont.fontV(typeFont.instruments, 0, 18));
-        lblExperience.setFont(typeFont.fontV(typeFont.instruments, 0, 18));
-        lblReferences.setFont(typeFont.fontV(typeFont.instruments, 0, 18));
+        lblDefinition.setFont(typeFont.fontV(typeFont.instruments, 0, 17));
+        lblAdvantages.setFont(typeFont.fontV(typeFont.instruments, 0, 17));
+        lblAdvantages1.setFont(typeFont.fontV(typeFont.instruments, 0, 17));
+        lblImplement.setFont(typeFont.fontV(typeFont.instruments, 0, 17));
+        lblTextEx.setFont(typeFont.fontV(typeFont.instruments, 0, 17));
+        lblExperience.setFont(typeFont.fontV(typeFont.instruments, 0, 17));
+        lblReferences.setFont(typeFont.fontV(typeFont.instruments, 0, 17));
   
     
     }
@@ -112,10 +114,12 @@ public class PatternX extends javax.swing.JFrame {
     
     }
     
-    private void link(String wich) throws IOException{
+    private void link(String wich) throws IOException, URISyntaxException{
         
         switch(wich){
             case "Github":
+                Desktop enlace = Desktop.getDesktop();
+                enlace.browse(new URI("https://github.com/BloodSlayer-404/"+dato));
                 break;
             
             case "Diagram":
@@ -586,9 +590,9 @@ public class PatternX extends javax.swing.JFrame {
             pnlAdventageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlAdventageLayout.createSequentialGroup()
                 .addContainerGap(40, Short.MAX_VALUE)
-                .addGroup(pnlAdventageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblAdvantages1, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblAdvantages, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnlAdventageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblAdvantages, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblAdvantages1, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
 
@@ -1030,6 +1034,8 @@ public class PatternX extends javax.swing.JFrame {
             link("Github");
         } catch (IOException ex) {
             Logger.getLogger(PatternX.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(PatternX.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_lblGitHubMouseClicked
 
@@ -1038,6 +1044,8 @@ public class PatternX extends javax.swing.JFrame {
             link("Diagram");
         } catch (IOException ex) {
             Logger.getLogger(PatternX.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(PatternX.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_lblDiagramMouseClicked
 
@@ -1045,6 +1053,8 @@ public class PatternX extends javax.swing.JFrame {
         try {
             link("DiagramEx");
         } catch (IOException ex) {
+            Logger.getLogger(PatternX.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
             Logger.getLogger(PatternX.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_lblDiagramExMouseClicked
