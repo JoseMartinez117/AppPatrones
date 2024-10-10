@@ -286,7 +286,6 @@ public class Singleton extends javax.swing.JFrame {
             setImageLabel(lblEnemy, "src/Assets/IMG/Singleton/Creaking.png");
             Object memory = new Object();
             lblMemory.setText("Dirección en memoria: "+Integer.toHexString(System.identityHashCode(memory)));
-            decorator();
         }else{
             JOptionPane.showMessageDialog(null, "Solo se puede generar un Creaking por corazon!!");
         

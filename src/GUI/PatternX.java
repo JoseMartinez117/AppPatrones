@@ -51,15 +51,20 @@ public class PatternX extends javax.swing.JFrame {
         //-Titulos, subtitulos, definiciones
         lblTitle.setFont(typeFont.fontV(typeFont.instruments, 1, 40));
         lblTab.setFont(typeFont.fontV(typeFont.instruments, 1, 24));
-        lblDefinition.setFont(typeFont.fontV(typeFont.instruments, 0, 17));
-        lblAdvantages.setFont(typeFont.fontV(typeFont.instruments, 0, 17));
-        lblAdvantages1.setFont(typeFont.fontV(typeFont.instruments, 0, 17));
+        lblDefinition.setFont(typeFont.fontV(typeFont.instruments, 0, 18));
+        lblAdvantages.setFont(typeFont.fontV(typeFont.instruments, 0, 18));
+        lblAdvantages1.setFont(typeFont.fontV(typeFont.instruments, 0, 18));
         lblImplement.setFont(typeFont.fontV(typeFont.instruments, 0, 17));
-        lblTextEx.setFont(typeFont.fontV(typeFont.instruments, 0, 17));
-        lblExperience.setFont(typeFont.fontV(typeFont.instruments, 0, 17));
-        lblReferences.setFont(typeFont.fontV(typeFont.instruments, 0, 17));
-  
-    
+        lblTextEx.setFont(typeFont.fontV(typeFont.instruments, 0, 18));
+        lblExperience.setFont(typeFont.fontV(typeFont.instruments, 0, 18));
+        lblReferences.setFont(typeFont.fontV(typeFont.instruments, 0, 18));
+        lbltxtDefinition.setFont(typeFont.fontV(typeFont.instruments, 0, 11));
+        LbltxtAdvantage.setFont(typeFont.fontV(typeFont.instruments, 0, 11));
+        LbltxtImplement.setFont(typeFont.fontV(typeFont.instruments, 0, 11));
+        LbltxtCodeExample.setFont(typeFont.fontV(typeFont.instruments, 0, 11));
+        LbltxtExperience.setFont(typeFont.fontV(typeFont.instruments, 0, 11));
+        LbltxtReferences.setFont(typeFont.fontV(typeFont.instruments, 0, 11));
+        
     }
     
     public void setDato(String dato){
@@ -156,16 +161,22 @@ public class PatternX extends javax.swing.JFrame {
         btnHome = new javax.swing.JPanel();
         LblHome = new javax.swing.JLabel();
         btnDefinition = new javax.swing.JPanel();
+        lbltxtDefinition = new javax.swing.JLabel();
         LblDefinition = new javax.swing.JLabel();
         btnAdvantage = new javax.swing.JPanel();
+        LbltxtAdvantage = new javax.swing.JLabel();
         LblAdvantege = new javax.swing.JLabel();
         btnImplement = new javax.swing.JPanel();
+        LbltxtImplement = new javax.swing.JLabel();
         LblImplement = new javax.swing.JLabel();
         btnCodeExample = new javax.swing.JPanel();
+        LbltxtCodeExample = new javax.swing.JLabel();
         LblCodeExample = new javax.swing.JLabel();
         btnExperience = new javax.swing.JPanel();
+        LbltxtExperience = new javax.swing.JLabel();
         LblExperience = new javax.swing.JLabel();
         btnReferences = new javax.swing.JPanel();
+        LbltxtReferences = new javax.swing.JLabel();
         LblReferences = new javax.swing.JLabel();
         lblTitle = new javax.swing.JLabel();
         tabs = new javax.swing.JTabbedPane();
@@ -300,7 +311,7 @@ public class PatternX extends javax.swing.JFrame {
         btnHome.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         LblHome.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Patterns/Home_icon.png"))); // NOI18N
+        LblHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Patterns/Home_Icon.png"))); // NOI18N
         LblHome.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         LblHome.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -334,6 +345,21 @@ public class PatternX extends javax.swing.JFrame {
         btnDefinition.setBackground(new java.awt.Color(37, 133, 217));
         btnDefinition.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        lbltxtDefinition.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbltxtDefinition.setText("Definicion");
+        lbltxtDefinition.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lbltxtDefinition.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbltxtDefinitionMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbltxtDefinitionMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbltxtDefinitionMouseExited(evt);
+            }
+        });
+
         LblDefinition.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LblDefinition.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Patterns/Definition_Icon.png"))); // NOI18N
         LblDefinition.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -356,16 +382,40 @@ public class PatternX extends javax.swing.JFrame {
             .addGroup(btnDefinitionLayout.createSequentialGroup()
                 .addComponent(LblDefinition, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(btnDefinitionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(lbltxtDefinition, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE))
         );
         btnDefinitionLayout.setVerticalGroup(
             btnDefinitionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LblDefinition, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+            .addGroup(btnDefinitionLayout.createSequentialGroup()
+                .addComponent(LblDefinition, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(btnDefinitionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnDefinitionLayout.createSequentialGroup()
+                    .addContainerGap(75, Short.MAX_VALUE)
+                    .addComponent(lbltxtDefinition, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(17, 17, 17)))
         );
 
         jPanel1.add(btnDefinition, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 60, 110));
 
         btnAdvantage.setBackground(new java.awt.Color(37, 133, 217));
         btnAdvantage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        LbltxtAdvantage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LbltxtAdvantage.setText("<html>Ventaja y <p> Desventaja<html>");
+        LbltxtAdvantage.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        LbltxtAdvantage.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LbltxtAdvantageMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LbltxtAdvantageMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LbltxtAdvantageMouseExited(evt);
+            }
+        });
 
         LblAdvantege.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LblAdvantege.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Patterns/Advantages_Icon.png"))); // NOI18N
@@ -389,16 +439,40 @@ public class PatternX extends javax.swing.JFrame {
             .addGroup(btnAdvantageLayout.createSequentialGroup()
                 .addComponent(LblAdvantege, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(btnAdvantageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(btnAdvantageLayout.createSequentialGroup()
+                    .addComponent(LbltxtAdvantage, javax.swing.GroupLayout.PREFERRED_SIZE, 60, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         btnAdvantageLayout.setVerticalGroup(
             btnAdvantageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(LblAdvantege, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+            .addGroup(btnAdvantageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnAdvantageLayout.createSequentialGroup()
+                    .addContainerGap(78, Short.MAX_VALUE)
+                    .addComponent(LbltxtAdvantage, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
         );
 
         jPanel1.add(btnAdvantage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 60, 110));
 
         btnImplement.setBackground(new java.awt.Color(37, 133, 217));
         btnImplement.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        LbltxtImplement.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LbltxtImplement.setText("<html>Ejecucion<html>");
+        LbltxtImplement.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        LbltxtImplement.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LbltxtImplementMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LbltxtImplementMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LbltxtImplementMouseExited(evt);
+            }
+        });
 
         LblImplement.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LblImplement.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Patterns/Implement_Icon.png"))); // NOI18N
@@ -421,17 +495,41 @@ public class PatternX extends javax.swing.JFrame {
             btnImplementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnImplementLayout.createSequentialGroup()
                 .addComponent(LblImplement, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
+            .addGroup(btnImplementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(btnImplementLayout.createSequentialGroup()
+                    .addComponent(LbltxtImplement, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 26, Short.MAX_VALUE)))
         );
         btnImplementLayout.setVerticalGroup(
             btnImplementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(LblImplement, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+            .addGroup(btnImplementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnImplementLayout.createSequentialGroup()
+                    .addContainerGap(79, Short.MAX_VALUE)
+                    .addComponent(LbltxtImplement, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
         );
 
         jPanel1.add(btnImplement, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 60, 110));
 
         btnCodeExample.setBackground(new java.awt.Color(37, 133, 217));
         btnCodeExample.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        LbltxtCodeExample.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LbltxtCodeExample.setText("Codigo");
+        LbltxtCodeExample.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        LbltxtCodeExample.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LbltxtCodeExampleMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LbltxtCodeExampleMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LbltxtCodeExampleMouseExited(evt);
+            }
+        });
 
         LblCodeExample.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LblCodeExample.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Patterns/CodeExample_Icon.png"))); // NOI18N
@@ -455,10 +553,17 @@ public class PatternX extends javax.swing.JFrame {
             .addGroup(btnCodeExampleLayout.createSequentialGroup()
                 .addComponent(LblCodeExample, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(btnCodeExampleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(LbltxtCodeExample, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE))
         );
         btnCodeExampleLayout.setVerticalGroup(
             btnCodeExampleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(LblCodeExample, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+            .addGroup(btnCodeExampleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnCodeExampleLayout.createSequentialGroup()
+                    .addContainerGap(74, Short.MAX_VALUE)
+                    .addComponent(LbltxtCodeExample)
+                    .addGap(20, 20, 20)))
         );
 
         jPanel1.add(btnCodeExample, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 60, 110));
@@ -466,8 +571,23 @@ public class PatternX extends javax.swing.JFrame {
         btnExperience.setBackground(new java.awt.Color(37, 133, 217));
         btnExperience.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        LbltxtExperience.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LbltxtExperience.setText("<html>Ejemplo<html>");
+        LbltxtExperience.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        LbltxtExperience.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LbltxtExperienceMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LbltxtExperienceMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LbltxtExperienceMouseExited(evt);
+            }
+        });
+
         LblExperience.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LblExperience.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Patterns/Experience_Icon.png"))); // NOI18N
+        LblExperience.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Patterns/Experiencia_Icon.png"))); // NOI18N
         LblExperience.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         LblExperience.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -488,16 +608,38 @@ public class PatternX extends javax.swing.JFrame {
             .addGroup(btnExperienceLayout.createSequentialGroup()
                 .addComponent(LblExperience, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(btnExperienceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(LbltxtExperience, javax.swing.GroupLayout.PREFERRED_SIZE, 60, Short.MAX_VALUE))
         );
         btnExperienceLayout.setVerticalGroup(
             btnExperienceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(LblExperience, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+            .addGroup(btnExperienceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnExperienceLayout.createSequentialGroup()
+                    .addContainerGap(76, Short.MAX_VALUE)
+                    .addComponent(LbltxtExperience)
+                    .addContainerGap(18, Short.MAX_VALUE)))
         );
 
         jPanel1.add(btnExperience, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 60, 110));
 
         btnReferences.setBackground(new java.awt.Color(37, 133, 217));
         btnReferences.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        LbltxtReferences.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LbltxtReferences.setText("<html>Referencia<html>");
+        LbltxtReferences.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        LbltxtReferences.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LbltxtReferencesMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LbltxtReferencesMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LbltxtReferencesMouseExited(evt);
+            }
+        });
 
         LblReferences.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LblReferences.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Patterns/References_Icon.png"))); // NOI18N
@@ -518,15 +660,24 @@ public class PatternX extends javax.swing.JFrame {
         btnReferences.setLayout(btnReferencesLayout);
         btnReferencesLayout.setHorizontalGroup(
             btnReferencesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnReferencesLayout.createSequentialGroup()
+            .addGroup(btnReferencesLayout.createSequentialGroup()
                 .addComponent(LblReferences, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(btnReferencesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(btnReferencesLayout.createSequentialGroup()
+                    .addComponent(LbltxtReferences, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         btnReferencesLayout.setVerticalGroup(
             btnReferencesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnReferencesLayout.createSequentialGroup()
                 .addComponent(LblReferences, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(btnReferencesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnReferencesLayout.createSequentialGroup()
+                    .addContainerGap(74, Short.MAX_VALUE)
+                    .addComponent(LbltxtReferences)
+                    .addContainerGap(30, Short.MAX_VALUE)))
         );
 
         jPanel1.add(btnReferences, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 610, 60, 120));
@@ -707,7 +858,7 @@ public class PatternX extends javax.swing.JFrame {
         );
 
         lblTextEx.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblTextEx.setText("<html>Haciendo click en los siguientes botones podras abrir el repositorio en donde se encuentra el codigo de ejemplo y los diagramas de clase del patrón de diseño como el del ejemplo realizado para el patron de diseño<html>");
+        lblTextEx.setText("<html>Haciendo click en los siguientes botones podras abrir el repositorio en donde se encuentra el codigo de ejemplo y los diagramas de clase del patrón de diseño como el del ejemplo realizado para el patron de diseño.<html>");
         lblTextEx.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         javax.swing.GroupLayout pnlCodeExampleLayout = new javax.swing.GroupLayout(pnlCodeExample);
@@ -966,7 +1117,7 @@ public class PatternX extends javax.swing.JFrame {
 
     private void LblImplementMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblImplementMouseClicked
         tabs.setSelectedIndex(2);
-        lblTab.setText("Pasos de Implementación");
+        lblTab.setText("Pasos de Ejecución");
         defaultButtons();
         btnImplement.setBackground(colorSelected);
         lblImplement.setText("<html>"+info.getList(dato, "Implementacion")+"<html>");
@@ -1059,6 +1210,78 @@ public class PatternX extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_lblDiagramExMouseClicked
 
+    private void lbltxtDefinitionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbltxtDefinitionMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lbltxtDefinitionMouseClicked
+
+    private void lbltxtDefinitionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbltxtDefinitionMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lbltxtDefinitionMouseEntered
+
+    private void lbltxtDefinitionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbltxtDefinitionMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lbltxtDefinitionMouseExited
+
+    private void LbltxtAdvantageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbltxtAdvantageMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LbltxtAdvantageMouseClicked
+
+    private void LbltxtAdvantageMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbltxtAdvantageMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LbltxtAdvantageMouseEntered
+
+    private void LbltxtAdvantageMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbltxtAdvantageMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LbltxtAdvantageMouseExited
+
+    private void LbltxtImplementMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbltxtImplementMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LbltxtImplementMouseClicked
+
+    private void LbltxtImplementMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbltxtImplementMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LbltxtImplementMouseEntered
+
+    private void LbltxtImplementMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbltxtImplementMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LbltxtImplementMouseExited
+
+    private void LbltxtCodeExampleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbltxtCodeExampleMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LbltxtCodeExampleMouseClicked
+
+    private void LbltxtCodeExampleMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbltxtCodeExampleMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LbltxtCodeExampleMouseEntered
+
+    private void LbltxtCodeExampleMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbltxtCodeExampleMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LbltxtCodeExampleMouseExited
+
+    private void LbltxtExperienceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbltxtExperienceMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LbltxtExperienceMouseClicked
+
+    private void LbltxtExperienceMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbltxtExperienceMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LbltxtExperienceMouseEntered
+
+    private void LbltxtExperienceMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbltxtExperienceMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LbltxtExperienceMouseExited
+
+    private void LbltxtReferencesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbltxtReferencesMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LbltxtReferencesMouseClicked
+
+    private void LbltxtReferencesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbltxtReferencesMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LbltxtReferencesMouseEntered
+
+    private void LbltxtReferencesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbltxtReferencesMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LbltxtReferencesMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -1109,6 +1332,11 @@ public class PatternX extends javax.swing.JFrame {
     private javax.swing.JLabel LblHome;
     private javax.swing.JLabel LblImplement;
     private javax.swing.JLabel LblReferences;
+    private javax.swing.JLabel LbltxtAdvantage;
+    private javax.swing.JLabel LbltxtCodeExample;
+    private javax.swing.JLabel LbltxtExperience;
+    private javax.swing.JLabel LbltxtImplement;
+    private javax.swing.JLabel LbltxtReferences;
     private javax.swing.JPanel btnAdvantage;
     private javax.swing.JPanel btnClose;
     private javax.swing.JPanel btnCodeExample;
@@ -1136,6 +1364,7 @@ public class PatternX extends javax.swing.JFrame {
     private javax.swing.JLabel lblTab;
     private javax.swing.JLabel lblTextEx;
     private javax.swing.JLabel lblTitle;
+    private javax.swing.JLabel lbltxtDefinition;
     private javax.swing.JPanel pnlAdventage;
     private javax.swing.JPanel pnlCodeExample;
     private javax.swing.JPanel pnlDefinition;
