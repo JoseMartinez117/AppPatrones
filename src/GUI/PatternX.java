@@ -345,8 +345,9 @@ public class PatternX extends javax.swing.JFrame {
         btnDefinition.setBackground(new java.awt.Color(37, 133, 217));
         btnDefinition.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        lbltxtDefinition.setForeground(new java.awt.Color(255, 255, 255));
         lbltxtDefinition.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbltxtDefinition.setText("Definicion");
+        lbltxtDefinition.setText("Definición");
         lbltxtDefinition.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         lbltxtDefinition.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -402,6 +403,7 @@ public class PatternX extends javax.swing.JFrame {
         btnAdvantage.setBackground(new java.awt.Color(37, 133, 217));
         btnAdvantage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        LbltxtAdvantage.setForeground(new java.awt.Color(255, 255, 255));
         LbltxtAdvantage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LbltxtAdvantage.setText("<html>Ventaja y <p> Desventaja<html>");
         LbltxtAdvantage.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -459,6 +461,7 @@ public class PatternX extends javax.swing.JFrame {
         btnImplement.setBackground(new java.awt.Color(37, 133, 217));
         btnImplement.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        LbltxtImplement.setForeground(new java.awt.Color(255, 255, 255));
         LbltxtImplement.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LbltxtImplement.setText("<html>Ejecucion<html>");
         LbltxtImplement.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -516,8 +519,9 @@ public class PatternX extends javax.swing.JFrame {
         btnCodeExample.setBackground(new java.awt.Color(37, 133, 217));
         btnCodeExample.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        LbltxtCodeExample.setForeground(new java.awt.Color(255, 255, 255));
         LbltxtCodeExample.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LbltxtCodeExample.setText("Codigo");
+        LbltxtCodeExample.setText("Código");
         LbltxtCodeExample.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         LbltxtCodeExample.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -571,6 +575,7 @@ public class PatternX extends javax.swing.JFrame {
         btnExperience.setBackground(new java.awt.Color(37, 133, 217));
         btnExperience.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        LbltxtExperience.setForeground(new java.awt.Color(255, 255, 255));
         LbltxtExperience.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LbltxtExperience.setText("<html>Ejemplo<html>");
         LbltxtExperience.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -626,6 +631,7 @@ public class PatternX extends javax.swing.JFrame {
         btnReferences.setBackground(new java.awt.Color(37, 133, 217));
         btnReferences.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        LbltxtReferences.setForeground(new java.awt.Color(255, 255, 255));
         LbltxtReferences.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LbltxtReferences.setText("<html>Referencia<html>");
         LbltxtReferences.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -1137,6 +1143,7 @@ public class PatternX extends javax.swing.JFrame {
     private void LblExperienceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblExperienceMouseClicked
         tabs.setSelectedIndex(4);
         lblTab.setText("Experiencia Interactiva");
+        lblExperience.setText("<html>"+info.getInfo(dato, "Experiencia"));
         defaultButtons();
         btnExperience.setBackground(colorSelected);
         window(dato);
