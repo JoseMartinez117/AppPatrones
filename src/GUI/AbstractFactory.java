@@ -4,6 +4,7 @@
  */
 package GUI;
 
+import Assets.FONT.Fonts;
 import java.awt.Color;
 import java.awt.Image;
 import javax.swing.Icon;
@@ -18,9 +19,13 @@ public class AbstractFactory extends javax.swing.JFrame {
     Color colorEntered=new Color(128, 128, 128);
     Color colorSelected=new Color(128, 128, 129);
     Color colorDefault=new Color(214, 217, 223);
+    Fonts typeFont;
+    
     public AbstractFactory() {
         initComponents();
         defaultButtons();
+        typeFont = new Fonts();
+        
         //Ores para construir
         setImageLabel(lblDiamond, "src/Assets/IMG/Items/Materials/Diamond.png");
         setImageLabel(lblGold, "src/Assets/IMG/Items/Materials/Gold.png");
@@ -36,7 +41,11 @@ public class AbstractFactory extends javax.swing.JFrame {
         
         //Crafteo
         setImageLabel(lblFactory, "src/Assets/IMG/Icons/Patterns/Fabric_Icon.png");
-       
+        
+        
+        lblSubtittle.setFont(typeFont.fontV(typeFont.instruments, 1, 18));
+        lblSubtittle1.setFont(typeFont.fontV(typeFont.instruments, 1, 18));
+        lblSubtittle2.setFont(typeFont.fontV(typeFont.instruments, 1, 18));
     }
 
     private void setImageLabel(JLabel labelName, String root){
@@ -142,6 +151,9 @@ public class AbstractFactory extends javax.swing.JFrame {
         lbl22 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
         lblResult = new javax.swing.JLabel();
+        lblSubtittle = new javax.swing.JLabel();
+        lblSubtittle1 = new javax.swing.JLabel();
+        lblSubtittle2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -394,10 +406,10 @@ public class AbstractFactory extends javax.swing.JFrame {
         jPanel1.add(lblExample4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 340, 175, 93));
 
         lblExample2.setText("jLabel6");
-        jPanel1.add(lblExample2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 175, 93));
+        jPanel1.add(lblExample2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 175, 93));
 
         lblExample1.setText("jLabel6");
-        jPanel1.add(lblExample1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 220, 175, 93));
+        jPanel1.add(lblExample1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 175, 93));
 
         lblExample3.setText("jLabel6");
         jPanel1.add(lblExample3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, 175, 93));
@@ -618,6 +630,18 @@ public class AbstractFactory extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 75, 75));
+
+        lblSubtittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSubtittle.setText("<html>Recetas<html>");
+        jPanel1.add(lblSubtittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, 160, 30));
+
+        lblSubtittle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSubtittle1.setText("<html>Zona de Crafteo<html>");
+        jPanel1.add(lblSubtittle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 70, 160, 40));
+
+        lblSubtittle2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSubtittle2.setText("<html>Materiales<html>");
+        jPanel1.add(lblSubtittle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, 160, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -937,6 +961,9 @@ public class AbstractFactory extends javax.swing.JFrame {
     private javax.swing.JLabel lblIron;
     private javax.swing.JLabel lblResult;
     private javax.swing.JLabel lblStick;
+    private javax.swing.JLabel lblSubtittle;
+    private javax.swing.JLabel lblSubtittle1;
+    private javax.swing.JLabel lblSubtittle2;
     private javax.swing.JPanel pnlSeparator;
     private javax.swing.JPanel pnlSeparator2;
     private javax.swing.JPanel pnlSeparator3;

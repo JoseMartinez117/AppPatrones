@@ -45,6 +45,7 @@ public class Builder extends javax.swing.JFrame {
         typeFont = new Fonts();
         
         lblSubtittle.setFont(typeFont.fontV(typeFont.instruments, 1, 18));
+        lblSubtittle1.setFont(typeFont.fontV(typeFont.instruments, 1, 18));
         lblGenerator1.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
         lblGenerator2.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
         lblGenerator3.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
@@ -148,6 +149,7 @@ public class Builder extends javax.swing.JFrame {
         lblChesplate = new javax.swing.JLabel();
         pnlHelmet = new javax.swing.JPanel();
         lblHelmet = new javax.swing.JLabel();
+        lblSubtittle1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -381,9 +383,10 @@ public class Builder extends javax.swing.JFrame {
         jPanel1.add(lblGenerate1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 275, 90, 160));
         jPanel1.add(lblGenerate2, new org.netbeans.lib.awtextra.AbsoluteConstraints(515, 275, 90, 160));
 
-        lblSubtittle.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        lblSubtittle.setText("Enemigos Generados:");
-        jPanel1.add(lblSubtittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(405, 250, 300, -1));
+        lblSubtittle.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblSubtittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSubtittle.setText("Editor de Enemigos");
+        jPanel1.add(lblSubtittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, 300, -1));
 
         cmbHelmet.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nada", "Diamante", "Hierro", "Oro" }));
         cmbHelmet.addItemListener(new java.awt.event.ItemListener() {
@@ -593,6 +596,10 @@ public class Builder extends javax.swing.JFrame {
         );
 
         jPanel1.add(pnlHelmet, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 50, 50));
+
+        lblSubtittle1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblSubtittle1.setText("Enemigos Generados:");
+        jPanel1.add(lblSubtittle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(405, 250, 300, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -811,6 +818,7 @@ public class Builder extends javax.swing.JFrame {
     private javax.swing.JLabel lblLeggins;
     private javax.swing.JLabel lblSave;
     private javax.swing.JLabel lblSubtittle;
+    private javax.swing.JLabel lblSubtittle1;
     private javax.swing.JLabel lblWeapon;
     private javax.swing.JPanel pnWepon;
     private javax.swing.JPanel pnlBoots;

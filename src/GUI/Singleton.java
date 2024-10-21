@@ -197,7 +197,7 @@ public class Singleton extends javax.swing.JFrame {
         btnSpawn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         lblSpawn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSpawn.setText("Spawn Creaking");
+        lblSpawn.setText("Generar Creaking");
         lblSpawn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblSpawnMouseClicked(evt);

@@ -51,6 +51,8 @@ public class Prototype extends javax.swing.JFrame {
         cmbBoots1.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
         lblMemory.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
         lblMemory2.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblSubtittle.setFont(typeFont.fontV(typeFont.instruments, 1, 18));
+        lblSubtittle1.setFont(typeFont.fontV(typeFont.instruments, 1, 18));
     
     }
 
@@ -146,6 +148,8 @@ public class Prototype extends javax.swing.JFrame {
         pnlLeggins1 = new javax.swing.JPanel();
         lblLeggins1 = new javax.swing.JLabel();
         lblMemory2 = new javax.swing.JLabel();
+        lblSubtittle = new javax.swing.JLabel();
+        lblSubtittle1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -251,7 +255,7 @@ public class Prototype extends javax.swing.JFrame {
         jPanel1.add(lblEnemy2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 130, 220, 300));
 
         lblMemory.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jPanel1.add(lblMemory, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 250, -1));
+        jPanel1.add(lblMemory, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 250, -1));
 
         cmbHelmet.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nada", "Diamante", "Hierro", "Oro" }));
         cmbHelmet.addItemListener(new java.awt.event.ItemListener() {
@@ -625,6 +629,16 @@ public class Prototype extends javax.swing.JFrame {
         lblMemory2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jPanel1.add(lblMemory2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 290, -1));
 
+        lblSubtittle.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblSubtittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSubtittle.setText("Editor de Enemigos 2");
+        jPanel1.add(lblSubtittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 70, 180, -1));
+
+        lblSubtittle1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblSubtittle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSubtittle1.setText("Editor de Enemigos");
+        jPanel1.add(lblSubtittle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 150, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -824,6 +838,8 @@ public class Prototype extends javax.swing.JFrame {
     private javax.swing.JLabel lblMemory;
     private javax.swing.JLabel lblMemory2;
     private javax.swing.JLabel lblPrototype;
+    private javax.swing.JLabel lblSubtittle;
+    private javax.swing.JLabel lblSubtittle1;
     private javax.swing.JLabel lblWeapon;
     private javax.swing.JLabel lblWeapon1;
     private javax.swing.JPanel pnWepon;

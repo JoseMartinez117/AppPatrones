@@ -22,6 +22,7 @@ public class FactoryMethod extends javax.swing.JFrame {
     
     public FactoryMethod() {
         initComponents();
+        decorator();
         setImageLabel(lblFactory, "src/Assets/IMG/Icons/Patterns/fabrica_Icon.png");
         setImageLabel(lblEnemyx, "src/Assets/IMG/Enemies/body.png");
         setImageLabel(lblArrow, "src/Assets/IMG/Icons/Patterns/Arrow_Icon.png");
@@ -54,7 +55,9 @@ public class FactoryMethod extends javax.swing.JFrame {
         lblDescription5.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
         lblDescription6.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
         SldLight.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
-    
+        lblSubtittle.setFont(typeFont.fontV(typeFont.instruments, 1, 18));
+        lblSubtittle1.setFont(typeFont.fontV(typeFont.instruments, 1, 18));
+        lblSubtittle2.setFont(typeFont.fontV(typeFont.instruments, 1, 18));
     }
 
     /**
@@ -104,6 +107,9 @@ public class FactoryMethod extends javax.swing.JFrame {
         lblDescription5 = new javax.swing.JLabel();
         lblDescription6 = new javax.swing.JLabel();
         SldLight = new javax.swing.JSlider();
+        lblSubtittle = new javax.swing.JLabel();
+        lblSubtittle1 = new javax.swing.JLabel();
+        lblSubtittle2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -223,10 +229,10 @@ public class FactoryMethod extends javax.swing.JFrame {
         jPanel1.add(pnlSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 59, 2, 380));
 
         cmbBiome.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Planicie", "Oceano", "Desierto", "Tundra", "Pantano" }));
-        jPanel1.add(cmbBiome, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 90, 20));
+        jPanel1.add(cmbBiome, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 90, 20));
 
         cmbDifficulty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Facil", "Normal", "Dificil" }));
-        jPanel1.add(cmbDifficulty, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 90, -1));
+        jPanel1.add(cmbDifficulty, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 90, -1));
 
         lblBuildEnemy.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblBuildEnemy.setText("Fabricar Enemigo");
@@ -254,22 +260,22 @@ public class FactoryMethod extends javax.swing.JFrame {
             .addComponent(lblBuildEnemy, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnBuildEnemy, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, -1, 30));
+        jPanel1.add(btnBuildEnemy, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, -1, 30));
 
         lblLight.setText("Luz");
         jPanel1.add(lblLight, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 70, -1));
 
         lblDifficulty.setText("Dificultad:");
-        jPanel1.add(lblDifficulty, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 90, -1));
+        jPanel1.add(lblDifficulty, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 90, -1));
 
         lblBiome.setText("Bioma:");
-        jPanel1.add(lblBiome, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 90, 20));
+        jPanel1.add(lblBiome, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 90, 20));
 
         lblFactory.setText("jLabel3");
         jPanel1.add(lblFactory, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 120, 120));
 
         lblEnemy3.setText("jLabel1");
-        jPanel1.add(lblEnemy3, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 80, 60, 100));
+        jPanel1.add(lblEnemy3, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 100, 60, 100));
 
         lblArrow.setText("jLabel1");
         jPanel1.add(lblArrow, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 110, 60));
@@ -278,19 +284,19 @@ public class FactoryMethod extends javax.swing.JFrame {
         jPanel1.add(lblEnemyx, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 110, 180));
 
         lblEnemy1.setText("jLabel1");
-        jPanel1.add(lblEnemy1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, 60, 100));
+        jPanel1.add(lblEnemy1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 60, 100));
 
         lblEnemy2.setText("jLabel1");
-        jPanel1.add(lblEnemy2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, 60, 100));
+        jPanel1.add(lblEnemy2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 60, 100));
 
         lblDescription3.setText("<html>Luz: ≤2<p>Bioma: Desierto<p>Dificultad: Difícil");
-        jPanel1.add(lblDescription3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 180, 100, 60));
+        jPanel1.add(lblDescription3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 200, 100, 60));
 
         lblDescription.setText("<html>Luz: ≤4<p>Bioma: Planicie<p>Dificultad: Facil");
-        jPanel1.add(lblDescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, 100, 60));
+        jPanel1.add(lblDescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 200, 100, 60));
 
         lblDescription1.setText("<html>Luz: ≤3<p>Bioma: Océano<p>Dificultad: Normal");
-        jPanel1.add(lblDescription1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, 100, 60));
+        jPanel1.add(lblDescription1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, 100, 60));
 
         lblEnemy4.setText("jLabel1");
         jPanel1.add(lblEnemy4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 270, 60, 100));
@@ -322,6 +328,18 @@ public class FactoryMethod extends javax.swing.JFrame {
             }
         });
         jPanel1.add(SldLight, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 60, 140));
+
+        lblSubtittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSubtittle.setText("Fabrica");
+        jPanel1.add(lblSubtittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 140, 20));
+
+        lblSubtittle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSubtittle1.setText("Recetas");
+        jPanel1.add(lblSubtittle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, 140, 20));
+
+        lblSubtittle2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSubtittle2.setText("Resultado");
+        jPanel1.add(lblSubtittle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 140, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -467,6 +485,9 @@ public class FactoryMethod extends javax.swing.JFrame {
     private javax.swing.JLabel lblEnemyx;
     private javax.swing.JLabel lblFactory;
     private javax.swing.JLabel lblLight;
+    private javax.swing.JLabel lblSubtittle;
+    private javax.swing.JLabel lblSubtittle1;
+    private javax.swing.JLabel lblSubtittle2;
     private javax.swing.JPanel pnlSeparator;
     private javax.swing.JPanel pnlSeparator2;
     private javax.swing.JPanel pnlSeparator3;
