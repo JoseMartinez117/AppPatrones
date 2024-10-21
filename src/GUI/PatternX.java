@@ -64,6 +64,7 @@ public class PatternX extends javax.swing.JFrame {
         LbltxtCodeExample.setFont(typeFont.fontV(typeFont.instruments, 0, 11));
         LbltxtExperience.setFont(typeFont.fontV(typeFont.instruments, 0, 11));
         LbltxtReferences.setFont(typeFont.fontV(typeFont.instruments, 0, 11));
+        lblStartEx.setFont(typeFont.fontV(typeFont.instruments, 0, 20));
         
     }
     
@@ -196,6 +197,8 @@ public class PatternX extends javax.swing.JFrame {
         lblDiagram = new javax.swing.JLabel();
         lblTextEx = new javax.swing.JLabel();
         pnlExperience = new javax.swing.JPanel();
+        btnStartEx = new javax.swing.JPanel();
+        lblStartEx = new javax.swing.JLabel();
         lblExperience = new javax.swing.JLabel();
         pnlReferences = new javax.swing.JPanel();
         lblReferences = new javax.swing.JLabel();
@@ -903,6 +906,34 @@ public class PatternX extends javax.swing.JFrame {
 
         pnlExperience.setBackground(new java.awt.Color(255, 255, 255));
 
+        btnStartEx.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lblStartEx.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblStartEx.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Patterns/StartExperience_Icon.png"))); // NOI18N
+        lblStartEx.setText("Inciar Experiencia");
+        lblStartEx.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblStartExMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblStartExMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblStartExMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnStartExLayout = new javax.swing.GroupLayout(btnStartEx);
+        btnStartEx.setLayout(btnStartExLayout);
+        btnStartExLayout.setHorizontalGroup(
+            btnStartExLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblStartEx, javax.swing.GroupLayout.DEFAULT_SIZE, 333, Short.MAX_VALUE)
+        );
+        btnStartExLayout.setVerticalGroup(
+            btnStartExLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblStartEx, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+
         lblExperience.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         lblExperience.setText("Text");
         lblExperience.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -912,16 +943,22 @@ public class PatternX extends javax.swing.JFrame {
         pnlExperienceLayout.setHorizontalGroup(
             pnlExperienceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlExperienceLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(lblExperience, javax.swing.GroupLayout.DEFAULT_SIZE, 808, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap(19, Short.MAX_VALUE)
+                .addGroup(pnlExperienceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlExperienceLayout.createSequentialGroup()
+                        .addComponent(btnStartEx, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(241, 241, 241))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlExperienceLayout.createSequentialGroup()
+                        .addComponent(lblExperience, javax.swing.GroupLayout.PREFERRED_SIZE, 786, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26))))
         );
         pnlExperienceLayout.setVerticalGroup(
             pnlExperienceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlExperienceLayout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
-                .addComponent(lblExperience, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
+                .addComponent(lblExperience, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnStartEx, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
         tabs.addTab("", pnlExperience);
@@ -1146,7 +1183,6 @@ public class PatternX extends javax.swing.JFrame {
         lblExperience.setText("<html>"+info.getInfo(dato, "Experiencia"));
         defaultButtons();
         btnExperience.setBackground(colorSelected);
-        window(dato);
     }//GEN-LAST:event_LblExperienceMouseClicked
 
     private void LblReferencesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblReferencesMouseClicked
@@ -1289,6 +1325,20 @@ public class PatternX extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_LbltxtReferencesMouseExited
 
+    private void lblStartExMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblStartExMouseEntered
+        btnStartEx.setOpaque(true);
+        btnStartEx.setBackground(Color.gray);
+    }//GEN-LAST:event_lblStartExMouseEntered
+
+    private void lblStartExMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblStartExMouseExited
+        btnStartEx.setOpaque(true);
+        btnStartEx.setBackground(new Color(214, 217, 223));
+    }//GEN-LAST:event_lblStartExMouseExited
+
+    private void lblStartExMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblStartExMouseClicked
+        window(dato);
+    }//GEN-LAST:event_lblStartExMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1355,6 +1405,7 @@ public class PatternX extends javax.swing.JFrame {
     private javax.swing.JPanel btnHome;
     private javax.swing.JPanel btnImplement;
     private javax.swing.JPanel btnReferences;
+    private javax.swing.JPanel btnStartEx;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -1368,6 +1419,7 @@ public class PatternX extends javax.swing.JFrame {
     private javax.swing.JLabel lblGitHub;
     private javax.swing.JLabel lblImplement;
     private javax.swing.JLabel lblReferences;
+    private javax.swing.JLabel lblStartEx;
     private javax.swing.JLabel lblTab;
     private javax.swing.JLabel lblTextEx;
     private javax.swing.JLabel lblTitle;
