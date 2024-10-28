@@ -36,7 +36,7 @@ public class PatternX extends javax.swing.JFrame {
     Fonts typeFont;
     
     public PatternX() throws IOException, FileNotFoundException, ParseException {
-        this.info = new JsonInformation();
+        this.info = new JsonInformation("src/Assets/Patrones.json");
         colorSelected = new Color(81,174,248);
         colorEntered = new Color(81,174,247);
         colorDefault = new Color(37, 133, 217);
@@ -91,7 +91,8 @@ public class PatternX extends javax.swing.JFrame {
         btnReferences.setBackground(colorDefault);
     }
     
-    private void window(String nombre){
+    private void window(String nombre) throws IOException, FileNotFoundException, ParseException {
+        
         
         switch(nombre){
             case "FactoryMethod":
@@ -115,7 +116,18 @@ public class PatternX extends javax.swing.JFrame {
             case "Singleton":
                 Singleton newframe4 = new Singleton();
                 newframe4.setVisible(true);
-                break;   
+                break;
+                       
+            case "Adapter":
+                Adapter newframe5 = new Adapter();
+                newframe5.setVisible(true);
+                break;
+                
+            case "Bridge":
+                Bridge newframe6 = new Bridge();
+                newframe6.setVisible(true);
+                break;     
+  
         }
     
     }
@@ -1336,7 +1348,13 @@ public class PatternX extends javax.swing.JFrame {
     }//GEN-LAST:event_lblStartExMouseExited
 
     private void lblStartExMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblStartExMouseClicked
-        window(dato);
+        try {
+            window(dato);
+        } catch (IOException ex) {
+            Logger.getLogger(PatternX.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ParseException ex) {
+            Logger.getLogger(PatternX.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_lblStartExMouseClicked
 
     /**

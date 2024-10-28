@@ -21,9 +21,10 @@ public class JsonInformation {
     private FileReader reader;
     private JSONParser parser;
     private JSONObject json;
+    private int number;
 
-    public JsonInformation() throws FileNotFoundException, IOException, ParseException {
-        reader = new FileReader("src/Assets/Patrones.json");
+    public JsonInformation(String path) throws FileNotFoundException, IOException, ParseException {
+        reader = new FileReader(path);
         parser = new JSONParser();
         json = (JSONObject) parser.parse(reader);
     }
@@ -36,7 +37,6 @@ public class JsonInformation {
     
     public String getList(String key, String element){
         String information = "";
-        String text;
         
         JSONObject pattern = (JSONObject) json.get(key);
         JSONArray list = (JSONArray) pattern.get(element);
@@ -48,4 +48,21 @@ public class JsonInformation {
         
         return information;
     }
+    
+    public String getData(String key){
+        int question =(int)(Math.random() * 2);
+        this.number=question;
+        String information;
+        JSONArray list = (JSONArray) json.get(key);
+        
+        information=(String) list.get(question);
+        
+        return information;
+    }
+    
+    public int returnNumber(){
+        return this.number;
+    }
+    
+
 }

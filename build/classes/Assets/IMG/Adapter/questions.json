@@ -1,0 +1,19 @@
+{
+    "minish": [
+        "¿Los patrones de diseño son los Creacionales, Estructurales y Comportamentales?",
+        "¿Actualmente existen 10 patrones de diseño Comportamentales?"
+    ],
+    
+    "deku":[
+        "¿Actualmente existen 5 patrones de diseño Creacionales?",
+        "¿Los patrones comportamentales incrementan la flexibilidad y la reutilización del código existente?"
+    ],
+    
+    "goron": [
+        "¿Los patrones de diseño nos ayudan en la recoleccion de los requerimientos funcionales de un programa?",
+        "¿El patron de diseño adapter permite dividir una clase grande o un grupo de clases estrechamente relacionadas, en dos jerarquías separadas?"
+    
+    ]
+    
+    
+}
