@@ -43,6 +43,31 @@ public class Composite extends javax.swing.JFrame {
         setImageLabel(lblRock,"src/Assets/IMG/composite/rock_Icon.png");
         setImageLabel(lblEnemy,"src/Assets/IMG/composite/enemy_Icon.png");
         setImageLabel(lblReset,"src/Assets/IMG/composite/change_Icon.png");
+        
+        //Poner paneles invisiblees
+        btnSpace1.setOpaque(false);
+        btnSpace2.setOpaque(false);
+        btnSpace3.setOpaque(false);
+        btnSpace4.setOpaque(false);
+        btnSpace5.setOpaque(false);
+        btnSpace6.setOpaque(false);
+        btnSpace7.setOpaque(false);
+        btnSpace8.setOpaque(false);
+        btnSpace9.setOpaque(false);
+        btnSpace10.setOpaque(false);
+        
+        //Poner fuente de texto
+        
+        lblTittle1.setFont(typeFont.fontV(typeFont.instruments, 1, 14));
+        lblTittle.setFont(typeFont.fontV(typeFont.instruments, 1, 12));
+        lblTittle.setAlignmentX(CENTER_ALIGNMENT);
+        lblSubtittle1.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblSubtittle2.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblSubtittle3.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblSubtittle4.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblSubtittle5.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        
+        
     }
     
     private void setImg(String tree, String rock, String enemy ,JLabel space){
@@ -103,6 +128,8 @@ public class Composite extends javax.swing.JFrame {
         lblSubtittle2 = new javax.swing.JLabel();
         lblSubtittle3 = new javax.swing.JLabel();
         lblSubtittle5 = new javax.swing.JLabel();
+        lblTittle = new javax.swing.JLabel();
+        lblTittle1 = new javax.swing.JLabel();
 
         lblSubtittle4.setText("Mapa");
 
@@ -233,7 +260,7 @@ public class Composite extends javax.swing.JFrame {
             .addComponent(lblbMap, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnMap, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 100, -1, -1));
+        jPanel1.add(btnMap, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 130, -1, -1));
 
         btnTree.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -260,7 +287,7 @@ public class Composite extends javax.swing.JFrame {
             .addComponent(lblTree, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnTree, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 160, -1, -1));
+        jPanel1.add(btnTree, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 190, -1, -1));
 
         btnRock.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -287,7 +314,7 @@ public class Composite extends javax.swing.JFrame {
             .addComponent(lblRock, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnRock, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 220, -1, -1));
+        jPanel1.add(btnRock, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 250, -1, -1));
 
         btnEnemy.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -314,7 +341,7 @@ public class Composite extends javax.swing.JFrame {
             .addComponent(lblEnemy, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnEnemy, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 280, 50, 50));
+        jPanel1.add(btnEnemy, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 310, 50, 50));
 
         btnReset.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -341,7 +368,7 @@ public class Composite extends javax.swing.JFrame {
             .addComponent(lblReset, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 340, -1, -1));
+        jPanel1.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 370, -1, -1));
 
         btnSpace1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -355,14 +382,14 @@ public class Composite extends javax.swing.JFrame {
         btnSpace1.setLayout(btnSpace1Layout);
         btnSpace1Layout.setHorizontalGroup(
             btnSpace1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace1, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace1, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
         btnSpace1Layout.setVerticalGroup(
             btnSpace1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace1, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace1, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnSpace1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 60, 60));
+        jPanel1.add(btnSpace1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 70, 70));
 
         btnSpace2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -376,14 +403,14 @@ public class Composite extends javax.swing.JFrame {
         btnSpace2.setLayout(btnSpace2Layout);
         btnSpace2Layout.setHorizontalGroup(
             btnSpace2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace2, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace2, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
         btnSpace2Layout.setVerticalGroup(
             btnSpace2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace2, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace2, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnSpace2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 60, 60));
+        jPanel1.add(btnSpace2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 70, 70));
 
         btnSpace3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -397,14 +424,14 @@ public class Composite extends javax.swing.JFrame {
         btnSpace3.setLayout(btnSpace3Layout);
         btnSpace3Layout.setHorizontalGroup(
             btnSpace3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace3, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace3, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
         btnSpace3Layout.setVerticalGroup(
             btnSpace3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace3, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace3, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnSpace3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 60, 60));
+        jPanel1.add(btnSpace3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 70, 70));
 
         btnSpace4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -418,14 +445,14 @@ public class Composite extends javax.swing.JFrame {
         btnSpace4.setLayout(btnSpace4Layout);
         btnSpace4Layout.setHorizontalGroup(
             btnSpace4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace4, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace4, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
         btnSpace4Layout.setVerticalGroup(
             btnSpace4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace4, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace4, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnSpace4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, 60, 60));
+        jPanel1.add(btnSpace4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 130, 70, 70));
 
         btnSpace5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -439,14 +466,14 @@ public class Composite extends javax.swing.JFrame {
         btnSpace5.setLayout(btnSpace5Layout);
         btnSpace5Layout.setHorizontalGroup(
             btnSpace5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace5, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace5, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
         btnSpace5Layout.setVerticalGroup(
             btnSpace5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace5, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace5, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnSpace5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 60, 60));
+        jPanel1.add(btnSpace5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 70, 70));
 
         btnSpace6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -460,14 +487,14 @@ public class Composite extends javax.swing.JFrame {
         btnSpace6.setLayout(btnSpace6Layout);
         btnSpace6Layout.setHorizontalGroup(
             btnSpace6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace6, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace6, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
         btnSpace6Layout.setVerticalGroup(
             btnSpace6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace6, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace6, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnSpace6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 60, 60));
+        jPanel1.add(btnSpace6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 70, 70));
 
         btnSpace7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -481,14 +508,14 @@ public class Composite extends javax.swing.JFrame {
         btnSpace7.setLayout(btnSpace7Layout);
         btnSpace7Layout.setHorizontalGroup(
             btnSpace7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace7, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace7, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
         btnSpace7Layout.setVerticalGroup(
             btnSpace7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace7, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace7, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnSpace7, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 60, 60));
+        jPanel1.add(btnSpace7, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 230, 70, 70));
 
         btnSpace8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -502,14 +529,14 @@ public class Composite extends javax.swing.JFrame {
         btnSpace8.setLayout(btnSpace8Layout);
         btnSpace8Layout.setHorizontalGroup(
             btnSpace8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace8, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace8, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
         btnSpace8Layout.setVerticalGroup(
             btnSpace8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace8, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace8, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnSpace8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 60, 60));
+        jPanel1.add(btnSpace8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, 70, 70));
 
         btnSpace9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -523,14 +550,14 @@ public class Composite extends javax.swing.JFrame {
         btnSpace9.setLayout(btnSpace9Layout);
         btnSpace9Layout.setHorizontalGroup(
             btnSpace9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace9, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace9, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
         btnSpace9Layout.setVerticalGroup(
             btnSpace9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace9, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace9, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnSpace9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, 60, 60));
+        jPanel1.add(btnSpace9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, 70, 70));
 
         btnSpace10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -544,32 +571,40 @@ public class Composite extends javax.swing.JFrame {
         btnSpace10.setLayout(btnSpace10Layout);
         btnSpace10Layout.setHorizontalGroup(
             btnSpace10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace10, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace10, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
         btnSpace10Layout.setVerticalGroup(
             btnSpace10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpace10, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblSpace10, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnSpace10, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 60, 60));
+        jPanel1.add(btnSpace10, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 70, 70));
 
         lblMap.setFont(new java.awt.Font("Segoe UI", 0, 3)); // NOI18N
-        jPanel1.add(lblMap, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 570, 360));
+        jPanel1.add(lblMap, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 580, 340));
 
         lblSubtittle.setText("Reset");
-        jPanel1.add(lblSubtittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 360, 60, -1));
+        jPanel1.add(lblSubtittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 390, 60, -1));
 
         lblSubtittle1.setText("Mapa");
-        jPanel1.add(lblSubtittle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 120, 60, -1));
+        jPanel1.add(lblSubtittle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 150, 60, -1));
 
         lblSubtittle2.setText("Arbol");
-        jPanel1.add(lblSubtittle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 180, 60, -1));
+        jPanel1.add(lblSubtittle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 210, 60, -1));
 
         lblSubtittle3.setText("Roca");
-        jPanel1.add(lblSubtittle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 240, 60, -1));
+        jPanel1.add(lblSubtittle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 270, 60, -1));
 
         lblSubtittle5.setText("Enemigo");
-        jPanel1.add(lblSubtittle5, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 300, 60, -1));
+        jPanel1.add(lblSubtittle5, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 330, 60, -1));
+
+        lblTittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTittle.setText("<html>Opciones de generacion de mundo<html>");
+        jPanel1.add(lblTittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 70, 120, 50));
+
+        lblTittle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTittle1.setText("Mapa");
+        jPanel1.add(lblTittle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 230, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -678,6 +713,17 @@ public class Composite extends javax.swing.JFrame {
 
     private void lblbMapMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblbMapMouseClicked
        setImageLabel(lblMap,"src/Assets/IMG/composite/map_Img.png");
+       setImageLabel(lblSpace1,"src/Assets/IMG/composite/flag_Img.png");
+       setImageLabel(lblSpace2,"src/Assets/IMG/composite/flag_Img.png");
+       setImageLabel(lblSpace3,"src/Assets/IMG/composite/flag_Img.png");
+       setImageLabel(lblSpace4,"src/Assets/IMG/composite/flag_Img.png");
+       setImageLabel(lblSpace5,"src/Assets/IMG/composite/flag_Img.png");
+       setImageLabel(lblSpace6,"src/Assets/IMG/composite/flag_Img.png");
+       setImageLabel(lblSpace7,"src/Assets/IMG/composite/flag_Img.png");
+       setImageLabel(lblSpace8,"src/Assets/IMG/composite/flag_Img.png");
+       setImageLabel(lblSpace9,"src/Assets/IMG/composite/flag_Img.png");
+       setImageLabel(lblSpace10,"src/Assets/IMG/composite/flag_Img.png");
+       
     }//GEN-LAST:event_lblbMapMouseClicked
 
     private void lblResetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblResetMouseClicked
@@ -731,123 +777,163 @@ public class Composite extends javax.swing.JFrame {
     }//GEN-LAST:event_lblEnemyMouseClicked
 
     private void lblSpace1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSpace1MouseClicked
-
-        if(evt.getButton()==1){
-            if(lblMap.getIcon()!=null){
-                setImg(valueT, valueR, valueE, lblSpace1);
-            }else{
-                JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
-            }
+        if(valueT.isEmpty() && valueR.isEmpty() && valueE.isEmpty()){
+            JOptionPane.showMessageDialog(null, "No has selecccionado ningun obstaculo");
         }else{
-          lblSpace1.setIcon(null);
-        }
+            if(evt.getButton()==1){
+                if(lblMap.getIcon()!=null){
+                    setImg(valueT, valueR, valueE, lblSpace1);
+                }else{
+                    JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
+                }
+            }else{
+              lblSpace1.setIcon(null);
+            }
+        }    
     }//GEN-LAST:event_lblSpace1MouseClicked
 
     private void lblSpace2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSpace2MouseClicked
-        if(evt.getButton()==1){
-            if(lblMap.getIcon()!=null){
-                setImg(valueT, valueR, valueE, lblSpace2);
-            }else{
-                JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
-            }
+        if(valueT.isEmpty() && valueR.isEmpty() && valueE.isEmpty()){
+            JOptionPane.showMessageDialog(null, "No has selecccionado ningun obstaculo");
         }else{
-          lblSpace2.setIcon(null);
+            if(evt.getButton()==1){
+                if(lblMap.getIcon()!=null){
+                    setImg(valueT, valueR, valueE, lblSpace2);
+                }else{
+                    JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
+                }
+            }else{
+              lblSpace2.setIcon(null);
+            }
         }
     }//GEN-LAST:event_lblSpace2MouseClicked
 
     private void lblSpace3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSpace3MouseClicked
-        if(evt.getButton()==1){
-            if(lblMap.getIcon()!=null){
-                setImg(valueT, valueR, valueE, lblSpace3);
-            }else{
-                JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
-            }
+        if(valueT.isEmpty() && valueR.isEmpty() && valueE.isEmpty()){
+            JOptionPane.showMessageDialog(null, "No has selecccionado ningun obstaculo");
         }else{
-          lblSpace3.setIcon(null);
+        
+            if(evt.getButton()==1){
+                if(lblMap.getIcon()!=null){
+                    setImg(valueT, valueR, valueE, lblSpace3);
+                }else{
+                    JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
+                }
+            }else{
+              lblSpace3.setIcon(null);
+            }
         }
     }//GEN-LAST:event_lblSpace3MouseClicked
 
     private void lblSpace4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSpace4MouseClicked
-        if(evt.getButton()==1){
-            if(lblMap.getIcon()!=null){
-                setImg(valueT, valueR, valueE, lblSpace4);
-            }else{
-                JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
-            }
+        if(valueT.isEmpty() && valueR.isEmpty() && valueE.isEmpty()){
+            JOptionPane.showMessageDialog(null, "No has selecccionado ningun obstaculo");
         }else{
-          lblSpace4.setIcon(null);
-        }
+            if(evt.getButton()==1){
+                if(lblMap.getIcon()!=null){
+                    setImg(valueT, valueR, valueE, lblSpace4);
+                }else{
+                    JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
+                }
+            }else{
+              lblSpace4.setIcon(null);
+            }
+        }    
     }//GEN-LAST:event_lblSpace4MouseClicked
 
     private void lblSpace5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSpace5MouseClicked
-        if(evt.getButton()==1){
-            if(lblMap.getIcon()!=null){
-                setImg(valueT, valueR, valueE, lblSpace5);
-            }else{
-                JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
-            }
+        if(valueT.isEmpty() && valueR.isEmpty() && valueE.isEmpty()){
+            JOptionPane.showMessageDialog(null, "No has selecccionado ningun obstaculo");
         }else{
-          lblSpace5.setIcon(null);
+            if(evt.getButton()==1){
+                if(lblMap.getIcon()!=null){
+                    setImg(valueT, valueR, valueE, lblSpace5);
+                }else{
+                    JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
+                }
+            }else{
+              lblSpace5.setIcon(null);
+            }
         }
     }//GEN-LAST:event_lblSpace5MouseClicked
 
     private void lblSpace6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSpace6MouseClicked
-        if(evt.getButton()==1){
-            if(lblMap.getIcon()!=null){
-                setImg(valueT, valueR, valueE, lblSpace6);
-            }else{
-                JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
-            }
+        if(valueT.isEmpty() && valueR.isEmpty() && valueE.isEmpty()){
+            JOptionPane.showMessageDialog(null, "No has selecccionado ningun obstaculo");
         }else{
-          lblSpace6.setIcon(null);
+            if(evt.getButton()==1){
+                if(lblMap.getIcon()!=null){
+                    setImg(valueT, valueR, valueE, lblSpace6);
+                }else{
+                    JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
+                }
+            }else{
+              lblSpace6.setIcon(null);
+            }
         }
     }//GEN-LAST:event_lblSpace6MouseClicked
 
     private void lblSpace7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSpace7MouseClicked
-        if(evt.getButton()==1){
-            if(lblMap.getIcon()!=null){
-                setImg(valueT, valueR, valueE, lblSpace7);
-            }else{
-                JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
-            }
+        if(valueT.isEmpty() && valueR.isEmpty() && valueE.isEmpty()){
+            JOptionPane.showMessageDialog(null, "No has selecccionado ningun obstaculo");
         }else{
-          lblSpace7.setIcon(null);
+            if(evt.getButton()==1){
+                if(lblMap.getIcon()!=null){
+                    setImg(valueT, valueR, valueE, lblSpace7);
+                }else{
+                    JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
+                }
+            }else{
+              lblSpace7.setIcon(null);
+            }
         }
     }//GEN-LAST:event_lblSpace7MouseClicked
 
     private void lblSpace8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSpace8MouseClicked
-        if(evt.getButton()==1){
-            if(lblMap.getIcon()!=null){
-                setImg(valueT, valueR, valueE, lblSpace8);
-            }else{
-                JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
-            }
+        if(valueT.isEmpty() && valueR.isEmpty() && valueE.isEmpty()){
+            JOptionPane.showMessageDialog(null, "No has selecccionado ningun obstaculo");
         }else{
-          lblSpace8.setIcon(null);
+            if(evt.getButton()==1){
+                if(lblMap.getIcon()!=null){
+                    setImg(valueT, valueR, valueE, lblSpace8);
+                }else{
+                    JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
+                }
+            }else{
+              lblSpace8.setIcon(null);
+            }
         }
     }//GEN-LAST:event_lblSpace8MouseClicked
 
     private void lblSpace9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSpace9MouseClicked
-        if(evt.getButton()==1){
-            if(lblMap.getIcon()!=null){
-                setImg(valueT, valueR, valueE, lblSpace9);
-            }else{
-                JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
-            }
+        if(valueT.isEmpty() && valueR.isEmpty() && valueE.isEmpty()){
+            JOptionPane.showMessageDialog(null, "No has selecccionado ningun obstaculo");
         }else{
-          lblSpace9.setIcon(null);
-        }
+            if(evt.getButton()==1){
+                if(lblMap.getIcon()!=null){
+                    setImg(valueT, valueR, valueE, lblSpace9);
+                }else{
+                    JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
+                }
+            }else{
+              lblSpace9.setIcon(null);
+            }
+        }    
     }//GEN-LAST:event_lblSpace9MouseClicked
 
     private void lblSpace10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSpace10MouseClicked
-        if(evt.getButton()==1){
-            if(lblMap.getIcon()!=null){
-                setImg(valueT, valueR, valueE, lblSpace10);
-            }else{
-                JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
-            }
+        if(valueT.isEmpty() && valueR.isEmpty() && valueE.isEmpty()){
+            JOptionPane.showMessageDialog(null, "No has selecccionado ningun obstaculo");
         }else{
-          lblSpace10.setIcon(null);
+            if(evt.getButton()==1){
+                if(lblMap.getIcon()!=null){
+                    setImg(valueT, valueR, valueE, lblSpace10);
+                }else{
+                    JOptionPane.showMessageDialog(null, "No puedes poner obstaculos, aun no has generado el mapa!!!");
+                }
+            }else{
+              lblSpace10.setIcon(null);
+            }
         }
     }//GEN-LAST:event_lblSpace10MouseClicked
 
@@ -928,6 +1014,8 @@ public class Composite extends javax.swing.JFrame {
     private javax.swing.JLabel lblSubtittle3;
     private javax.swing.JLabel lblSubtittle4;
     private javax.swing.JLabel lblSubtittle5;
+    private javax.swing.JLabel lblTittle;
+    private javax.swing.JLabel lblTittle1;
     private javax.swing.JLabel lblTree;
     private javax.swing.JLabel lblbMap;
     private javax.swing.JPanel pnlSeparator;

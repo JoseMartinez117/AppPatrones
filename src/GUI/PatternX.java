@@ -92,8 +92,7 @@ public class PatternX extends javax.swing.JFrame {
     }
     
     private void window(String nombre) throws IOException, FileNotFoundException, ParseException {
-        
-        
+
         switch(nombre){
             case "FactoryMethod":
                 FactoryMethod newframe = new FactoryMethod();
@@ -126,7 +125,12 @@ public class PatternX extends javax.swing.JFrame {
             case "Bridge":
                 Bridge newframe6 = new Bridge();
                 newframe6.setVisible(true);
-                break;     
+                break;
+                
+            case "Composite":
+                Composite newframe7 = new Composite();
+                newframe7.setVisible(true);
+                break; 
   
         }
     
