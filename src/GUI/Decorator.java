@@ -17,6 +17,10 @@ public class Decorator extends javax.swing.JFrame {
 
     int mouseX, mouseY;
     Fonts typeFont;
+    Color colorEntered=new Color(128, 128, 128);
+    Color colorSelected=new Color(128, 128, 129);
+    Color colorDefault=new Color(214, 217, 223);
+    String valueN="n", valueB="", valueH="";
     
     public Decorator() {
         initComponents();
@@ -32,8 +36,88 @@ public class Decorator extends javax.swing.JFrame {
     
     private void decorator(){
         typeFont = new Fonts();
+        lblSubtittle.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblSubtittle1.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblSubtittle2.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lbl1.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lbl2.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lbl3.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lbl4.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lbl5.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblText.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        lblContainer.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
         
+        btn3.setVisible(false);
+        btn4.setVisible(false);
+        btn5.setVisible(false);
+        
+        btnNormal.setOpaque(true);
+        btnNormal.setBackground(colorSelected);
+        setImageLabel(lblPj,"src/Assets/IMG/Decorator/Link_Img.png");
+        setImageLabel(lblNormal,"src/Assets/IMG/Decorator/vacio_Icon.png");
+        setImageLabel(lblABoots,"src/Assets/IMG/Decorator/Boots_Icon.png");
+        setImageLabel(lblHorse,"src/Assets/IMG/Decorator/Horse_Icon.png");
+        
+    }
+    
+    
+    private void validateFunction(String normal, String boots, String horse){
+        String value=normal+boots+horse;
+        lblText.setText("");
+        
+        switch(value){
+            
+            case "n":
+                btn3.setVisible(false);
+                btn4.setVisible(false);
+                btn5.setVisible(false);
+                setImageLabel(lblPj,"src/Assets/IMG/Decorator/Link_Img.png");
+            break;
+                
+            
+            case "nb":
 
+                btn3.setVisible(false);
+                btn4.setVisible(false);
+                btn5.setVisible(true);
+                setImageLabel(lblPj,"src/Assets/IMG/Decorator/LinkBoots_Img.png");
+                
+            break;
+            
+            case "nh":
+                
+                btn3.setVisible(true);
+                btn4.setVisible(true);
+                btn5.setVisible(false);
+                setImageLabel(lblPj,"src/Assets/IMG/Decorator/Horse_Img.png");
+                
+            break;
+            
+        
+            case "nbh":
+                
+                btn3.setVisible(true);
+                btn4.setVisible(true);
+                btn5.setVisible(true);
+                setImageLabel(lblPj,"src/Assets/IMG/Decorator/LinkHorseBoots_Img.png");
+                
+            break;
+        
+            case "":
+                btn3.setVisible(false);
+                btn4.setVisible(false);
+                btn5.setVisible(false);
+                
+                setImageLabel(lblPj,"src/Assets/IMG/Decorator/Link_Img.png");
+                break;
+        
+            default:
+                JOptionPane.showMessageDialog(null, "El icono Normal debe estar seleccionado"); 
+                btn3.setVisible(false);
+                btn4.setVisible(false);
+                btn5.setVisible(false);
+            break;
+        }
     }
     
     /**
@@ -50,6 +134,28 @@ public class Decorator extends javax.swing.JFrame {
         btnClose = new javax.swing.JPanel();
         txtCerrar = new javax.swing.JLabel();
         pnlSeparator = new javax.swing.JPanel();
+        btnNormal = new javax.swing.JPanel();
+        lblNormal = new javax.swing.JLabel();
+        btnHorse = new javax.swing.JPanel();
+        lblHorse = new javax.swing.JLabel();
+        btnABoots = new javax.swing.JPanel();
+        lblABoots = new javax.swing.JLabel();
+        lblPj = new javax.swing.JLabel();
+        btn1 = new javax.swing.JPanel();
+        lbl1 = new javax.swing.JLabel();
+        btn3 = new javax.swing.JPanel();
+        lbl3 = new javax.swing.JLabel();
+        btn2 = new javax.swing.JPanel();
+        lbl2 = new javax.swing.JLabel();
+        btn4 = new javax.swing.JPanel();
+        lbl4 = new javax.swing.JLabel();
+        btn5 = new javax.swing.JPanel();
+        lbl5 = new javax.swing.JLabel();
+        lblText = new javax.swing.JLabel();
+        lblSubtittle = new javax.swing.JLabel();
+        lblSubtittle1 = new javax.swing.JLabel();
+        lblSubtittle2 = new javax.swing.JLabel();
+        lblContainer = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -138,6 +244,261 @@ public class Decorator extends javax.swing.JFrame {
 
         jPanel1.add(pnlSeparator, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 720, 3));
 
+        btnNormal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lblNormal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblNormalMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblNormalMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblNormalMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnNormalLayout = new javax.swing.GroupLayout(btnNormal);
+        btnNormal.setLayout(btnNormalLayout);
+        btnNormalLayout.setHorizontalGroup(
+            btnNormalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblNormal, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+        btnNormalLayout.setVerticalGroup(
+            btnNormalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblNormal, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(btnNormal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 50, 50));
+
+        btnHorse.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lblHorse.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblHorseMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblHorseMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblHorseMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnHorseLayout = new javax.swing.GroupLayout(btnHorse);
+        btnHorse.setLayout(btnHorseLayout);
+        btnHorseLayout.setHorizontalGroup(
+            btnHorseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblHorse, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+        btnHorseLayout.setVerticalGroup(
+            btnHorseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblHorse, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(btnHorse, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+
+        btnABoots.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lblABoots.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblABootsMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblABootsMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblABootsMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnABootsLayout = new javax.swing.GroupLayout(btnABoots);
+        btnABoots.setLayout(btnABootsLayout);
+        btnABootsLayout.setHorizontalGroup(
+            btnABootsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblABoots, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+        btnABootsLayout.setVerticalGroup(
+            btnABootsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblABoots, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(btnABoots, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, -1));
+
+        lblPj.setText("jLabel1");
+        jPanel1.add(lblPj, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 310, 360));
+
+        btn1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lbl1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl1.setText("Caminar");
+        lbl1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbl1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbl1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbl1MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btn1Layout = new javax.swing.GroupLayout(btn1);
+        btn1.setLayout(btn1Layout);
+        btn1Layout.setHorizontalGroup(
+            btn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbl1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        btn1Layout.setVerticalGroup(
+            btn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbl1, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 120, -1, 40));
+
+        btn3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lbl3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl3.setText("Correr");
+        lbl3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbl3MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbl3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbl3MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btn3Layout = new javax.swing.GroupLayout(btn3);
+        btn3.setLayout(btn3Layout);
+        btn3Layout.setHorizontalGroup(
+            btn3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbl3, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        btn3Layout.setVerticalGroup(
+            btn3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbl3, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 170, -1, -1));
+
+        btn2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lbl2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl2.setText("Rodar");
+        lbl2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbl2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbl2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbl2MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btn2Layout = new javax.swing.GroupLayout(btn2);
+        btn2.setLayout(btn2Layout);
+        btn2Layout.setHorizontalGroup(
+            btn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbl2, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        btn2Layout.setVerticalGroup(
+            btn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbl2, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 120, -1, -1));
+
+        btn4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lbl4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl4.setText("Saltar");
+        lbl4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbl4MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbl4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbl4MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btn4Layout = new javax.swing.GroupLayout(btn4);
+        btn4.setLayout(btn4Layout);
+        btn4Layout.setHorizontalGroup(
+            btn4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbl4, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        btn4Layout.setVerticalGroup(
+            btn4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbl4, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 170, -1, -1));
+
+        btn5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lbl5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl5.setText("Caminar sobre agua");
+        lbl5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbl5MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbl5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbl5MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btn5Layout = new javax.swing.GroupLayout(btn5);
+        btn5.setLayout(btn5Layout);
+        btn5Layout.setHorizontalGroup(
+            btn5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbl5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        btn5Layout.setVerticalGroup(
+            btn5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbl5, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(btn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, -1, -1));
+        jPanel1.add(lblText, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, 220, 150));
+
+        lblSubtittle.setText("Caballo");
+        jPanel1.add(lblSubtittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, -1, -1));
+
+        lblSubtittle1.setText("Normal");
+        jPanel1.add(lblSubtittle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, -1, -1));
+
+        lblSubtittle2.setText("<html>Botas de agua<html>");
+        jPanel1.add(lblSubtittle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 50, 40));
+
+        lblContainer.setBackground(new java.awt.Color(255, 255, 255));
+        lblContainer.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Zona de botones", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+
+        javax.swing.GroupLayout lblContainerLayout = new javax.swing.GroupLayout(lblContainer);
+        lblContainer.setLayout(lblContainerLayout);
+        lblContainerLayout.setHorizontalGroup(
+            lblContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 230, Short.MAX_VALUE)
+        );
+        lblContainerLayout.setVerticalGroup(
+            lblContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 147, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(lblContainer, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, 240, 170));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -180,6 +541,197 @@ public class Decorator extends javax.swing.JFrame {
         btnClose.setBackground(Color.pink);
         btnClose.setOpaque(false);
     }//GEN-LAST:event_txtCerrarMouseExited
+
+    private void lblNormalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNormalMouseEntered
+        if (btnNormal.getBackground().equals(colorDefault)) {
+            btnNormal.setOpaque(true);
+            btnNormal.setBackground(colorEntered);
+        }
+    }//GEN-LAST:event_lblNormalMouseEntered
+
+    private void lblNormalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNormalMouseExited
+        if(btnNormal.getBackground().equals(colorEntered)){
+            btnNormal.setOpaque(true);
+            btnNormal.setBackground(colorDefault);
+        }
+    }//GEN-LAST:event_lblNormalMouseExited
+
+    private void lblABootsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblABootsMouseEntered
+        if (btnABoots.getBackground().equals(colorDefault)) {
+            btnABoots.setOpaque(true);
+            btnABoots.setBackground(colorEntered);
+        }
+    }//GEN-LAST:event_lblABootsMouseEntered
+
+    private void lblABootsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblABootsMouseExited
+        if(btnABoots.getBackground().equals(colorEntered)){  
+            btnABoots.setOpaque(true);
+            btnABoots.setBackground(colorDefault);
+        }
+    }//GEN-LAST:event_lblABootsMouseExited
+
+    private void lblHorseMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblHorseMouseEntered
+        if (btnHorse.getBackground().equals(colorDefault)) {
+            btnHorse.setOpaque(true);
+            btnHorse.setBackground(colorEntered);
+        }
+    }//GEN-LAST:event_lblHorseMouseEntered
+
+    private void lblHorseMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblHorseMouseExited
+        if(btnHorse.getBackground().equals(colorEntered)){
+            btnHorse.setOpaque(true);
+            btnHorse.setBackground(colorDefault);
+        }
+    }//GEN-LAST:event_lblHorseMouseExited
+
+    private void lbl1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl1MouseEntered
+        btn1.setOpaque(true);
+        btn1.setBackground(colorEntered);
+    }//GEN-LAST:event_lbl1MouseEntered
+
+    private void lbl1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl1MouseExited
+        btn1.setOpaque(true);
+        btn1.setBackground(colorDefault);
+    }//GEN-LAST:event_lbl1MouseExited
+
+    private void lbl2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl2MouseEntered
+        btn2.setOpaque(true);
+        btn2.setBackground(colorEntered);
+    }//GEN-LAST:event_lbl2MouseEntered
+
+    private void lbl2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl2MouseExited
+        btn2.setOpaque(true);
+        btn2.setBackground(colorDefault);
+    }//GEN-LAST:event_lbl2MouseExited
+
+    private void lbl3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl3MouseEntered
+        btn3.setOpaque(true);
+        btn3.setBackground(colorEntered);
+    }//GEN-LAST:event_lbl3MouseEntered
+
+    private void lbl3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl3MouseExited
+        btn3.setOpaque(true);
+        btn3.setBackground(colorDefault);
+    }//GEN-LAST:event_lbl3MouseExited
+
+    private void lbl4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl4MouseEntered
+        btn4.setOpaque(true);
+        btn4.setBackground(colorEntered);
+    }//GEN-LAST:event_lbl4MouseEntered
+
+    private void lbl4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl4MouseExited
+        btn4.setOpaque(true);
+        btn4.setBackground(colorDefault);
+    }//GEN-LAST:event_lbl4MouseExited
+
+    private void lbl5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl5MouseEntered
+        btn5.setOpaque(true);
+        btn5.setBackground(colorEntered);
+    }//GEN-LAST:event_lbl5MouseEntered
+
+    private void lbl5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl5MouseExited
+        btn5.setOpaque(true);
+        btn5.setBackground(colorDefault);
+    }//GEN-LAST:event_lbl5MouseExited
+
+    private void lblNormalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNormalMouseClicked
+        if(evt.getButton()==1){
+          btnNormal.setBackground(colorSelected);
+          this.valueN="n";
+          validateFunction(valueN,valueB,valueH);
+          
+          
+        }else{
+          btnNormal.setBackground(colorDefault);
+          this.valueN="";
+          validateFunction(valueN,valueB,valueH);
+        }
+        
+    }//GEN-LAST:event_lblNormalMouseClicked
+
+    private void lblABootsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblABootsMouseClicked
+        if(evt.getButton()==1){
+          btnABoots.setBackground(colorSelected);
+          this.valueB="b";
+          validateFunction(valueN,valueB,valueH);
+          
+        }else{
+          btnABoots.setBackground(colorDefault);
+          this.valueB="";
+          validateFunction(valueN,valueB,valueH);
+        }
+        
+    }//GEN-LAST:event_lblABootsMouseClicked
+
+    private void lblHorseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblHorseMouseClicked
+        
+        if(evt.getButton()==1){
+          btnHorse.setBackground(colorSelected);
+          this.valueH="h";
+          validateFunction(valueN,valueB,valueH);
+          
+        }else{
+          btnHorse.setBackground(colorDefault);
+          this.valueH="";
+          validateFunction(valueN,valueB,valueH);
+        }
+        
+    }//GEN-LAST:event_lblHorseMouseClicked
+
+    private void lbl1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl1MouseClicked
+        if(valueN.equals("n")){
+            lblText.setText("<html>Link camina por la pradera<html>");
+        }else{
+            JOptionPane.showMessageDialog(null, "El icono Normal debe estar seleccionado"); 
+            lblText.setText("");
+        }    
+    }//GEN-LAST:event_lbl1MouseClicked
+
+    private void lbl2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl2MouseClicked
+        if(valueN.equals("n")){
+            lblText.setText("<html>Link rueda para esquivar a un enemigo<html>");
+        }else{
+            JOptionPane.showMessageDialog(null, "El icono Normal debe estar seleccionado"); 
+            lblText.setText("");
+        }    
+    }//GEN-LAST:event_lbl2MouseClicked
+
+    private void lbl3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl3MouseClicked
+      
+        if(valueN.equals("n")){
+            lblText.setText("<html>Link corre con su caballo por la pradera<html>");
+        }else{
+            JOptionPane.showMessageDialog(null, "El icono Normal debe estar seleccionado"); 
+            lblText.setText("");
+        } 
+    }//GEN-LAST:event_lbl3MouseClicked
+
+    private void lbl4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl4MouseClicked
+        
+        if(valueN.equals("n")){
+            lblText.setText("<html>Link salta con su caballo un obstaculo<html>");
+        }else{
+            JOptionPane.showMessageDialog(null, "El icono Normal debe estar seleccionado"); 
+            lblText.setText("");
+        } 
+    }//GEN-LAST:event_lbl4MouseClicked
+
+    private void lbl5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl5MouseClicked
+        
+
+        
+         if(valueN.equals("n")){
+            if(valueH.equals("")){
+            lblText.setText("<html>Link camina por el agua<html>");
+            }else{
+               lblText.setText("<html>Link camina sobre su caballo por el agua<html>"); 
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "El icono Normal debe estar seleccionado"); 
+            lblText.setText("");
+        } 
+        
+    }//GEN-LAST:event_lbl5MouseClicked
 
     /**
      * @param args the command line arguments
@@ -225,8 +777,30 @@ public class Decorator extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Header;
+    private javax.swing.JPanel btn1;
+    private javax.swing.JPanel btn2;
+    private javax.swing.JPanel btn3;
+    private javax.swing.JPanel btn4;
+    private javax.swing.JPanel btn5;
+    private javax.swing.JPanel btnABoots;
     private javax.swing.JPanel btnClose;
+    private javax.swing.JPanel btnHorse;
+    private javax.swing.JPanel btnNormal;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lbl1;
+    private javax.swing.JLabel lbl2;
+    private javax.swing.JLabel lbl3;
+    private javax.swing.JLabel lbl4;
+    private javax.swing.JLabel lbl5;
+    private javax.swing.JLabel lblABoots;
+    private javax.swing.JPanel lblContainer;
+    private javax.swing.JLabel lblHorse;
+    private javax.swing.JLabel lblNormal;
+    private javax.swing.JLabel lblPj;
+    private javax.swing.JLabel lblSubtittle;
+    private javax.swing.JLabel lblSubtittle1;
+    private javax.swing.JLabel lblSubtittle2;
+    private javax.swing.JLabel lblText;
     private javax.swing.JPanel pnlSeparator;
     private javax.swing.JLabel txtCerrar;
     // End of variables declaration//GEN-END:variables

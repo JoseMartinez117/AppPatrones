@@ -131,6 +131,11 @@ public class PatternX extends javax.swing.JFrame {
                 Composite newframe7 = new Composite();
                 newframe7.setVisible(true);
                 break; 
+            
+            case "Decorator":
+                Decorator newframe8 = new Decorator();
+                newframe8.setVisible(true);
+                break; 
   
         }
     

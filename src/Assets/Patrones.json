@@ -178,7 +178,7 @@
           
     "Ejemplo": "",
 
-    "Experiencia": "",
+    "Experiencia": "En esta experiencia podrás experimentar como funciona el patrón de diseño Adapter, mediante un ejemplo basado en la saga de juegos del The Legend Of Zelda. En esta ventana podrás encontrar a diferentes criaturas del mundo de The Legend Of Zelda la cuales hablan en sus propios idiomas, deberás adaptarte a las criaturas de este mundo utilizando los 3 botones que se encuentran al lado izquierdo de Link, una vez te hayas adaptado a la criatura podrás observar como el texto se vuelve legible y tendrás que responder a una pregunta sobre los patrones de diseño, se muy astuto y pon a prueba tus conocimientos! ",
 
     "Referencias" : [
       "https://refactoring.guru/es/design-patterns/adapter" 
@@ -211,7 +211,7 @@
 
     "Ejemplo": "",
 
-    "Experiencia": "",
+    "Experiencia": "En esta experiencia podrás experimentar como funciona el patrón de diseño Bridge, mediante un ejemplo basado en la saga de juegos del The Legend Of Zelda. En esta ventana podrás observar que se encuentra dividida en 2 partes la interfaz de ítem y la interfaz de personaje. En la interfaz de ítem podrás seleccionar mediante 3 botones el arma que desees que link utilicé (espada, escudo, bastón), además podrás digitar la cantidad de daño y la durabilidad que quieres que tenga esta (solo se admiten números enteros positivos) y un botón para otorgarle este arma creada al link que se encuentra en la interfaz de personaje. En la interfaz de personaje podrás cambiar a link en sus dos estados (link) y (deku-link) estos dos podrán usar el ítem y repararlo pero solo deku-link podrá mejorar las estadísticas de este.",
 
     "Referencias" : [
       "https://refactoring.guru/es/design-patterns/bridge" 
@@ -240,7 +240,7 @@
 
     "Ejemplo": "",
 
-    "Experiencia": "",
+    "Experiencia": "En esta experiencia podrás experimentar como funciona el patrón de diseño Composite, mediante un ejemplo basado en la saga de juegos del The Legend Of Zelda. Esta ventana estará dividida en 2 secciones una mas grande que la otra, en la sección mas pequeña de esta ventana podrás encontrar una serie de 5 botones que controlaran la zona mas grande de esta ventana, esta experiencia tiene como iniciativa simular la construcción de mapa de los videojuegos retro, ten en cuenta que para poder construir deberás inicializar el mapa utilizando el botón (mapa). Una vez el mapa este generado se generaran ciertas banderitas las cuales indicaran los lugares en los cuales podrás poner los diferentes obstáculos (arboles, rocas, enemigos y sus respectivas combinaciones) para seleccionar deberás utilizar el click izquierdo de tu mouse y para deseleccionar utilizar el botón derecho de tu mouse. En dado caso que quieras eliminar un obstáculo colocado en el mapa solo deberás hacer click derecho sobre el enemigo que desees eliminar o en su defecto presionar el botón reset para borrar todo incluso hasta el mapa.   ",
 
     "Referencias" : [
       "https://refactoring.guru/es/design-patterns/composite" 
@@ -275,7 +275,7 @@
    
     "Ejemplo": "",
 
-    "Experiencia": "",
+    "Experiencia": "En esta experiencia podrás experimentar como funciona el patrón de diseño Decorator, mediante un ejemplo basado en la saga de juegos del The Legend Of Zelda. Esta ventana podrás encontrar una imagen de link y una zona de botones que variara dependiendo de los 3 botones que se encuentran a la izquierda de la ventana. Estos para poder seleccionar estos botones solo tienes que dar click izquierdo y si quieres deseleccionarlos solo tienes que dar click derecho. los botones de la zona de botones representaran las distintas habilidades que ira ganando o perdiendo link dependiendo de los botones que tengas seleccionado en el lateral izquierdo de la ventana.",
 
     "Referencias" : [
       "https://refactoring.guru/es/design-patterns/decorator" 

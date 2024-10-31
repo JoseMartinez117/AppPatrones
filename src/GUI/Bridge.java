@@ -56,6 +56,8 @@ public class Bridge extends javax.swing.JFrame {
         lblRepair.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
         lblBuff.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
         lblText.setFont(typeFont.fontV(typeFont.instruments, 0, 13));
+        lblTittle.setFont(typeFont.fontV(typeFont.instruments, 1, 14));
+        lblTittle1.setFont(typeFont.fontV(typeFont.instruments, 1, 14));
     }
     
     /**
@@ -102,6 +104,8 @@ public class Bridge extends javax.swing.JFrame {
         lblSubtittle2 = new javax.swing.JLabel();
         lblDamage = new javax.swing.JLabel();
         lbltextDamage = new javax.swing.JLabel();
+        lblTittle = new javax.swing.JLabel();
+        lblTittle1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -333,15 +337,15 @@ public class Bridge extends javax.swing.JFrame {
         lblLink.setFont(new java.awt.Font("Segoe UI", 0, 3)); // NOI18N
         lblLink.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblLink.setText("link");
-        jPanel1.add(lblLink, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 180, 190));
-        jPanel1.add(lblItem1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 170, 90, 90));
+        jPanel1.add(lblLink, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 180, 190));
+        jPanel1.add(lblItem1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 90, 90));
 
         lblSubtittle.setText("Stats Item:");
-        jPanel1.add(lblSubtittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 80, 140, -1));
+        jPanel1.add(lblSubtittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 130, 140, -1));
 
         lblDurability.setText("000");
-        jPanel1.add(lblDurability, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 140, 70, -1));
-        jPanel1.add(lblText, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, 340, 90));
+        jPanel1.add(lblDurability, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 190, 70, -1));
+        jPanel1.add(lblText, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, 340, 50));
 
         btnChange.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -371,10 +375,10 @@ public class Bridge extends javax.swing.JFrame {
             .addComponent(lblChange, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 220, 40, 40));
+        jPanel1.add(btnChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 270, 40, 40));
 
         lbltextDurability.setText("Durabilidad");
-        jPanel1.add(lbltextDurability, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 140, 70, -1));
+        jPanel1.add(lbltextDurability, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 190, 70, -1));
 
         btnUse.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -403,7 +407,7 @@ public class Bridge extends javax.swing.JFrame {
             .addComponent(lblUse, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnUse, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 100, 30));
+        jPanel1.add(btnUse, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, 100, 30));
 
         btnRepair.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -432,7 +436,7 @@ public class Bridge extends javax.swing.JFrame {
             .addComponent(lblRepair, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnRepair, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 290, 100, 30));
+        jPanel1.add(btnRepair, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 340, 100, 30));
 
         btnBuff.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -461,7 +465,7 @@ public class Bridge extends javax.swing.JFrame {
             .addComponent(lblBuff, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnBuff, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 290, 100, 30));
+        jPanel1.add(btnBuff, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 340, 100, 30));
 
         lblSubtittle1.setText("Durabilidad:");
         jPanel1.add(lblSubtittle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, 80, -1));
@@ -470,10 +474,18 @@ public class Bridge extends javax.swing.JFrame {
         jPanel1.add(lblSubtittle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 80, -1));
 
         lblDamage.setText("000");
-        jPanel1.add(lblDamage, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 110, 60, -1));
+        jPanel1.add(lblDamage, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 160, 60, -1));
 
         lbltextDamage.setText("Daño");
-        jPanel1.add(lbltextDamage, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 110, 70, -1));
+        jPanel1.add(lbltextDamage, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 160, 70, -1));
+
+        lblTittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTittle.setText("Interfaz de personaje");
+        jPanel1.add(lblTittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 80, 160, -1));
+
+        lblTittle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTittle1.setText("Interfaz de Item");
+        jPanel1.add(lblTittle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 160, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -845,6 +857,8 @@ public class Bridge extends javax.swing.JFrame {
     private javax.swing.JLabel lblSubtittle2;
     private javax.swing.JLabel lblSword;
     private javax.swing.JLabel lblText;
+    private javax.swing.JLabel lblTittle;
+    private javax.swing.JLabel lblTittle1;
     private javax.swing.JLabel lblUse;
     private javax.swing.JLabel lbltextDamage;
     private javax.swing.JLabel lbltextDurability;
