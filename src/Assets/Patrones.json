@@ -302,7 +302,7 @@
  
     "Ejemplo": "",
 
-    "Experiencia": "",
+    "Experiencia": "En esta experiencia podras experimentar el funcionamiento del patrón de diseño Facade, en el cual, se le ofrece la interfaz simplificada Link, el cual puede interactuar con los procesos complejos de todo el juego, como lo son el Atacar, el manejar el Inventario y el resolver Puzzles. Para esto cuenta con los diversos botones, los cuales le permiten elegir de forma simple cual es la accion que desea realizar. Dependiendo de la acción elegida, Link realizara dicha acción.",
 
     "Referencias" : [
       "https://refactoring.guru/es/design-patterns/facade" 
@@ -331,7 +331,7 @@
      
     "Ejemplo": "",
 
-    "Experiencia": "",
+    "Experiencia": "En esta experiencia podras experimentar el funcionamiento del patrón de diseño Flyweight, para esto podras ir generando en memoria unidades de 2 tipos de enemigos distintos, visualizando los atributos de cada clase de enemigo, con los botones correspondientes, a su vez podras ver el conteo de los enemigos existentes de cada clase y como estos almacenan memoria, visualizando una comparativa entre la memoria RAM de generar estos enemigos implementando y no implementando el patrón de diseño.",
 
     "Referencias" : [
       "https://refactoring.guru/es/design-patterns/flyweight" 
@@ -339,7 +339,7 @@
   },
   
   "Proxy":{
-    "Definicion": "Permite proporcionar un sustituto o marcador de posición para otro objeto. Un proxy controla el acceso al objeto original, permitiéndote hacer algo antes o después de que la solicitud llegue al objeto original.",
+    "Definicion": "Proxy es un patrón de diseño estructural que te permite proporcionar un sustituto o marcador de posición para otro objeto. Un proxy controla el acceso al objeto original, permitiéndote hacer algo antes o después de que la solicitud llegue al objeto original. <p><p> El patrón Proxy sugiere que crees una nueva clase proxy con la misma interfaz que un objeto de servicio original. Después actualizas tu aplicación para que pase el objeto proxy a todos los clientes del objeto original. Al recibir una solicitud de un cliente, el proxy crea un objeto de servicio real y le delega todo el trabajo. <p><p> Pero, ¿cuál es la ventaja? Si necesitas ejecutar algo antes o después de la lógica primaria de la clase, el proxy te permite hacerlo sin cambiar esa clase. Ya que el proxy implementa la misma interfaz que la clase original, puede pasarse a cualquier cliente que espere un objeto de servicio real.",
         
     "Ventajas" : [
       "Puedes controlar el objeto de servicio sin que los clientes lo sepan.",
@@ -363,7 +363,7 @@
       
     "Ejemplo": "",
 
-    "Experiencia": "",
+    "Experiencia": "En esta experiencia podrás experimentar el funcionamiento del patrón de diseño Proxy, para ello se tiene una mecánica simulando un videojuego (Clicker), en el cual la clase Proxy, se da acceso al jugador a nuevos objetos dependiendo que mejoran sus capacidad de obtener puntos, dependiendo de la cantidad de puntos actuales.",
 
     "Referencias" : [
       "https://refactoring.guru/es/design-patterns/proxy" 
@@ -434,7 +434,7 @@
   },
 
   "Iterator":{
-    "Definicion": "Permite recorrer elementos de una colección sin exponer su representación subyacente (lista, pila, árbol, etc.).",
+    "Definicion": "Iterator es un patrón de diseño de comportamiento que te permite recorrer elementos de una colección sin exponer su representación subyacente (lista, pila, árbol, etc.). <p><p> La idea central del patrón Iterator es extraer el comportamiento de recorrido de una colección y colocarlo en un objeto independiente llamado iterador. <p><p> Además de implementar el propio algoritmo, un objeto iterador encapsula todos los detalles del recorrido, como la posición actual y cuántos elementos quedan hasta el final. Debido a esto, varios iteradores pueden recorrer la misma colección al mismo tiempo, independientemente los unos de los otros. <p><p> Normalmente, los iteradores aportan un método principal para extraer elementos de la colección. El cliente puede continuar ejecutando este método hasta que no devuelva nada, lo que significa que el iterador ha recorrido todos los elementos. <p><p> Todos los iteradores deben implementar la misma interfaz. Esto hace que el código cliente sea compatible con cualquier tipo de colección o cualquier algoritmo de recorrido, siempre y cuando exista un iterador adecuado. Si necesitas una forma particular de recorrer una colección, creas una nueva clase iteradora sin tener que cambiar la colección o el cliente.",
         
     "Ventajas" : [
       "Principio de responsabilidad única. Puedes limpiar el código cliente y las colecciones extrayendo algoritmos de recorrido voluminosos y colocándolos en clases independientes.",
@@ -458,7 +458,7 @@
        
     "Ejemplo": "",
 
-    "Experiencia": "",
+    "Experiencia": "En esta experiencia podras experimentar el funcionamiento del patrón de diseño Iterator, el cual en este caso, busca Iterar los ataques de cada uno de los Pokemon en un equipo, para que asi, el juego sepa si el jugador puede atravesar un obstaculo, cada tipo de obstaculo es atravesable si alguno de los Pokemon del jugador tiene la MO correspondiente a dicho obstaculo. Para esto el juego itera de Pokemon en Pokemon, revisando si un pokemon tiene la MO necesaria, en el caso de que este la tenga, sale un anuncio preguntando si desea usarla.",
 
     "Referencias" : [
       "https://refactoring.guru/es/design-patterns/iterator" 
@@ -498,7 +498,7 @@
   },
   
   "Memento":{
-    "Definicion": "Permite guardar y restaurar el estado previo de un objeto sin revelar los detalles de su implementación.",
+    "Definicion": "Memento es un patrón de diseño de comportamiento que te permite guardar y restaurar el estado previo de un objeto sin revelar los detalles de su implementación. <p><p> El patrón Memento delega la creación de instantáneas de estado al propietario de ese estado, el objeto originador. Por lo tanto, en lugar de que haya otros objetos intentando copiar el estado del editor desde el “exterior”, la propia clase editora puede hacer la instantánea, ya que tiene pleno acceso a su propio estado. <p><p> El patrón sugiere almacenar la copia del estado del objeto en un objeto especial llamado memento. Los contenidos del memento no son accesibles para ningún otro objeto excepto el que lo produjo. Otros objetos deben comunicarse con mementos utilizando una interfaz limitada que pueda permitir extraer los metadatos de la instantánea (tiempo de creación, el nombre de la operación realizada, etc.), pero no el estado del objeto original contenido en la instantánea. <p><p>Una política tan restrictiva te permite almacenar mementos dentro de otros objetos, normalmente llamados cuidadores. Debido a que el cuidador trabaja con el memento únicamente a través de la interfaz limitada, no puede manipular el estado almacenado dentro del memento. Al mismo tiempo, el originador tiene acceso a todos los campos dentro del memento, permitiéndole restaurar su estado previo a voluntad.",
         
     "Ventajas" : [
       "Puedes producir instantáneas del estado del objeto sin violar su encapsulación.",
@@ -524,7 +524,7 @@
      
     "Ejemplo": "",
 
-    "Experiencia": "",
+    "Experiencia": "En esta experiencia podras experimentar el funcionamiento del patrón de diseño Memento, para esto la interfaz simula el sistema de guardado y carga de partidas en los emuladores utilizados para jugar Pokemon, en esta interfaz podras establecer los parametros principales de la partida a guardar y almacenar ese estado en uno de los slots correspondientes, puedes seguir jugando y mejorar tu partida, para asi sobreescribir la partida guardada o guardarla en otro slot. Al presionar alguno de los slots, los datos de esa partida guardada seran cargados.",
 
     "Referencias" : [
       "https://refactoring.guru/es/design-patterns/"
@@ -532,7 +532,7 @@
   },
   
   "Observer":{
-    "Definicion": "Permite definir un mecanismo de suscripción para notificar a varios objetos sobre cualquier evento que le suceda al objeto que están observando.",
+    "Definicion": "Observer es un patrón de diseño de comportamiento que te permite definir un mecanismo de suscripción para notificar a varios objetos sobre cualquier evento que le suceda al objeto que están observando. <p><p> El patrón Observer sugiere que añadas un mecanismo de suscripción a la clase notificadora para que los objetos individuales puedan suscribirse o cancelar su suscripción a un flujo de eventos que proviene de esa notificadora. ¡No temas! No es tan complicado como parece. En realidad, este mecanismo consiste en: 1) un campo matriz para almacenar una lista de referencias a objetos suscriptores y 2) varios métodos públicos que permiten añadir suscriptores y eliminarlos de esa lista. <p><p> Ahora, cuando le sucede un evento importante al notificador, recorre sus suscriptores y llama al método de notificación específico de sus objetos. <p><p> Las aplicaciones reales pueden tener decenas de clases suscriptoras diferentes interesadas en seguir los eventos de la misma clase notificadora. No querrás acoplar la notificadora a todas esas clases. Además, puede que no conozcas algunas de ellas de antemano si se supone que otras personas pueden utilizar tu clase notificadora.",
         
     "Ventajas" : [
       "Principio de abierto/cerrado. Puedes introducir nuevas clases suscriptoras sin tener que cambiar el código de la notificadora (y viceversa si hay una interfaz notificadora).",
@@ -555,14 +555,14 @@
      
     "Ejemplo": "",
 
-    "Experiencia": "",
+    "Experiencia": "En esta experiencia podras experimentar el funcionamiento del patrón de diseño Observer, en la cual se simula el comportamiento del mundo de Genshin Impact, el cual al ir variando de Nivel, notifica a sus elementos internos, es decir, a sus enemigos y recompensas, para que estos aumenten o disminuyan sus atributos dependiendo del nivel del mundo.",
 
     "Referencias" : ["https://refactoring.guru/es/design-patterns/observer" 
     ]
   },
   
   "State":{
-    "Definicion": "Permite a un objeto alterar su comportamiento cuando su estado interno cambia. Parece como si el objeto cambiara su clase.",
+    "Definicion": "State es un patrón de diseño de comportamiento que permite a un objeto alterar su comportamiento cuando su estado interno cambia. Parece como si el objeto cambiara su clase. <p><p> El patrón State sugiere que crees nuevas clases para todos los estados posibles de un objeto y extraigas todos los comportamientos específicos del estado para colocarlos dentro de esas clases. <p><p> En lugar de implementar todos los comportamientos por su cuenta, el objeto original, llamado contexto, almacena una referencia a uno de los objetos de estado que representa su estado actual y delega todo el trabajo relacionado con el estado a ese objeto. <p><p> Para la transición del contexto a otro estado, sustituye el objeto de estado activo por otro objeto que represente ese nuevo estado. Esto sólo es posible si todas las clases de estado siguen la misma interfaz y el propio contexto funciona con esos objetos a través de esa interfaz. <p><p> Esta estructura puede resultar similar al patrón Strategy, pero hay una diferencia clave. En el patrón State, los estados particulares pueden conocerse entre sí e iniciar transiciones de un estado a otro, mientras que las estrategias casi nunca se conocen",
         
     "Ventajas" : [
       "Principio de responsabilidad única. Organiza el código relacionado con estados particulares en clases separadas.",
@@ -585,7 +585,7 @@
      
     "Ejemplo": "",
 
-    "Experiencia": "",
+    "Experiencia": "En esta experiencia podras experimentar el funcionamiento del patrón de diseño State, con el cual podras interactuar de dos formas, realizando acciones que simulan la invocación de metodos comunes para la interfaz jugador y la zona de transformaciones (States), en la cual puedes transformas a tu jugador en distintos tipos de seres (States) extraidos del videojuego de Genshin Impact, cada uno de estos seres ejecuta las acciones de manera distinta, simulando asi que los diferentes States responden de forma diferente a un mismo metodo.",
 
     "Referencias" : [
       "https://refactoring.guru/es/design-patterns/state" 

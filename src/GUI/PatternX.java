@@ -136,7 +136,44 @@ public class PatternX extends javax.swing.JFrame {
                 Decorator newframe8 = new Decorator();
                 newframe8.setVisible(true);
                 break; 
-  
+            
+            case "Facade":
+                Facade newframe9 = new Facade();
+                newframe9.setVisible(true);
+                break; 
+                
+            case "Flyweight":
+                Flyweight newframe10 = new Flyweight();
+                newframe10.setVisible(true);
+                break;   
+                
+            case "Proxy":
+                Proxy newframe11 = new Proxy();
+                newframe11.setVisible(true);
+                break;
+                
+            case "Iterator":
+                Iterator newframe12 = new Iterator();
+                newframe12.setVisible(true);
+                break;    
+                
+            case "Observer":
+                Observer newframe13 = new Observer();
+                newframe13.setVisible(true);
+                break;    
+            
+            case "State":
+                State newframe14 = new State();
+                newframe14.setVisible(true);
+                break;    
+                
+                
+            case "Memento":
+                Memento newframe15 = new Memento();
+                newframe15.setVisible(true);
+                break;    
+                
+                
         }
     
     }
