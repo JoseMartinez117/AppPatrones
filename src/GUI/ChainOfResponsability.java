@@ -4,6 +4,8 @@
  */
 package GUI;
 
+
+
 import java.awt.Color;
 import Assets.FONT.Fonts;
 import java.awt.Image;
@@ -11,35 +13,77 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import Assets.IMG.ChainOfResponsability.types;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
 
 
 public class ChainOfResponsability extends javax.swing.JFrame {
 
-    int mouseX, mouseY, turno=0;
+    int mouseX, mouseY, turno=0, cont=0;
     Fonts typeFont;    
     Color colorEntered=new Color(128, 128, 128);
     Color colorDefault=new Color(214, 217, 223);
-    String [][] pkmns = new String[4][3];
+    String [][] pkmnA = new String[6][3];
+    String [][] pkmnE = new String[6][3];
 
 
 
     public ChainOfResponsability() {
         initComponents();
-        pkmns[0][0]="Sceptile";
-        pkmns[0][1]="500";
-        pkmns[0][2]="Hoja";
+        pkmnE[0][0]="Sceptile";
+        pkmnE[0][1]="500";
+        pkmnE[0][2]="Planta";
         
-        pkmns[1][0]="Swampert";
-        pkmns[1][1]="500";
-        pkmns[1][2]="Agua";
+        pkmnE[1][0]="Swampert";
+        pkmnE[1][1]="500";
+        pkmnE[1][2]="Agua";
         
-        pkmns[2][0]="Infernape";
-        pkmns[2][1]="500";
-        pkmns[2][2]="Fuego";
+        pkmnE[2][0]="Blaziken";
+        pkmnE[2][1]="500";
+        pkmnE[2][2]="Fuego";
         
-        pkmns[3][0]="Empoleon";
-        pkmns[3][1]="500";
-        pkmns[3][2]="Agua";
+        pkmnE[3][0]="Lanturn";
+        pkmnE[3][1]="500";
+        pkmnE[3][2]="Electrico";
+        
+        pkmnE[4][0]="Metagross";
+        pkmnE[4][1]="500";
+        pkmnE[4][2]="Acero";
+        
+        pkmnE[5][0]="Salamance";
+        pkmnE[5][1]="500";
+        pkmnE[5][2]="Dragon";
+        
+        //Agua - fuego - planta - eléctrico - acero - dragon
+  
+        pkmnA[0][0]="Infernape";
+        pkmnA[0][1]="500";
+        pkmnA[0][2]="Fuego";
+        
+        pkmnA[1][0]="Empoleon";
+        pkmnA[1][1]="500";
+        pkmnA[1][2]="Agua";
+        
+        pkmnA[2][0]="Torterra";
+        pkmnA[2][1]="500";
+        pkmnA[2][2]="Planta";
+        
+        pkmnA[3][0]="Luxray";
+        pkmnA[3][1]="500";
+        pkmnA[3][2]="Electrico";
+        
+        pkmnA[4][0]="Lucario";
+        pkmnA[4][1]="500";
+        pkmnA[4][2]="Acero";
+        
+        pkmnA[5][0]="Garchomp";
+        pkmnA[5][1]="500";
+        pkmnA[5][2]="Dragon";
         decorator();
 
     }
@@ -53,22 +97,26 @@ public class ChainOfResponsability extends javax.swing.JFrame {
     
     private void decorator(){
         typeFont = new Fonts();
-
-        setImageLabel(lblPkmnE, "src/Assets/IMG/ChainOfResponsability/Sceptile_Img.png" );
-        lblName.setText("Nombre: "+pkmns[0][0]);
-        lblLife.setText("Vida: "+pkmns[0][1]);
-        lblType.setText("Tipo: "+pkmns[0][2]);
-
-        lblText.setText("<html>La pelea contra "+pkmns[0][0]+" ha iniciado<html>");
+        
+        setImageLabel(lblPkmn1, "src\\Assets\\IMG\\ChainOfResponsability\\Infernape_Icon.png");
+        setImageLabel(lblPkmn2, "src\\Assets\\IMG\\ChainOfResponsability\\Empoleon_Icon.png");
+        setImageLabel(lblPkmn3, "src\\Assets\\IMG\\ChainOfResponsability\\Torterra_Icon.png");
+        setImageLabel(lblPkmn4, "src\\Assets\\IMG\\ChainOfResponsability\\Luxray_Icon.png");
+        setImageLabel(lblPkmn5, "src\\Assets\\IMG\\ChainOfResponsability\\Lucario_Icon.png");
+        setImageLabel(lblPkmn6, "src\\Assets\\IMG\\ChainOfResponsability\\Garchomp_Icon.png");
+        
+        setImageLabel(lblPkmnA, "src\\Assets\\IMG\\ChainOfResponsability\\Infernape_Img.png");
+        setImageLabel(lblPkmnE, "src\\Assets\\IMG\\ChainOfResponsability\\Sceptile_Img.png");
+        
+        lblName.setText("Nombre: "+pkmnE[0][0]);
+        lblLife.setText("Vida: "+pkmnE[0][1]);
+        lblType.setText("Tipo: "+pkmnE[0][2]);
+        
+        lblName1.setText("Nombre: "+pkmnA[0][0]);
+        lblLife1.setText("Vida: "+pkmnA[0][1]);
+        lblType1.setText("Tipo: "+pkmnA[0][2]);
         
         
-        setImageLabel(lblPkmn2, "src/Assets/IMG/ChainOfResponsability/empoleon_Icon.png" );
-        setImageLabel(lblPkmnA, "src/Assets/IMG/ChainOfResponsability/infernape_Img.png" );
-        setImageLabel(lblPkmn1, "src/Assets/IMG/ChainOfResponsability/infernape_Icon.png" );
-
-        lblName1.setText("Nombre: "+pkmns[2][0]);
-        lblLife1.setText("Vida: "+pkmns[2][1]);
-        lblType1.setText("Tipo: "+pkmns[2][2]);
         
         lblText.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
         
@@ -85,153 +133,98 @@ public class ChainOfResponsability extends javax.swing.JFrame {
         
     }
     
-    
-    private void cambio(){
-        if(Integer.parseInt(pkmns[1][1])>0){
-            if(lblType.getText().contains("Hoja") && lblType1.getText().contains("Fuego")){
-                setImageLabel(lblPkmnE, "src/Assets/IMG/ChainOfResponsability/Swampert_Img.png" );
-                lblName.setText("Nombre: "+pkmns[1][0]);
-                lblLife.setText("Vida: "+pkmns[1][1]);
-                lblType.setText("Tipo: "+pkmns[1][2]);
-                lblText.setText("El rival ha cambiado al pomkemon "+pkmns[1][0]);
-            }
-        }    
-    }
-    
-    private boolean validation(){
+    private void validatePkmn(String typePA, String typePE){
+
         
-        if(turno%2==0){
-
-            if(lblType1.getText().contains("Fuego") && lblType.getText().contains("Hoja")){
-                this.turno++;
-                lblText.setText("El ataque es super efectivo");
-                return true;
-            }
-        }else{
-
+        if(typePA.equals("Fuego") && !typePE.equals("Agua")){
             
-
-            if(lblType1.getText().contains("Agua") && lblType.getText().contains("Hoja")){
-                this.turno++;
-                lblText.setText("El ataque es super efectivo");
-                return true;
-
-            }
-
-            if(lblType1.getText().contains("Fuego") && lblType.getText().contains("Agua")){
-                this.turno++;
-                lblText.setText("El ataque es super efectivo");
-                return true;
-
-            }
+            change("Agua");
+        }
         
+        if(typePA.equals("Agua") && !typePE.equals("Dragon")){
+           
+            change("Dragon");
+        }
+        
+        if(typePA.equals("Dragon") && !typePE.equals("Acero")){
+           
+            change("Acero");
+        }
+        
+        if(typePA.equals("Acero") && !typePE.equals("Electrico")){
+           
+            change("Electrico");
+        }
+        
+        if(typePA.equals("Electrico") && !typePE.equals("Planta")){
+           
+            change("Planta");
+        }
+        
+        if(typePA.equals("Planta") && !typePE.equals("Fuego")){
+           
+            change("Fuego");
         }
 
-        
-        
-        this.turno++;
-        return false;
     }
     
-    private int attack(int life){
-        
-        if(validation()){
-            life=life-90;
-        }else{
-            life=life-30;
-        
+    private void change(String typePE){
+
+        for (int i = 0; i < 6; i++) {
+            
+            if(typePE.equals(pkmnE[i][2])){
+                String value=pkmnE[i][0];
+                setImageLabel(lblPkmnE, "src\\Assets\\IMG\\ChainOfResponsability\\"+value+"_Img.png");
+                lblName.setText("Nombre: "+pkmnE[i][0]);
+                lblLife.setText("Vida: "+pkmnE[i][1]);
+                lblType.setText("Tipo: "+pkmnE[i][2]);
+            }
+            
         }
-    
-        if(life<=0){
-            life=0;
-        }
         
-        return life;
+        
     }
+
     
-    private void who(String name, String nameAt){
-        cambio();
+    private void attack(String pkmnA, String pkmnE){
+        turno++;
         
-        JOptionPane.showMessageDialog(null, nameAt+" Ataca utilizando su tipo");
-               
-        for (int i = 0; i < 4; i++) {
-            if(this.pkmns[i][0].contains(name)){
-                this.pkmns[i][1]=Integer.toString(attack(Integer.parseInt(this.pkmns[i][1])));
+        if(turno%2!=0){
+            
+            validatePkmn(pkmnA, pkmnE);
+            for (int i = 0; i < 6; i++) {
+                if(this.pkmnE[i][0].equals(lblName.getText().substring(8))){
+                    int value=Integer.parseInt(this.pkmnE[i][1])-30;
                 
-
-                   
-                if(i<2){
-                    lblLife.setText("Vida: "+this.pkmns[i][1]);
-                }else{
-                    lblLife1.setText("Vida: "+this.pkmns[i][1]);
+                    this.pkmnE[i][1]= Integer.toString(value);
+                    lblLife.setText("Vida: "+this.pkmnE[i][1]);
+                  
                 }
-                
-                if(Integer.parseInt(this.pkmns[i][1])<=0){
-                    lblText.setText(name+" ha sido derrotado");
-                    if(defeat()){
-                      continus(name);  
+            }
+            
+            
+        }else if(turno%2==0){
+           for (int i = 0; i < 6; i++) {
+                if(this.pkmnA[i][0].equals(lblName1.getText().substring(8))){
+                    
+                    int value=Integer.parseInt(this.pkmnA[i][1])-50;
+                    this.pkmnA[i][1]= Integer.toString(value);
+                    lblLife1.setText("Vida: "+this.pkmnA[i][1]);
+                    if(value<=0){
+                        lblPkmnA.setIcon(null);
+                        JOptionPane.showMessageDialog(null, this.pkmnA[i][0] +" Fue Derrotado");
+                        this.cont++;
                     }
                     
-                    
                 }
-            }
-        }
- 
-    
-    }
-    
-    private void continus(String name){
-
-        switch (name){
-            case "Infernape":
-                setImageLabel(lblPkmnA, "src/Assets/IMG/ChainOfResponsability/Empoleon_Img.png" );
-
-                lblName1.setText("Nombre: "+pkmns[3][0]);
-                lblLife1.setText("Vida: "+pkmns[3][1]);
-                lblType1.setText("Tipo: "+pkmns[3][2]);
-
-                lblText.setText("<html>Haz cambiado a "+pkmns[3][0]+"<html>");
-            break;
-            
-            case "Empoleon":
-                setImageLabel(lblPkmnA, "src/Assets/IMG/ChainOfResponsability/Infernape_Img.png" );
-
-                lblName1.setText("Nombre: "+pkmns[2][0]);
-                lblLife1.setText("Vida: "+pkmns[2][1]);
-                lblType1.setText("Tipo: "+pkmns[2][2]);
-                lblText.setText("<html>Haz cambiado a "+pkmns[2][0]+"<html>");
-            break;
-        
-            case "Swampert":
-                setImageLabel(lblPkmnE, "src/Assets/IMG/ChainOfResponsability/Sceptile_Img.png" );
-                lblName.setText("Nombre: "+pkmns[0][0]);
-                lblLife.setText("Vida: "+pkmns[0][1]);
-                lblType.setText("Tipo: "+pkmns[0][2]);
-                
-            break;
+            } 
         
         }
- 
         
-    
     }
     
-    private boolean defeat(){
+    
 
-        if(Integer.parseInt(this.pkmns[0][1])<=0 && Integer.parseInt(this.pkmns[1][1])<=0){
-            JOptionPane.showMessageDialog(null,"Haz ganado el combate");
-            setImageLabel(lblPkmnE, "src/Assets/IMG/ChainOfResponsability/trophy_Img.png" );
-            btnCombat.setOpaque(false);
-            return false;
-            
-        }else if(Integer.parseInt(this.pkmns[2][1])<=0 && Integer.parseInt(this.pkmns[3][1])<=0) {
-            JOptionPane.showMessageDialog(null,"Haz perdido el combate");
-            btnCombat.setOpaque(false);
-            return false;
-        }
-        
-      return true;
-    }
     
     
     /**
@@ -255,6 +248,14 @@ public class ChainOfResponsability extends javax.swing.JFrame {
         lblPkmn1 = new javax.swing.JLabel();
         btnPkmn2 = new javax.swing.JPanel();
         lblPkmn2 = new javax.swing.JLabel();
+        btnPkmn3 = new javax.swing.JPanel();
+        lblPkmn3 = new javax.swing.JLabel();
+        btnPkmn4 = new javax.swing.JPanel();
+        lblPkmn4 = new javax.swing.JLabel();
+        btnPkmn5 = new javax.swing.JPanel();
+        lblPkmn5 = new javax.swing.JLabel();
+        btnPkmn6 = new javax.swing.JPanel();
+        lblPkmn6 = new javax.swing.JLabel();
         lblPkmnA = new javax.swing.JLabel();
         lblType = new javax.swing.JLabel();
         lblName = new javax.swing.JLabel();
@@ -399,11 +400,11 @@ public class ChainOfResponsability extends javax.swing.JFrame {
         btnPkmn1.setLayout(btnPkmn1Layout);
         btnPkmn1Layout.setHorizontalGroup(
             btnPkmn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblPkmn1, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblPkmn1, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
         btnPkmn1Layout.setVerticalGroup(
             btnPkmn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblPkmn1, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblPkmn1, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         lblPkmn2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -424,11 +425,111 @@ public class ChainOfResponsability extends javax.swing.JFrame {
         btnPkmn2.setLayout(btnPkmn2Layout);
         btnPkmn2Layout.setHorizontalGroup(
             btnPkmn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblPkmn2, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblPkmn2, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
         btnPkmn2Layout.setVerticalGroup(
             btnPkmn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblPkmn2, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(lblPkmn2, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+        );
+
+        lblPkmn3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPkmn3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblPkmn3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblPkmn3MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblPkmn3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblPkmn3MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnPkmn3Layout = new javax.swing.GroupLayout(btnPkmn3);
+        btnPkmn3.setLayout(btnPkmn3Layout);
+        btnPkmn3Layout.setHorizontalGroup(
+            btnPkmn3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblPkmn3, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+        );
+        btnPkmn3Layout.setVerticalGroup(
+            btnPkmn3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblPkmn3, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+        );
+
+        lblPkmn4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPkmn4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblPkmn4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblPkmn4MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblPkmn4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblPkmn4MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnPkmn4Layout = new javax.swing.GroupLayout(btnPkmn4);
+        btnPkmn4.setLayout(btnPkmn4Layout);
+        btnPkmn4Layout.setHorizontalGroup(
+            btnPkmn4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblPkmn4, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+        );
+        btnPkmn4Layout.setVerticalGroup(
+            btnPkmn4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblPkmn4, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+        );
+
+        lblPkmn5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPkmn5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblPkmn5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblPkmn5MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblPkmn5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblPkmn5MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnPkmn5Layout = new javax.swing.GroupLayout(btnPkmn5);
+        btnPkmn5.setLayout(btnPkmn5Layout);
+        btnPkmn5Layout.setHorizontalGroup(
+            btnPkmn5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblPkmn5, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+        );
+        btnPkmn5Layout.setVerticalGroup(
+            btnPkmn5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblPkmn5, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+        );
+
+        lblPkmn6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPkmn6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblPkmn6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblPkmn6MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblPkmn6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblPkmn6MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnPkmn6Layout = new javax.swing.GroupLayout(btnPkmn6);
+        btnPkmn6.setLayout(btnPkmn6Layout);
+        btnPkmn6Layout.setHorizontalGroup(
+            btnPkmn6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblPkmn6, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+        );
+        btnPkmn6Layout.setVerticalGroup(
+            btnPkmn6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblPkmn6, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -436,13 +537,21 @@ public class ChainOfResponsability extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addContainerGap()
                 .addComponent(btnCombat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnPkmn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnPkmn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPkmn3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPkmn4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPkmn5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPkmn6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -451,14 +560,16 @@ public class ChainOfResponsability extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(btnPkmn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnPkmn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnPkmn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnPkmn4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnPkmn3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnPkmn6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnPkmn5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btnCombat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 310, 110));
-
-        lblPkmnA.setText("jLabel1");
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 550, 110));
         jPanel1.add(lblPkmnA, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 190, 190));
 
         lblType.setText("jLabel3");
@@ -472,8 +583,6 @@ public class ChainOfResponsability extends javax.swing.JFrame {
 
         lblName1.setText("jLabel3");
         jPanel1.add(lblName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 130, -1));
-
-        lblPkmnE.setText("jLabel1");
         jPanel1.add(lblPkmnE, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 80, 190, 190));
 
         lblLife.setText("jLabel3");
@@ -481,9 +590,7 @@ public class ChainOfResponsability extends javax.swing.JFrame {
 
         lblLife1.setText("jLabel3");
         jPanel1.add(lblLife1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 130, -1));
-
-        lblText.setText("jLabel1");
-        jPanel1.add(lblText, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 320, 360, 90));
+        jPanel1.add(lblText, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 320, 130, 90));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -529,11 +636,26 @@ public class ChainOfResponsability extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCerrarMouseExited
 
     private void lblCombatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCombatMouseClicked
-        who(lblName.getText().substring(8), lblName1.getText().substring(8));
+        System.out.println(cont);
+        if(Integer.parseInt(lblLife1.getText().substring(6))>0){
+            JOptionPane.showMessageDialog(null, lblName1.getText().substring(8)+" realiza su ataque utilizando su tipo");
+            attack(lblType1.getText().substring(6),lblType.getText().substring(6));
+    
+            JOptionPane.showMessageDialog(null, lblName.getText().substring(8)+" realiza su ataque utilizando su tipo");
+            attack(lblType.getText().substring(6),lblType1.getText().substring(6));
+        }else{
+                JOptionPane.showMessageDialog(null, "Debes seleccionar otro pokemon");
+
+        }
         
-        
-        who(lblName1.getText().substring(8), lblName.getText().substring(8));
-        
+        if(this.cont==6){
+            setImageLabel(lblPkmnA, "src\\Assets\\IMG\\ChainOfResponsability\\trophy_Img.png");
+            JOptionPane.showMessageDialog(null, "Haz sido derrotado");
+        }
+     
+
+ 
+     
         
     }//GEN-LAST:event_lblCombatMouseClicked
 
@@ -549,16 +671,19 @@ public class ChainOfResponsability extends javax.swing.JFrame {
 
     private void lblPkmn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn1MouseClicked
         
-        
-        if(lblName1.getText().contains(pkmns[2][0])){
-            JOptionPane.showMessageDialog(null, "Ya este pokemon esta en campo!!");   
-        }else{
-            setImageLabel(lblPkmnA, "src/Assets/IMG/ChainOfResponsability/Infernape_Img.png" );
+        if(Integer.parseInt(pkmnA[0][1])>0){
+            if(lblName1.getText().contains(pkmnA[0][0])){
+                JOptionPane.showMessageDialog(null, "Ya este pokemon esta en campo!!");   
+            }else{
+                setImageLabel(lblPkmnA, "src/Assets/IMG/ChainOfResponsability/Infernape_Img.png" );
 
-            lblName1.setText("Nombre: "+pkmns[2][0]);
-            lblLife1.setText("Vida: "+pkmns[2][1]);
-            lblType1.setText("Tipo: "+pkmns[2][2]);
-            lblText.setText("<html>Haz cambiado a "+pkmns[2][0]+"<html>");
+                lblName1.setText("Nombre: "+pkmnA[0][0]);
+                lblLife1.setText("Vida: "+pkmnA[0][1]);
+                lblType1.setText("Tipo: "+pkmnA[0][2]);
+                lblText.setText("<html>Haz cambiado a "+pkmnA[0][0]+"<html>");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Ya este pokemon esta muerto!!");   
         }
 
     }//GEN-LAST:event_lblPkmn1MouseClicked
@@ -574,19 +699,21 @@ public class ChainOfResponsability extends javax.swing.JFrame {
     }//GEN-LAST:event_lblPkmn1MouseExited
 
     private void lblPkmn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn2MouseClicked
-        
-        if(lblName1.getText().contains(pkmns[3][0])){
-            JOptionPane.showMessageDialog(null, "Ya este pokemon esta en campo!!");    
-        }else{
-            setImageLabel(lblPkmnA, "src/Assets/IMG/ChainOfResponsability/Empoleon_Img.png" );
+        if(Integer.parseInt(pkmnA[1][1])>0){
+            if(lblName1.getText().contains(pkmnA[1][0])){
+                JOptionPane.showMessageDialog(null, "Ya este pokemon esta en campo!!");    
+            }else{
+                setImageLabel(lblPkmnA, "src/Assets/IMG/ChainOfResponsability/Empoleon_Img.png" );
 
-            lblName1.setText("Nombre: "+pkmns[3][0]);
-            lblLife1.setText("Vida: "+pkmns[3][1]);
-            lblType1.setText("Tipo: "+pkmns[3][2]);
-            
-            lblText.setText("<html>Haz cambiado a "+pkmns[3][0]+"<html>");
+                lblName1.setText("Nombre: "+pkmnA[1][0]);
+                lblLife1.setText("Vida: "+pkmnA[1][1]);
+                lblType1.setText("Tipo: "+pkmnA[1][2]);
+
+                lblText.setText("<html>Haz cambiado a "+pkmnA[1][0]+"<html>");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Ya este pokemon esta muerto!!");   
         }
-        
         
     }//GEN-LAST:event_lblPkmn2MouseClicked
 
@@ -599,6 +726,116 @@ public class ChainOfResponsability extends javax.swing.JFrame {
         btnPkmn2.setOpaque(true);
         btnPkmn2.setBackground(colorDefault);
     }//GEN-LAST:event_lblPkmn2MouseExited
+
+    private void lblPkmn3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn3MouseClicked
+        if(Integer.parseInt(pkmnA[2][1])>0){
+            if(lblName1.getText().contains(pkmnA[2][0])){
+                JOptionPane.showMessageDialog(null, "Ya este pokemon esta en campo!!");    
+            }else{
+                setImageLabel(lblPkmnA, "src/Assets/IMG/ChainOfResponsability/Torterra_Img.png" );
+
+                lblName1.setText("Nombre: "+pkmnA[2][0]);
+                lblLife1.setText("Vida: "+pkmnA[2][1]);
+                lblType1.setText("Tipo: "+pkmnA[2][2]);
+
+                lblText.setText("<html>Haz cambiado a "+pkmnA[2][0]+"<html>");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Ya este pokemon esta muerto!!");   
+        }
+    }//GEN-LAST:event_lblPkmn3MouseClicked
+
+    private void lblPkmn3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn3MouseEntered
+        btnPkmn3.setOpaque(true);
+        btnPkmn3.setBackground(colorEntered);
+    }//GEN-LAST:event_lblPkmn3MouseEntered
+
+    private void lblPkmn3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn3MouseExited
+        btnPkmn3.setOpaque(true);
+        btnPkmn3.setBackground(colorDefault);
+    }//GEN-LAST:event_lblPkmn3MouseExited
+
+    private void lblPkmn4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn4MouseClicked
+        if(Integer.parseInt(pkmnA[3][1])>0){
+            if(lblName1.getText().contains(pkmnA[3][0])){
+                JOptionPane.showMessageDialog(null, "Ya este pokemon esta en campo!!");   
+            }else{
+                setImageLabel(lblPkmnA, "src/Assets/IMG/ChainOfResponsability/Luxray_Img.png" );
+
+                lblName1.setText("Nombre: "+pkmnA[3][0]);
+                lblLife1.setText("Vida: "+pkmnA[3][1]);
+                lblType1.setText("Tipo: "+pkmnA[3][2]);
+                lblText.setText("<html>Haz cambiado a "+pkmnA[3][0]+"<html>");
+
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Ya este pokemon esta muerto!!");   
+        }
+    }//GEN-LAST:event_lblPkmn4MouseClicked
+
+    private void lblPkmn4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn4MouseEntered
+        btnPkmn4.setOpaque(true);
+        btnPkmn4.setBackground(colorEntered);
+    }//GEN-LAST:event_lblPkmn4MouseEntered
+
+    private void lblPkmn4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn4MouseExited
+        btnPkmn4.setOpaque(true);
+        btnPkmn4.setBackground(colorDefault);
+    }//GEN-LAST:event_lblPkmn4MouseExited
+
+    private void lblPkmn5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn5MouseClicked
+        if(Integer.parseInt(pkmnA[4][1])>0){
+            if(lblName1.getText().contains(pkmnA[4][0])){
+                JOptionPane.showMessageDialog(null, "Ya este pokemon esta en campo!!");   
+            }else{
+                setImageLabel(lblPkmnA, "src/Assets/IMG/ChainOfResponsability/Lucario_Img.png" );
+
+                lblName1.setText("Nombre: "+pkmnA[4][0]);
+                lblLife1.setText("Vida: "+pkmnA[4][1]);
+                lblType1.setText("Tipo: "+pkmnA[4][2]);
+                lblText.setText("<html>Haz cambiado a "+pkmnA[4][0]+"<html>");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Ya este pokemon esta muerto!!");   
+        }
+    }//GEN-LAST:event_lblPkmn5MouseClicked
+
+    private void lblPkmn5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn5MouseEntered
+        btnPkmn5.setOpaque(true);
+        btnPkmn5.setBackground(colorEntered);
+    }//GEN-LAST:event_lblPkmn5MouseEntered
+
+    private void lblPkmn5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn5MouseExited
+        btnPkmn5.setOpaque(true);
+        btnPkmn5.setBackground(colorDefault);
+    }//GEN-LAST:event_lblPkmn5MouseExited
+
+    private void lblPkmn6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn6MouseClicked
+        if(Integer.parseInt(pkmnA[5][1])>0){
+            if(lblName1.getText().contains(pkmnA[5][0])){
+                JOptionPane.showMessageDialog(null, "Ya este pokemon esta en campo!!");   
+            }else{
+                setImageLabel(lblPkmnA, "src/Assets/IMG/ChainOfResponsability/Garchomp_Img.png" );
+
+                lblName1.setText("Nombre: "+pkmnA[5][0]);
+                lblLife1.setText("Vida: "+pkmnA[5][1]);
+                lblType1.setText("Tipo: "+pkmnA[5][2]);
+                lblText.setText("<html>Haz cambiado a "+pkmnA[5][0]+"<html>");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Ya este pokemon esta muerto!!");   
+        }
+    }//GEN-LAST:event_lblPkmn6MouseClicked
+
+    private void lblPkmn6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn6MouseEntered
+        btnPkmn6.setOpaque(true);
+        btnPkmn6.setBackground(colorEntered);
+    }//GEN-LAST:event_lblPkmn6MouseEntered
+
+    private void lblPkmn6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn6MouseExited
+        btnPkmn6.setOpaque(true);
+        btnPkmn6.setBackground(colorDefault);
+    }//GEN-LAST:event_lblPkmn6MouseExited
 
     /**
      * @param args the command line arguments
@@ -641,6 +878,54 @@ public class ChainOfResponsability extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -656,6 +941,10 @@ public class ChainOfResponsability extends javax.swing.JFrame {
     private javax.swing.JPanel btnCombat;
     private javax.swing.JPanel btnPkmn1;
     private javax.swing.JPanel btnPkmn2;
+    private javax.swing.JPanel btnPkmn3;
+    private javax.swing.JPanel btnPkmn4;
+    private javax.swing.JPanel btnPkmn5;
+    private javax.swing.JPanel btnPkmn6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblCombat;
@@ -665,6 +954,10 @@ public class ChainOfResponsability extends javax.swing.JFrame {
     private javax.swing.JLabel lblName1;
     private javax.swing.JLabel lblPkmn1;
     private javax.swing.JLabel lblPkmn2;
+    private javax.swing.JLabel lblPkmn3;
+    private javax.swing.JLabel lblPkmn4;
+    private javax.swing.JLabel lblPkmn5;
+    private javax.swing.JLabel lblPkmn6;
     private javax.swing.JLabel lblPkmnA;
     private javax.swing.JLabel lblPkmnE;
     private javax.swing.JLabel lblText;

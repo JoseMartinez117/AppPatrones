@@ -477,7 +477,23 @@ public class Memento extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCerrarMouseExited
 
     private void lblSaveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSaveMouseClicked
-        if(!txtName.getText().isEmpty() && !txtTime.getText().isEmpty() && !txtPokemon.getText().isEmpty() && !txtBadges.getText().isEmpty()){
+        String[] opciones = {"Si", "No"};
+        
+        
+        int seleccion = JOptionPane.showOptionDialog(
+            null, 
+            "Deseas guardar la partida?", 
+            "Opciones de acción", 
+            JOptionPane.DEFAULT_OPTION, // 
+            JOptionPane.INFORMATION_MESSAGE, 
+            null, 
+            opciones, 
+            opciones[0] 
+        );
+        
+        // Evaluamos la selección del usuario
+        if (seleccion == 0) {
+            if(!txtName.getText().isEmpty() && !txtTime.getText().isEmpty() && !txtPokemon.getText().isEmpty() && !txtBadges.getText().isEmpty()){
             if(Double.parseDouble(txtTime.getText())>=0){ 
                 if(Integer.parseInt(txtBadges.getText())>=0){
                     if((cmbSaveState.getSelectedIndex())+1==1){
@@ -514,6 +530,16 @@ public class Memento extends javax.swing.JFrame {
         }else{
             JOptionPane.showMessageDialog(null, "No pueden haber espacios en blanco");
         }
+        } else if (seleccion == 1) {
+            JOptionPane.showMessageDialog(null, "No se guardaron los datos");
+        } else {
+            JOptionPane.showMessageDialog(null, "No has seleccionado ninguna opción");
+        }
+        
+        
+        
+        
+        
     }//GEN-LAST:event_lblSaveMouseClicked
 
     private void lblSaveMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSaveMouseEntered
@@ -527,24 +553,90 @@ public class Memento extends javax.swing.JFrame {
     }//GEN-LAST:event_lblSaveMouseExited
 
     private void pnlContainer1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlContainer1MouseClicked
-        txtName.setText(lblName1.getText().substring(8));
-        txtTime.setText(lblTime1.getText().substring(15));
-        txtBadges.setText(lblBadges1.getText().substring(10));
-        txtPokemon.setText(lblPokedex1.getText().substring(9));
+        String[] opciones = {"Si", "No"};
+        
+        
+        int seleccion = JOptionPane.showOptionDialog(
+            null, 
+            "Deseas cargar la partida?", 
+            "Opciones de acción", 
+            JOptionPane.DEFAULT_OPTION, // 
+            JOptionPane.INFORMATION_MESSAGE, 
+            null, 
+            opciones, 
+            opciones[0] 
+        );
+        
+        // Evaluamos la selección del usuario
+        if (seleccion == 0) {
+            txtName.setText(lblName1.getText().substring(8));
+            txtTime.setText(lblTime1.getText().substring(15));
+            txtBadges.setText(lblBadges1.getText().substring(10));
+            txtPokemon.setText(lblPokedex1.getText().substring(9));
+        } else if (seleccion == 1) {
+            JOptionPane.showMessageDialog(null, "No se cargarón los datos");
+        } else {
+            JOptionPane.showMessageDialog(null, "No has seleccionado ninguna opción");
+        }
+        
+        
+        
     }//GEN-LAST:event_pnlContainer1MouseClicked
 
     private void pnlContainer2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlContainer2MouseClicked
-        txtName.setText(lblName2.getText().substring(8));
-        txtTime.setText(lblTime2.getText().substring(15));
-        txtBadges.setText(lblBadges2.getText().substring(10));
-        txtPokemon.setText(lblPokedex2.getText().substring(9));
+        String[] opciones = {"Si", "No"};
+        
+        
+        int seleccion = JOptionPane.showOptionDialog(
+            null, 
+            "Deseas cargar la partida?", 
+            "Opciones de acción", 
+            JOptionPane.DEFAULT_OPTION, // 
+            JOptionPane.INFORMATION_MESSAGE, 
+            null, 
+            opciones, 
+            opciones[0] 
+        );
+        
+        // Evaluamos la selección del usuario
+        if (seleccion == 0) {
+            txtName.setText(lblName2.getText().substring(8));
+            txtTime.setText(lblTime2.getText().substring(15));
+            txtBadges.setText(lblBadges2.getText().substring(10));
+            txtPokemon.setText(lblPokedex2.getText().substring(9));
+        } else if (seleccion == 1) {
+            JOptionPane.showMessageDialog(null, "No se cargarón los datos");
+        } else {
+            JOptionPane.showMessageDialog(null, "No has seleccionado ninguna opción");
+        }
     }//GEN-LAST:event_pnlContainer2MouseClicked
 
     private void pnlContainer3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlContainer3MouseClicked
-        txtName.setText(lblName3.getText().substring(8));
-        txtTime.setText(lblTime3.getText().substring(15));
-        txtBadges.setText(lblBadges3.getText().substring(10));
-        txtPokemon.setText(lblPokedex3.getText().substring(9));
+        String[] opciones = {"Si", "No"};
+        
+        
+        int seleccion = JOptionPane.showOptionDialog(
+            null, 
+            "Deseas cargar la partida?", 
+            "Opciones de acción", 
+            JOptionPane.DEFAULT_OPTION, // 
+            JOptionPane.INFORMATION_MESSAGE, 
+            null, 
+            opciones, 
+            opciones[0] 
+        );
+        
+        // Evaluamos la selección del usuario
+        if (seleccion == 0) {
+            txtName.setText(lblName3.getText().substring(8));
+            txtTime.setText(lblTime3.getText().substring(15));
+            txtBadges.setText(lblBadges3.getText().substring(10));
+            txtPokemon.setText(lblPokedex3.getText().substring(9));
+        } else if (seleccion == 1) {
+            JOptionPane.showMessageDialog(null, "No se cargarón los datos");
+        } else {
+            JOptionPane.showMessageDialog(null, "No has seleccionado ninguna opción");
+        }
     }//GEN-LAST:event_pnlContainer3MouseClicked
 
     private void lblCleanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCleanMouseClicked

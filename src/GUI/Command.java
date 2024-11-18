@@ -4,6 +4,8 @@
  */
 package GUI;
 
+
+
 import java.awt.Color;
 import Assets.FONT.Fonts;
 import java.awt.Image;
@@ -11,19 +13,50 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import Assets.IMG.ChainOfResponsability.types;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+
+
 
 
 public class Command extends javax.swing.JFrame {
 
-    int mouseX, mouseY;
-    Fonts typeFont;
+    int mouseX, mouseY, turno=0;
+    Fonts typeFont;    
+    Color colorEntered=new Color(128, 128, 128);
+    Color colorDefault=new Color(214, 217, 223);
     
+
+
     public Command() {
         initComponents();
         decorator();
-        setImageLabel(lblTree,"src/Assets/IMG/Singleton/Tree1.png");
-        btnEnemy.setOpaque(false);
-        btnTree.setOpaque(false);
+this.addKeyListener(new KeyAdapter() {
+            public void keyPressed(KeyEvent e) {
+                char keyChar = e.getKeyChar();
+                switch(keyChar) {
+                    case 'z':
+                        JOptionPane.showMessageDialog(null, "Empoleon realiza su ataque utilizando su tipo");
+                        attack("Empoleon");
+                        JOptionPane.showMessageDialog(null, "Swampert realiza su ataque utilizando su tipo");
+                        attack("Swampert");
+                        break;
+                    case 'x':
+                        JOptionPane.showMessageDialog(null, "le tiras una poscion a Empoleon y se cura 30 de vida");
+                        heal("Empoleon");
+                        
+
+                        break;
+                    case 'c':
+                        escape();
+
+                        break;
+                    
+
+                }
+            }
+        });
     }
 
     private void setImageLabel(JLabel labelName, String root){
@@ -35,11 +68,99 @@ public class Command extends javax.swing.JFrame {
     
     private void decorator(){
         typeFont = new Fonts();
+
+        setImageLabel(lblPkmnE, "src/Assets/IMG/Command/Swampert_Img.png" );
+        lblName.setText("Nombre: Swampert");
+        lblLife.setText("Vida: 1000");
+        lblType.setText("Tipo: Agua");
+
+        lblText.setText("<html>La pelea contra Swampert ha iniciado<html>");
         
-        lblSpawn.setFont(typeFont.fontV(typeFont.instruments, 0, 18));
-        lblMemory.setFont(typeFont.fontV(typeFont.instruments, 0, 18));
+        
+        
+        setImageLabel(lblPkmnA, "src/Assets/IMG/Command/empoleon_Img.png" );
+        
+
+        lblName1.setText("Nombre: Empoleon");
+        lblLife1.setText("Vida: 500");
+        lblType1.setText("Tipo: Agua");
+
+        
+        lblText.setFont(typeFont.fontV(typeFont.instruments, 0, 14));
+        
+        lblName.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblLife.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblType.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        
+        lblName1.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblLife1.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblType1.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        
+        lblCombat.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        
+        
+    }
+    
+    
+   
+    
+    private void attack(String attacker){
+        int life=0;
+        if(attacker.equals("Swampert")){
+            life=Integer.parseInt(lblLife1.getText().substring(6));
+            life=life-90;
+            if(life>0){
+                lblLife1.setText("Vida: "+life);
+            }else{
+                setImageLabel(lblPkmnA, "src/Assets/IMG/Command/trophy_Img.png");
+                JOptionPane.showMessageDialog(null, "Swampert ha ganado la pelea");
+                this.dispose();
+            }
+        }else if(attacker.equals("Empoleon")){
+            life=Integer.parseInt(lblLife.getText().substring(6));
+            life=life-90;
+            if(life>0){
+                lblLife.setText("Vida: "+life);
+            }else{
+                setImageLabel(lblPkmnE, "src/Assets/IMG/Command/trophy_Img.png");
+                JOptionPane.showMessageDialog(null, "Empoleon ha ganado la pelea");
+                this.dispose();
+            }
+            
+        
+        }
+        
+    
+    }
+    
+    private void heal(String pkmn){
+        int life=0;
+        if(pkmn.equals("Empoleon") && Integer.parseInt(lblLife1.getText().substring(6))<500){
+            life=Integer.parseInt(lblLife1.getText().substring(6));
+            life=life+30;
+            lblLife1.setText("Vida: "+life);
+        }else{
+            JOptionPane.showMessageDialog(null, "ya estas full vida!!");
+        }
+        
+        
+    }
+    
+    private void escape(){
+        int randomNumber = (int) (Math.random() * 10);
+        if(randomNumber==6){
+            JOptionPane.showMessageDialog(null, "Escapas de la pelea");
+            this.dispose();
+            
+        }else{
+            JOptionPane.showMessageDialog(null, "No pudiste escapar");
+            JOptionPane.showMessageDialog(null, "Swampert realiza su ataque utilizando su tipo");
+            attack("Swampert");
+        }
 
     }
+  
+    
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -55,14 +176,22 @@ public class Command extends javax.swing.JFrame {
         btnClose = new javax.swing.JPanel();
         txtCerrar = new javax.swing.JLabel();
         pnlSeparator = new javax.swing.JPanel();
-        btnTree = new javax.swing.JPanel();
-        btnEnemy = new javax.swing.JPanel();
-        lblTree = new javax.swing.JLabel();
-        btnSpawn = new javax.swing.JPanel();
-        lblSpawn = new javax.swing.JLabel();
-        lblEnemy = new javax.swing.JLabel();
-        lblArrow = new javax.swing.JLabel();
-        lblMemory = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        btnCombat = new javax.swing.JPanel();
+        lblCombat = new javax.swing.JLabel();
+        btnPkmn1 = new javax.swing.JPanel();
+        lblPkmn1 = new javax.swing.JLabel();
+        btnPkmn2 = new javax.swing.JPanel();
+        lblPkmn2 = new javax.swing.JLabel();
+        lblPkmnA = new javax.swing.JLabel();
+        lblType = new javax.swing.JLabel();
+        lblName = new javax.swing.JLabel();
+        lblType1 = new javax.swing.JLabel();
+        lblName1 = new javax.swing.JLabel();
+        lblPkmnE = new javax.swing.JLabel();
+        lblLife = new javax.swing.JLabel();
+        lblLife1 = new javax.swing.JLabel();
+        lblText = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -151,82 +280,140 @@ public class Command extends javax.swing.JFrame {
 
         jPanel1.add(pnlSeparator, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 720, 3));
 
-        btnTree.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnTree.addMouseListener(new java.awt.event.MouseAdapter() {
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Menu Opciones"));
+
+        lblCombat.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblCombat.setText("Combate");
+        lblCombat.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblCombat.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnTreeMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout btnTreeLayout = new javax.swing.GroupLayout(btnTree);
-        btnTree.setLayout(btnTreeLayout);
-        btnTreeLayout.setHorizontalGroup(
-            btnTreeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
-        );
-        btnTreeLayout.setVerticalGroup(
-            btnTreeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(btnTree, new org.netbeans.lib.awtextra.AbsoluteConstraints(515, 230, 70, 70));
-
-        btnEnemy.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEnemy.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnEnemyMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout btnEnemyLayout = new javax.swing.GroupLayout(btnEnemy);
-        btnEnemy.setLayout(btnEnemyLayout);
-        btnEnemyLayout.setHorizontalGroup(
-            btnEnemyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        btnEnemyLayout.setVerticalGroup(
-            btnEnemyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(btnEnemy, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, -1, -1));
-
-        lblTree.setFont(new java.awt.Font("Segoe UI", 0, 1)); // NOI18N
-        jPanel1.add(lblTree, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 340, 300));
-
-        btnSpawn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        lblSpawn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSpawn.setText("Generar Creaking");
-        lblSpawn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblSpawnMouseClicked(evt);
+                lblCombatMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblSpawnMouseEntered(evt);
+                lblCombatMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblSpawnMouseExited(evt);
+                lblCombatMouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout btnSpawnLayout = new javax.swing.GroupLayout(btnSpawn);
-        btnSpawn.setLayout(btnSpawnLayout);
-        btnSpawnLayout.setHorizontalGroup(
-            btnSpawnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpawn, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+        javax.swing.GroupLayout btnCombatLayout = new javax.swing.GroupLayout(btnCombat);
+        btnCombat.setLayout(btnCombatLayout);
+        btnCombatLayout.setHorizontalGroup(
+            btnCombatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblCombat, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
         );
-        btnSpawnLayout.setVerticalGroup(
-            btnSpawnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSpawn, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        btnCombatLayout.setVerticalGroup(
+            btnCombatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblCombat, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnSpawn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 150, 50));
+        lblPkmn1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPkmn1.setText("Curar");
+        lblPkmn1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblPkmn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblPkmn1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblPkmn1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblPkmn1MouseExited(evt);
+            }
+        });
 
-        lblEnemy.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jPanel1.add(lblEnemy, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 180, 240));
-        jPanel1.add(lblArrow, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, 120, 70));
-        jPanel1.add(lblMemory, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
+        javax.swing.GroupLayout btnPkmn1Layout = new javax.swing.GroupLayout(btnPkmn1);
+        btnPkmn1.setLayout(btnPkmn1Layout);
+        btnPkmn1Layout.setHorizontalGroup(
+            btnPkmn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblPkmn1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        btnPkmn1Layout.setVerticalGroup(
+            btnPkmn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblPkmn1, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+        );
+
+        lblPkmn2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPkmn2.setText("Huir");
+        lblPkmn2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblPkmn2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblPkmn2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblPkmn2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblPkmn2MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnPkmn2Layout = new javax.swing.GroupLayout(btnPkmn2);
+        btnPkmn2.setLayout(btnPkmn2Layout);
+        btnPkmn2Layout.setHorizontalGroup(
+            btnPkmn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblPkmn2, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        btnPkmn2Layout.setVerticalGroup(
+            btnPkmn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblPkmn2, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(btnCombat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnPkmn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnPkmn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(btnPkmn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnPkmn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnCombat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 390, 110));
+
+        lblPkmnA.setText("jLabel1");
+        jPanel1.add(lblPkmnA, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 190, 190));
+
+        lblType.setText("jLabel3");
+        jPanel1.add(lblType, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, 130, -1));
+
+        lblName.setText("jLabel3");
+        jPanel1.add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 130, -1));
+
+        lblType1.setText("jLabel3");
+        jPanel1.add(lblType1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 130, -1));
+
+        lblName1.setText("jLabel3");
+        jPanel1.add(lblName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 130, -1));
+
+        lblPkmnE.setText("jLabel1");
+        jPanel1.add(lblPkmnE, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 80, 190, 190));
+
+        lblLife.setText("jLabel3");
+        jPanel1.add(lblLife, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, 130, -1));
+
+        lblLife1.setText("jLabel3");
+        jPanel1.add(lblLife1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 130, -1));
+
+        lblText.setText("jLabel1");
+        jPanel1.add(lblText, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, 190, 90));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -271,50 +458,56 @@ public class Command extends javax.swing.JFrame {
         btnClose.setOpaque(false);
     }//GEN-LAST:event_txtCerrarMouseExited
 
-    private void lblSpawnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSpawnMouseEntered
-        btnSpawn.setOpaque(true);
-        btnSpawn.setBackground(Color.gray);
-    }//GEN-LAST:event_lblSpawnMouseEntered
+    private void lblCombatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCombatMouseClicked
+        JOptionPane.showMessageDialog(null, "Empoleon realiza su ataque utilizando su tipo");
+        attack("Empoleon");
+        JOptionPane.showMessageDialog(null, "Swampert realiza su ataque utilizando su tipo");
+        attack("Swampert");
+        
+        
+    }//GEN-LAST:event_lblCombatMouseClicked
 
-    private void lblSpawnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSpawnMouseExited
-        btnSpawn.setOpaque(true);
-        btnSpawn.setBackground(new Color(214, 217, 223));
-    }//GEN-LAST:event_lblSpawnMouseExited
+    private void lblCombatMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCombatMouseEntered
+        btnCombat.setOpaque(true);
+        btnCombat.setBackground(colorEntered);
+    }//GEN-LAST:event_lblCombatMouseEntered
 
-    private void lblSpawnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSpawnMouseClicked
-        if(lblEnemy.getIcon()==null){
-            setImageLabel(lblEnemy, "src/Assets/IMG/Singleton/Creaking.png");
-            Object memory = new Object();
-            lblMemory.setText("Dirección en memoria: "+Integer.toHexString(System.identityHashCode(memory)));
-        }else{
-            JOptionPane.showMessageDialog(null, "Solo se puede generar un Creaking por corazon!!");
-        
-        }
-        
-        
-        
-    }//GEN-LAST:event_lblSpawnMouseClicked
+    private void lblCombatMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCombatMouseExited
+        btnCombat.setOpaque(true);
+        btnCombat.setBackground(colorDefault);
+    }//GEN-LAST:event_lblCombatMouseExited
 
-    private void btnEnemyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnemyMouseClicked
-        if(lblEnemy.getIcon()!=null){
-            setImageLabel(lblArrow,"src/Assets/IMG/Singleton/Arrow.png");
-            setImageLabel(lblTree,"src/Assets/IMG/Singleton/TreeWithLight1.png");
-            lblTree.setText("Light");
-        }
-        
-        
-        
-    }//GEN-LAST:event_btnEnemyMouseClicked
+    private void lblPkmn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn1MouseClicked
+        heal("Empoleon");
 
-    private void btnTreeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTreeMouseClicked
-        if(lblTree.getText().equals("Light")){
-            lblEnemy.setIcon(null);
-            lblArrow.setIcon(null);
-            setImageLabel(lblTree,"src/Assets/IMG/Singleton/Tree1.png");
-            lblMemory.setText("");
-            JOptionPane.showMessageDialog(null, "Matas al Creaking rompiendo su corazon");
-        }
-    }//GEN-LAST:event_btnTreeMouseClicked
+
+    }//GEN-LAST:event_lblPkmn1MouseClicked
+
+    private void lblPkmn1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn1MouseEntered
+        btnPkmn1.setOpaque(true);
+        btnPkmn1.setBackground(colorEntered);
+    }//GEN-LAST:event_lblPkmn1MouseEntered
+
+    private void lblPkmn1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn1MouseExited
+        btnPkmn1.setOpaque(true);
+        btnPkmn1.setBackground(colorDefault);
+    }//GEN-LAST:event_lblPkmn1MouseExited
+
+    private void lblPkmn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn2MouseClicked
+        escape();
+        
+        
+    }//GEN-LAST:event_lblPkmn2MouseClicked
+
+    private void lblPkmn2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn2MouseEntered
+        btnPkmn2.setOpaque(true);
+        btnPkmn2.setBackground(colorEntered);
+    }//GEN-LAST:event_lblPkmn2MouseEntered
+
+    private void lblPkmn2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPkmn2MouseExited
+        btnPkmn2.setOpaque(true);
+        btnPkmn2.setBackground(colorDefault);
+    }//GEN-LAST:event_lblPkmn2MouseExited
 
     /**
      * @param args the command line arguments
@@ -349,6 +542,62 @@ public class Command extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -361,15 +610,23 @@ public class Command extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Header;
     private javax.swing.JPanel btnClose;
-    private javax.swing.JPanel btnEnemy;
-    private javax.swing.JPanel btnSpawn;
-    private javax.swing.JPanel btnTree;
+    private javax.swing.JPanel btnCombat;
+    private javax.swing.JPanel btnPkmn1;
+    private javax.swing.JPanel btnPkmn2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblArrow;
-    private javax.swing.JLabel lblEnemy;
-    private javax.swing.JLabel lblMemory;
-    private javax.swing.JLabel lblSpawn;
-    private javax.swing.JLabel lblTree;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lblCombat;
+    private javax.swing.JLabel lblLife;
+    private javax.swing.JLabel lblLife1;
+    private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblName1;
+    private javax.swing.JLabel lblPkmn1;
+    private javax.swing.JLabel lblPkmn2;
+    private javax.swing.JLabel lblPkmnA;
+    private javax.swing.JLabel lblPkmnE;
+    private javax.swing.JLabel lblText;
+    private javax.swing.JLabel lblType;
+    private javax.swing.JLabel lblType1;
     private javax.swing.JPanel pnlSeparator;
     private javax.swing.JLabel txtCerrar;
     // End of variables declaration//GEN-END:variables

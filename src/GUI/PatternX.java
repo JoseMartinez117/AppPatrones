@@ -173,7 +173,36 @@ public class PatternX extends javax.swing.JFrame {
                 newframe15.setVisible(true);
                 break;    
                 
+            case "Strategy":
+                Strategy newframe16 = new Strategy();
+                newframe16.setVisible(true);
+                break;    
                 
+            case "Command":
+                Command newframe17 = new Command();
+                newframe17.setVisible(true);
+                break; 
+                
+            case "ChainOfResponsability":
+                ChainOfResponsability newframe18 = new ChainOfResponsability();
+                newframe18.setVisible(true);
+                break;
+                
+            case "Mediator":
+                Mediator newframe19 = new Mediator();
+                newframe19.setVisible(true);
+                break;  
+                
+                
+            case "TemplateMethod":
+            TemplateMethod newframe20 = new TemplateMethod();
+            newframe20.setVisible(true);
+            break; 
+            
+            case "Visitor":
+            Visitor newframe21 = new Visitor();
+            newframe21.setVisible(true);
+            break; 
         }
     
     }
@@ -197,6 +226,12 @@ public class PatternX extends javax.swing.JFrame {
                 dt = Desktop.getDesktop();
                 dt.open(f);
             break;
+            
+            case "Guru":
+                Desktop enlace1 = Desktop.getDesktop();
+                String references=info.getList(dato, "Referencias");
+                enlace1.browse(new URI(references.substring(3, references.length()-6)));
+                break;
         }
          
     
@@ -752,7 +787,7 @@ public class PatternX extends javax.swing.JFrame {
         lblTitle.setFont(new java.awt.Font("Instrument Sans", 1, 24)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("<html>texto ejemplo<html>");
-        jPanel1.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 60, 430, 60));
+        jPanel1.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 830, 60));
 
         tabs.setBackground(new java.awt.Color(255, 255, 255));
         tabs.setTabPlacement(javax.swing.JTabbedPane.LEFT);
@@ -776,8 +811,8 @@ public class PatternX extends javax.swing.JFrame {
             pnlDefinitionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlDefinitionLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(lblDefinition, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addComponent(lblDefinition, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         tabs.addTab("", pnlDefinition);
@@ -1024,8 +1059,14 @@ public class PatternX extends javax.swing.JFrame {
         pnlReferences.setBackground(new java.awt.Color(255, 255, 255));
 
         lblReferences.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        lblReferences.setText("Text");
-        lblReferences.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        lblReferences.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblReferences.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/IMG/Icons/Patterns/references_Logo.png"))); // NOI18N
+        lblReferences.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblReferences.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblReferencesMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlReferencesLayout = new javax.swing.GroupLayout(pnlReferences);
         pnlReferences.setLayout(pnlReferencesLayout);
@@ -1052,7 +1093,7 @@ public class PatternX extends javax.swing.JFrame {
         lblTab.setFont(new java.awt.Font("Instrument Sans", 1, 12)); // NOI18N
         lblTab.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTab.setText("<html>Definición<html>");
-        jPanel1.add(lblTab, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 540, 40));
+        jPanel1.add(lblTab, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 830, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1248,7 +1289,6 @@ public class PatternX extends javax.swing.JFrame {
         lblTab.setText("Referencias");
         defaultButtons();
         btnReferences.setBackground(colorSelected);
-        lblReferences.setText("<html>"+info.getList(dato, "Referencias")+"<html>");
     }//GEN-LAST:event_LblReferencesMouseClicked
 
     private void lblGitHubMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGitHubMouseEntered
@@ -1402,6 +1442,16 @@ public class PatternX extends javax.swing.JFrame {
             Logger.getLogger(PatternX.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_lblStartExMouseClicked
+
+    private void lblReferencesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblReferencesMouseClicked
+       try {
+            link("Guru");
+        } catch (IOException ex) {
+            Logger.getLogger(PatternX.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(PatternX.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_lblReferencesMouseClicked
 
     /**
      * @param args the command line arguments

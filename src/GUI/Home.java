@@ -15,12 +15,14 @@ import Assets.FONT.Fonts;
 public class Home extends javax.swing.JFrame {
     int mouseX,mouseY;
     PatternX newFrame;
+    Glosario newFrameG;
     Fonts typeFont;
     
     public Home() throws IOException, FileNotFoundException, ParseException {
         initComponents();
         decorator();
-        newFrame = new PatternX();  
+        newFrame = new PatternX();
+        newFrameG = new Glosario();
     }
     
     
@@ -1145,7 +1147,9 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_LblSingletonMouseExited
 
     private void LblGlossaryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblGlossaryMouseClicked
-        // TODO add your handling code here:
+
+        newFrameG.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_LblGlossaryMouseClicked
 
     private void LblGlossaryMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblGlossaryMouseEntered

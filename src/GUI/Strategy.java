@@ -49,7 +49,7 @@ public class Strategy extends javax.swing.JFrame {
         setImageLabel(lblUltimate, "src\\Assets\\IMG\\Strategy\\magic_Icon.png");
         
         lblSubtittle.setFont(typeFont.fontV(typeFont.instruments, 1, 12));
-        lblText.setFont(typeFont.fontV(typeFont.instruments, 0, 12));
+        lblText.setFont(typeFont.fontV(typeFont.instruments, 1, 18));
         
     }
     

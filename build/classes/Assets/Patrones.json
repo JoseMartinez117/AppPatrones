@@ -371,8 +371,7 @@
   },
   
   "ChainOfResponsability":{
-    "Definicion": "Proxy es un patrón de diseño estructural que te permite proporcionar un sustituto o marcador de posición para otro objeto. Un proxy controla el acceso al objeto original, permitiéndote hacer algo antes o después de que la solicitud llegue al objeto original. <p><p> El patrón Proxy sugiere que crees una nueva clase proxy con la misma interfaz que un objeto de servicio original. Después actualizas tu aplicación para que pase el objeto proxy a todos los clientes del objeto original. Al recibir una solicitud de un cliente, el proxy crea un objeto de servicio real y le delega todo el trabajo. <p><p> Pero, ¿cuál es la ventaja? Si necesitas ejecutar algo antes o después de la lógica primaria de la clase, el proxy te permite hacerlo sin cambiar esa clase. Ya que el proxy implementa la misma interfaz que la clase original, puede pasarse a cualquier cliente que espere un objeto de servicio real.",
-        
+"Definicion": "Chain of Responsibility es un patrón de diseño de comportamiento que te permite pasar solicitudes a lo largo de una cadena de manejadores. Al recibir una solicitud, cada manejador decide si la procesa o si la pasa al siguiente manejador de la cadena. <p><p>Al igual que muchos otros patrones de diseño de comportamiento, el Chain of Responsibility se basa en transformar comportamientos particulares en objetos autónomos llamados manejadores. En nuestro caso, cada comprobación debe ponerse dentro de su propia clase con un único método que realice la comprobación. La solicitud, junto con su información, se pasa a este método como argumento.<p><p>El patrón sugiere que vincules esos manejadores en una cadena. Cada manejador vinculado tiene un campo para almacenar una referencia al siguiente manejador de la cadena. Además de procesar una solicitud, los manejadores la pasan a lo largo de la cadena. La solicitud viaja por la cadena hasta que todos los manejadores han tenido la oportunidad de procesarla.<p><p>Y ésta es la mejor parte: un manejador puede decidir no pasar la solicitud más allá por la cadena y detener con ello el procesamiento.",        
     "Ventajas" : [
       "Puedes controlar el orden de control de solicitudes.",
       "Principio de responsabilidad única. Puedes desacoplar las clases que invoquen operaciones de las que realicen operaciones.",
@@ -394,7 +393,7 @@
      
     "Ejemplo": "",
 
-    "Experiencia": "",
+    "Experiencia": "En esta experiencia podras experimentar una simulacion de como funciona el patron de diseño Chain Of Responsability, en la cual realizaras un combate Pokemon contra la maquina, esta tendra implementado el patron de diseño, en este caso la cadena de responsabilidades buscara cambiar al pokemon contra el cual tu recibiras daño superefectivo basandose en el tipo. Siendo que el fuego es superefectivo contra el planta, el planta contra el agua y el agua contra el fuego.",
 
     "Referencias" : [
       "https://refactoring.guru/es/design-patterns/chain-of-responsibility" 
@@ -402,8 +401,7 @@
   },
 
   "Command":{
-    "Definicion": "Convierte una solicitud en un objeto independiente que contiene toda la información sobre la solicitud. Esta transformación te permite parametrizar los métodos con diferentes solicitudes, retrasar o poner en cola la ejecución de una solicitud y soportar operaciones que no se pueden realizar.",
-        
+"Definicion": "Command es un patrón de diseño de comportamiento que convierte una solicitud en un objeto independiente que contiene toda la información sobre la solicitud. Esta transformación te permite parametrizar los métodos con diferentes solicitudes, retrasar o poner en cola la ejecución de una solicitud y soportar operaciones que no se pueden realizar.<p><p>El buen diseño de software a menudo se basa en el principio de separación de responsabilidades, lo que suele tener como resultado la división de la aplicación en capas. El ejemplo más habitual es tener una capa para la interfaz gráfica de usuario (GUI) y otra capa para la lógica de negocio. La capa GUI es responsable de representar una bonita imagen en pantalla, capturar entradas y mostrar resultados de lo que el usuario y la aplicación están haciendo. Sin embargo, cuando se trata de hacer algo importante, como calcular la trayectoria de la luna o componer un informe anual, la capa GUI delega el trabajo a la capa subyacente de la lógica de negocio.<p><p>El patrón Command sugiere que los objetos GUI no envíen estas solicitudes directamente. En lugar de ello, debes extraer todos los detalles de la solicitud, como el objeto que está siendo invocado, el nombre del método y la lista de argumentos, y ponerlos dentro de una clase comando separada con un único método que activa esta solicitud.",        
     "Ventajas" : [
       "Principio de responsabilidad única. Puedes desacoplar las clases que invocan operaciones de las que realizan esas operaciones.",
       "Principio de abierto/cerrado. Puedes introducir nuevos comandos en la aplicación sin descomponer el código cliente existente.",
@@ -426,7 +424,7 @@
      
     "Ejemplo": "",
 
-    "Experiencia": "",
+    "Experiencia": "En esta experiencia podras experimentar una simulacion de como funciona el patron de diseño Command, esta se basa en el sistema de combate de los juegos de Pokemon. El aptron de diseño se puede apreciar de forma clara al utilizar las multiples formas de llamar a un comportamiento especifico, en este caso los comportamientos de 'Atacar', 'Curar' y 'Huir' no estan vinculados exclusivamente a los botones, sino que estos comandos pueden tambien ser accionados con las teclas Z, X y C respectivamente.",
 
     "Referencias" : [
       "https://refactoring.guru/es/design-patterns/command" 
@@ -466,8 +464,7 @@
   },
 
   "Mediator":{
-    "Definicion": "Permite reducir las dependencias caóticas entre objetos. El patrón restringe las comunicaciones directas entre los objetos, forzándolos a colaborar únicamente a través de un objeto mediador.",
-        
+"Definicion": "Mediator es un patrón de diseño de comportamiento que te permite reducir las dependencias caóticas entre objetos. El patrón restringe las comunicaciones directas entre los objetos, forzándolos a colaborar únicamente a través de un objeto mediador.<p><p>El patrón Mediator sugiere que detengas toda comunicación directa entre los componentes que quieres hacer independientes entre sí. En lugar de ello, estos componentes deberán colaborar indirectamente, invocando un objeto mediador especial que redireccione las llamadas a los componentes adecuados. Como resultado, los componentes dependen únicamente de una sola clase mediadora, en lugar de estar acoplados a decenas de sus colegas.<p><p>De este modo, el patrón Mediator te permite encapsular una compleja red de relaciones entre varios objetos dentro de un único objeto mediador. Cuantas menos dependencias tenga una clase, más fácil es modificar, extender o reutilizar esa clase.",        
     "Ventajas" : [
       "Principio de responsabilidad única. Puedes extraer las comunicaciones entre varios componentes dentro de un único sitio, haciéndolo más fácil de comprender y mantener.",
       "Principio de abierto/cerrado. Puedes introducir nuevos mediadores sin tener que cambiar los propios componentes.",
@@ -490,7 +487,7 @@
    
     "Ejemplo": "",
 
-    "Experiencia": "",
+    "Experiencia": "En esta experiencia podras experimentar una simulacion de como funciona el patron de diseño Mediator, siendo que la clase Mediadora es el centro Pokemon, el cual ofrece una variedad de servicios simplicando la interaccion de multiples clases, en este caso podras solicitar servicios como la curacion o el intercambio de Pokemon, el almacenamiento y gestion de tu equipo Pokemon en el PC y la compra y venta de objetos en la tienda. Todas estas clases no interactuan directamente, sino que se ejecutan de forma simplificada en el Centro Pokemon.",
 
     "Referencias" : [
       "https://refactoring.guru/es/design-patterns/mediator" 
@@ -593,8 +590,7 @@
   },
   
   "Strategy":{
-    "Definicion": "Permite definir una familia de algoritmos, colocar cada uno de ellos en una clase separada y hacer sus objetos intercambiables.",
-        
+"Definicion": "Strategy es un patrón de diseño de comportamiento que te permite definir una familia de algoritmos, colocar cada uno de ellos en una clase separada y hacer sus objetos intercambiables.<p><p>El patrón Strategy sugiere que tomes esa clase que hace algo específico de muchas formas diferentes y extraigas todos esos algoritmos para colocarlos en clases separadas llamadas estrategias.<p><p>La clase original, llamada contexto, debe tener un campo para almacenar una referencia a una de las estrategias. El contexto delega el trabajo a un objeto de estrategia vinculado en lugar de ejecutarlo por su cuenta.<p><p>La clase contexto no es responsable de seleccionar un algoritmo adecuado para la tarea. En lugar de eso, el cliente pasa la estrategia deseada a la clase contexto. De hecho, la clase contexto no sabe mucho acerca de las estrategias. Funciona con todas las estrategias a través de la misma interfaz genérica, que sólo expone un único método para disparar el algoritmo encapsulado dentro de la estrategia seleccionada.<p><p>De esta forma, el contexto se vuelve independiente de las estrategias concretas, así que puedes añadir nuevos algoritmos o modificar los existentes sin cambiar el código de la clase contexto o de otras estrategias.",        
     "Ventajas" : [
       "Puedes intercambiar algoritmos usados dentro de un objeto durante el tiempo de ejecución.",
       "Puedes aislar los detalles de implementación de un algoritmo del código que lo utiliza.",
@@ -618,7 +614,7 @@
     
     "Ejemplo": "",
 
-    "Experiencia": "",
+    "Experiencia": "En esta experiencia podras experimentar una simulacion de como funciona el patron de diseño Strategy, en este caso, las estrategias estan representadas por los 5 elementos que actualmente tiene el protagonista del videojuego Genshin Impact, estas estrategias cambian el funcionamiento de sus habilidades base, como se puede apreciar en las imagenes que se cargan al usar una y en las descripciones correspondientes.",
 
     "Referencias" : [
       "https://refactoring.guru/es/design-patterns/strategy" 
@@ -626,8 +622,7 @@
   },
 
   "TemplateMethod":{
-    "Definicion": "Define el esqueleto de un algoritmo en la superclase pero permite que las subclases sobrescriban pasos del algoritmo sin cambiar su estructura.",
-        
+"Definicion": "Template Method es un patrón de diseño de comportamiento que define el esqueleto de un algoritmo en la superclase pero permite que las subclases sobrescriban pasos del algoritmo sin cambiar su estructura.<p><p>El patrón Template Method sugiere que dividas un algoritmo en una serie de pasos, conviertas estos pasos en métodos y coloques una serie de llamadas a esos métodos dentro de un único método plantilla. Los pasos pueden ser abstractos, o contar con una implementación por defecto. Para utilizar el algoritmo, el cliente debe aportar su propia subclase, implementar todos los pasos abstractos y sobrescribir algunos de los opcionales si es necesario (pero no el propio método plantilla).",        
     "Ventajas" : [
       "Puedes permitir a los clientes que sobrescriban tan solo ciertas partes de un algoritmo grande, para que les afecten menos los cambios que tienen lugar en otras partes del algoritmo.",
       "Puedes colocar el código duplicado dentro de una superclase."
@@ -649,7 +644,7 @@
     
     "Ejemplo": "",
 
-    "Experiencia": "",
+    "Experiencia": "En esta experiencia podras experimentar una simulacion de como funciona el patron de diseño Template Method basado en el sistema de fabricación de objetos de Genshin Impact. Para esto se simulo el funcionamiento de este sistema en base a una plantilla comun, la cual verifica los objetos para fabricar algo, lo fabrica y muestra el resultado en pantalla. Sin embargo esta plantilla es implementada de forma diferente dependiendo de lo que se fabrique. Si se va a sintetizar un objeto, se sigue la plantilla de forma exacta, pero si se va a cocinar un platillo, este verifica que el estado de en el que se encuentra un valor para determinar la calidad.",
 
     "Referencias" : [
       "https://refactoring.guru/es/design-patterns/template-method" 
@@ -657,8 +652,7 @@
   },
 
   "Visitor":{
-    "Definicion": "Permite separar algoritmos de los objetos sobre los que operan.",
-        
+"Definicion": "Visitor es un patrón de diseño de comportamiento que te permite separar algoritmos de los objetos sobre los que operan.<p><p>El patrón Visitor sugiere que coloques el nuevo comportamiento en una clase separada llamada visitante, en lugar de intentar integrarlo dentro de clases existentes. El objeto que originalmente tenía que realizar el comportamiento se pasa ahora a uno de los métodos del visitante como argumento, de modo que el método accede a toda la información necesaria contenida dentro del objeto.<p><p>Utiliza una técnica llamada Double Dispatch, que ayuda a ejecutar el método adecuado sobre un objeto sin complicados condicionales. En lugar de permitir al cliente seleccionar una versión adecuada del método a llamar, ¿qué tal si delegamos esta opción a los objetos que pasamos al visitante como argumento? Como estos objetos conocen sus propias clases, podrán elegir un método adecuado en el visitante más fácilmente. “Aceptan” un visitante y le dicen qué método visitante debe ejecutarse.",        
     "Ventajas" : [
       "Principio de abierto/cerrado. Puedes introducir un nuevo comportamiento que puede funcionar con objetos de clases diferentes sin cambiar esas clases.",
       "Principio de responsabilidad única. Puedes tomar varias versiones del mismo comportamiento y ponerlas en la misma clase.",
@@ -681,7 +675,7 @@
     
     "Ejemplo": "",
 
-    "Experiencia": "",
+    "Experiencia": "En esta experiencia podras experimentar una simulacion de como funciona el patron de diseño Visitor, utilizando como base el sistema de reacciones elementales del videouego Genshin Impact. En este, al aplicar un elemento (visitante) a un enemigo, el enemigo le indica cual es el elemento que previamente tiene aplicado, para que el visitante sepa cual es la reaccion elemental que debe de provocar. En caso de no tener un elemento aplicado, el elemento visitante sera aplicado al enemigo para que al aplicarse otro elemento, la logica anterior se repita.",
 
     "Referencias" : [
       "https://refactoring.guru/es/design-patterns/visitor" 
