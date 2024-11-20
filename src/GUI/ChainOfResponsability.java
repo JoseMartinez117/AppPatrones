@@ -636,7 +636,7 @@ public class ChainOfResponsability extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCerrarMouseExited
 
     private void lblCombatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCombatMouseClicked
-        System.out.println(cont);
+        
         if(Integer.parseInt(lblLife1.getText().substring(6))>0){
             JOptionPane.showMessageDialog(null, lblName1.getText().substring(8)+" realiza su ataque utilizando su tipo");
             attack(lblType1.getText().substring(6),lblType.getText().substring(6));
